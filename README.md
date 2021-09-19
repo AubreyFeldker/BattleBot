@@ -4,4 +4,4 @@
 
 A bot made with the **Discord.js library** for the **1-Up World Discord server**, [discord.gg/mario](https://discord.gg/mario)!
 
-![1-Up World Image](/images/1-Up-World-Image.png)
+![1-Up World Image](/images/1-Up-World-Image.png)# Battlebot
