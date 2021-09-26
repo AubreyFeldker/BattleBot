@@ -68,6 +68,32 @@ module.exports = (client) => {
     return owner;
   };
 
+  client.startTwitterFeed = () => {
+    client.twitter.stream('statuses/filter', { follow: client.config.followedTwitterUsers.join(',') })
+      .on('start', () => {
+        console.log('Started Twitter Feed Stream');
+      })
+      .on('data', (tweet) => {
+        if (!tweet.user || tweet.in_reply_to_status_id !== null) {
+          return;
+        }
+
+        if (client.config.affiliateUsers.includes(tweet.user.id_str)) {
+          client.twitterHookAffiliate.send(`http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, { username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });
+        } else if (client.config.officialUsers.includes(tweet.user.id_str)) {
+          client.twitterHookOfficial.send(`http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, { username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });
+        }
+      })
+      .on('error', (error) => console.error(error))
+      .on('end', () => {
+        console.log('Ended Twitter Feed Stream');
+        // Wait 10 seconds, then restart the twitter feed
+        setTimeout(() => {
+          client.startTwitterFeed();
+        }, 10000);
+      });
+  };
+
   // Extend the String prototype to provide String.toProperCase() to make formatting easier
   // Basically sets stuff like 'donkey kong' to 'Donkey Kong'
   Object.defineProperty(String.prototype, 'toProperCase', { // eslint-disable-line no-extend-native

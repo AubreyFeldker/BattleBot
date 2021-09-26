@@ -5,6 +5,7 @@
 // Require necessary dependencies
 const Discord = require('discord.js');
 const Enmap = require('enmap');
+const Twitter = require('twitter-lite');
 const fs = require('fs');
 
 // Create the client instance, require config.json, emoji.js, and the version from package.json
@@ -91,6 +92,18 @@ for (let i = 0; i < config.permLevels.length; i++) {
   const thislvl = config.permLevels[i];
   client.levelCache[thislvl.name] = thislvl.level;
 }
+
+// Twitter object for listening for tweets
+client.twitter = new Twitter({
+  consumer_key: client.config.twitterAPIKey,
+  consumer_secret: client.config.twitterAPISecret,
+  access_token_key: client.config.twitterAccessToken,
+  access_token_secret: client.config.twitterAccessTokenSecret,
+});
+
+// Start up the twitter webhook listener
+client.twitterHookAffiliate = new Discord.WebhookClient(client.config.twitterHookAffiliateID, client.config.twitterHookAffiliateToken);
+client.twitterHookOfficial = new Discord.WebhookClient(client.config.twitterHookOfficialID, client.config.twitterHookOfficialToken);
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
 Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'friendCodes', 'results', 'enabledCmds', 'teamSettings', 'selfAssignRoles', 'userDB'], { ensureProps: true }));

@@ -54,8 +54,10 @@ module.exports = async (client, message) => {
     '355139801676120074',
     '415992061955932160',
     '356505464944459778',
-    '579354098566955028',
+    '809203591406813205',
+    '809203591406813205',
     '356505383700922370',
+    '355139881531342859',
   ];
   // Ensure the user exists in the userDB
   const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0 });
@@ -91,8 +93,8 @@ module.exports = async (client, message) => {
       switch (userFromDB.rank) {
         // If the user is currently rank 0
         case 0:
-          // If the user has 15 or more points, give them the shroom role, increase their rank, and set leveledUp to true and newRank to 1
-          if (userFromDB.points >= 15) {
+          // If the user has 10 or more points, give them the shroom role, increase their rank, and set leveledUp to true and newRank to 1
+          if (userFromDB.points >= 10) {
             await message.member.roles.add(shroomRole);
             client.userDB.inc(message.author.id, 'rank');
             leveledUp = true;
@@ -292,11 +294,11 @@ module.exports = async (client, message) => {
 
     // If the user's level is less than 2 (Mod), and the channel the command is used in is not #robotic-operating-buddy or #bot-testing, delete the message, direct the user to use #robotic-operating-buddy, then delete that message with a 10 second timeout
     // If the user is a mod or higher, this is bypassed
-    if (level[1] < 2 && message.channel.id !== '355186664869724161' && message.channel.id !== '682337815031447597') {
+    if (!(level[1] >= 2 || message.channel.id == '355186664869724161' || message.channel.id == '682337815031447597') && !(command == 'meme' && message.channel.id == '355139801676120074')) {
       await message.delete().catch(console.error);
       return message.channel.send('Please use **all** bot commands in <#355186664869724161>!')
         .then((msg) => {
-          msg.delete(10000).catch(console.error);
+          msg.delete({ timeout: 10000}).catch(console.error);
         });
     }
 
