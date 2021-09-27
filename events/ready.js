@@ -12,7 +12,7 @@ module.exports = (client) => {
   ];
 
   // Set an interval that will run every 30 seconds and change the bot's activity to a random item for the activitiesLis array
-  setInterval(() => {
+    setInterval(() => {
     const index = Math.floor(Math.random() * activitiesList.length);
     client.user.setActivity(activitiesList[index]);
   }, 30000);

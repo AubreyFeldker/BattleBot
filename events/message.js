@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable consistent-return */
-
+ 
 // Require necessary dependencies
 const Discord = require('discord.js');
 const eco = require('discordenvo');

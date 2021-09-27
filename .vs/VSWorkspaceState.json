@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\commands",
+    "\\commands\\moderation",
+    "\\commands\\roles",
+    "\\events",
+    "\\images"
+  ],
+  "SelectedNode": "\\events\\ready.js",
+  "PreviewInSolutionExplorer": false
+}
