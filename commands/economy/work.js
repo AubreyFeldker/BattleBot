@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
 
   // Create final string and get output from pre-built work function
   const final = `${characters[rChar]}'s ${jobs[rJob]}`;
-  const output = await eco.Work(message.author.id, {
+  const output = await eco.ecoWork(message.author.id, {
     failurerate: 20, // Failure rate of 20%
     money: Math.floor(Math.random() * 5000), // Random money output between 1 and 5000
     jobs: [],
