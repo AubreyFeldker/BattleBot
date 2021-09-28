@@ -498,5 +498,100 @@
         "name": "Poltergust-5000",
         "id": 99,
         "price": 5000
+    },
+    {
+        "name": "Authentic Master Hand-shaped glove",
+        "id": 100,
+        "price": 3000
+    },
+    {
+        "name": "10 Beanbean Coins",
+        "id": 101,
+        "price": 10000
+    },
+    {
+        "name": "\"There's No Such Thing as a Nintendo\" poster",
+        "id": 102,
+        "price": 1500
+    },
+    {
+        "name": "Graded copy of Mario Kart 8 Deluxe",
+        "id": 103,
+        "price": 500000
+    },
+    {
+        "name": "Nintendo Switch OLED",
+        "id": 104,
+        "price": 35000
+    },
+    {
+        "name": "The Champ's special controller",
+        "id": 105,
+        "price": 10000
+    },
+    {
+        "name": "\"Super Mario Compact Disco\" on vinyl",
+        "id": 106,
+        "price": 2700
+    },
+    {
+        "name": "Access to Penny's research papers",
+        "id": 107,
+        "price": 16000
+    },
+    {
+        "name": "ON/OFF Block",
+        "id": 108,
+        "price": 300
+    },
+    {
+        "name": "Mega Yarn Yoshi amiibo",
+        "id": 109,
+        "price": 4000
+    },
+    {
+        "name": "Ninji's Iron 9",
+        "id": 110,
+        "price": 700
+    },
+    {
+        "name": "A painting of Waluigi",
+        "id": 111,
+        "price": 1
+    },
+    {
+        "name": "Collection of pride flags",
+        "id": 112,
+        "price": 1000
+    },
+    {
+        "name": "The Chimp's spare shades",
+        "id": 113,
+        "price": 7000
+    },
+    {
+        "name": "\"POWERFUL WARIO GAME 2004\" emblem",
+        "id": 114,
+        "price": 2004
+    },
+    {
+        "name": "1 million starbits (cosmetic)",
+        "id": 116,
+        "price": 100000
+    },
+    {
+        "name": "2 tickets to the 2022 Super Mario Bros. movie",
+        "id": 117,
+        "price": 5000
+    },
+    {
+        "name": "Birdo's ring",
+        "id": 118,
+        "price": 50000
+    },
+    {
+        "name": "one of Giga Bowser's spikes",
+        "id": 119,
+        "price": 80000
     }
 ]
