@@ -9,7 +9,23 @@ const Twitter = require('twitter-lite');
 const fs = require('fs');
 
 // Create the client instance, require config.json, emoji.js, and the version from package.json
-const client = new Discord.Client({ fetchAllMembers: true });
+const client = new Discord.Client({
+  messageCacheMaxSize: 500,
+  fetchAllMembers: true,
+  disableMentions: 'everyone',
+  intents: [
+      Discord.Intents.FLAGS.GUILDS,
+      Discord.Intents.FLAGS.GUILD_MEMBERS,
+      Discord.Intents.FLAGS.GUILD_BANS,
+      Discord.Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS,
+      Discord.Intents.FLAGS.GUILD_WEBHOOKS,
+      Discord.Intents.FLAGS.GUILD_PRESENCES,
+      Discord.Intents.FLAGS.GUILD_MESSAGES,
+      Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+      Discord.Intents.FLAGS.DIRECT_MESSAGES,
+      Discord.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
+    ],
+});
 const config = require('./config');
 const { version } = require('./package.json');
 const emoji = require('./src/emoji');
@@ -102,8 +118,14 @@ client.twitter = new Twitter({
 });
 
 // Start up the twitter webhook listener
-client.twitterHookAffiliate = new Discord.WebhookClient(client.config.twitterHookAffiliateID, client.config.twitterHookAffiliateToken);
-client.twitterHookOfficial = new Discord.WebhookClient(client.config.twitterHookOfficialID, client.config.twitterHookOfficialToken);
+client.twitterHookAffiliate = new Discord.WebhookClient({ 
+id: client.config.twitterHookAffiliateID,
+token: client.config.twitterHookAffiliateToken
+});
+client.twitterHookOfficial = new Discord.WebhookClient({ 
+id: client.config.twitterHookOfficialID,
+token: client.config.twitterHookOfficialToken
+});
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
 Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'friendCodes', 'results', 'enabledCmds', 'teamSettings', 'selfAssignRoles', 'userDB'], { ensureProps: true }));
