@@ -2,8 +2,8 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   // Get the starbits emoji
   const starbits = client.emojis.cache.get(client.emoji.starbits);
   // Fetch the daily output and the user's balance
-  const output = await eco.Daily(message.author.id, 5000);
-  const profile = await eco.FetchBalance(message.author.id);
+  const output = await eco.ecoDaily(message.author.id, 5000);
+  const profile = await eco.fetchBalance(message.author.id);
 
   // If daily has reset, display the user has claimed it. If not, display otherwise
   if (output.updated) {

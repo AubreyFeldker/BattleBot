@@ -1,14 +1,14 @@
 module.exports.run = async (client, message, args, level, Discord, eco) => {
   // If a user was mentioned, find them on the leaderboard and display their placement
   if (message.mentions.users.first()) {
-    const output = await eco.Leaderboard({
+    const output = await eco.ecoLeaderboard({
       search: message.mentions.users.first().id,
     });
 
     message.channel.send(`**${message.mentions.users.first().tag}** is number \`${output}\` on the leaderboard!`);
   } else {
     // Find the user's placement on the leaderboard
-    const authorPlace = await eco.Leaderboard({
+    const authorPlace = await eco.ecoLeaderboard({
       search: message.author.id,
     });
 
@@ -23,21 +23,22 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
       .setFooter(`Created and Maintained by ${owner.tag} | v${client.version}`);
 
     // Get the top 10 users on the leaderboard, fetch their user objects, and add them to the leaderboard embed
-    eco.Leaderboard({
-      limit: 10,
+    eco.ecoLeaderboard({
+      //limit: 10,
     }).then(async (users) => {
       for (let i = 0; i < 10; i++) {
         // eslint-disable-next-line no-await-in-loop
-        const user = await client.users.fetch(users[i].userid);
-
-        if (users[i]) {
-          embed.addField(`**${i + 1} -**  ${user.tag}`, `Balance: \`${parseInt(users[i].balance, 10).toLocaleString()} starbits\``);
+	console.log(users);
+       
+        if (users[i] && users[i].userId != undefined) {
+	  const user = await client.users.fetch(users[i].userId);
+          embed.addField(`**${i + 1} -**  ${user.tag}`, `Balance: \`${parseInt(users[i].balance, 10)} starbits\``);
         } else {
-          embed.addField(`**${i + 1} -** \`Nobody Yet\``);
+          embed.addFields({ name: "**${i + 1} -** `Nobody Yet`", value: 'a' });
         }
       }
 
-      message.channel.send(embed);
+      return message.channel.send({ embeds: [embed] });
     });
   }
 };

@@ -15,16 +15,16 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   flip = flip === 0 ? 'heads' : 'tails';
 
   // Fetch user balance and check if it's less than the amount provided. If it is, error on insufficient funds
-  const output = await eco.FetchBalance(message.author.id);
+  const output = await eco.fetchBalance(message.author.id);
   if (output.balance < amount) {
     return message.error('Insufficient Funds!', 'You have less starbits than the amount you want to gamble!');
   }
 
   // Use pre-built coinflip function to calculate outcome and add/subtract from user's balance
-  const gamble = await eco.Coinflip(message.author.id, flip, amount).catch(console.error);
+  const gamble = await eco.coinFlip(message.author.id, flip, amount).catch(console.error);
 
   // If output = lost, display a lost message, else, display a win message
-  const gambleMsg = gamble.output === 'lost' ? message.error('You Lost!', `**${message.member.displayName}**, You gambled ${starbits} \`${amount.toLocaleString()} starbits\` and **${gamble.output}**! Balance: \`${output.balance.toLocaleString()} - ${amount.toLocaleString()} = ${gamble.newbalance.toLocaleString()} starbits\``) : message.success('You Won!', `**${message.member.displayName}**, You gambled ${starbits} \`${amount.toLocaleString()} starbits\` and **${gamble.output}**! Balance: \`${output.balance.toLocaleString()} + ${amount.toLocaleString()} = ${gamble.newbalance.toLocaleString()} starbits\``);
+  const gambleMsg = gamble.output === 'lost' ? message.error('You Lost!', `**${message.member.displayName}**, You gambled ${starbits} \`${amount} starbits\` and **${gamble.output}**! Balance: \`${output.balance} - ${amount} = ${gamble.newBalance} starbits\``) : message.success('You Won!', `**${message.member.displayName}**, You gambled ${starbits} \`${amount} starbits\` and **${gamble.output}**! Balance: \`${output.balance} + ${amount.toLocaleString()} = ${gamble.newBalance} starbits\``);
   return gambleMsg;
 };
 

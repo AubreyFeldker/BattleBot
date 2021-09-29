@@ -23,9 +23,10 @@ module.exports.run = async (client, message, args, level, Discord) => {
     let item = items[Math.floor(Math.random() * items.length)];
 
     if (!final.includes(item.id)) {
-      if (userItems.includes(`${item.name} - ID: ${item.id}`) && userItems.length > 75) {
+      if (userItems.includes(`${item.name} - ID: ${item.id}`) && userItems.length > 75 && userItems.length < 95) {
         item = items.find((x) => !userItems.includes(`${x.name} - ID: ${x.id}`));
       }
+      console.log(item.name);
       const inItems = userItems.includes(`${item.name} - ID: ${item.id}`) ? `- ${client.emoji.checkMark} In collection!` : '';
       embed.addField(`${item.name}: ${starbits} ${item.price.toLocaleString()} starbits`, `ID: ${item.id} ${inItems}`);
       final.push(item.id);
@@ -34,7 +35,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
     }
   }
 
-  return message.channel.send(embed);
+  return message.channel.send({ embeds: [embed] });
 };
 
 module.exports.conf = {

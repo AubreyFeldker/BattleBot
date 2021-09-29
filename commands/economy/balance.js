@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   const starbits = client.emojis.cache.get(client.emoji.starbits);
 
   // Fetch user balance from economy database
-  const output = await eco.FetchBalance(member.id);
+  const output = await eco.fetchBalance(member.id);
   // Send balance to channel
   return message.channel.send(`**${member.displayName}'s** balance is ${starbits} \`${output.balance.toLocaleString()} starbits\`!`);
 };
