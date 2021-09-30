@@ -2,7 +2,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   // Get the starbits emoji
   const starbits = client.emojis.cache.get(client.emoji.starbits);
   // Fetch the daily output and the user's balance
-  const buffer = await eco.addBalance(message.author.id, 0);
+  
   const output = await eco.ecoDaily(message.author.id, 5000);
   const profile = await eco.fetchBalance(message.author.id);
 

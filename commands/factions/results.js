@@ -26,7 +26,7 @@ module.exports.run = async (client, message, [month, year], level, Discord) => {
     .addField('Points Distribution:', resultMonth.points);
 
   // Send the results embed
-  return message.channel.send(resultsEmbed);
+  message.channel.send({ embeds: [resultsEmbed] });
 };
 
 module.exports.conf = {

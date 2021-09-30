@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
 
   // If item doesn't exist, error on invalid item id
   if (!item) {
-    return message.error('Invalid Item ID!', 'Please ensure the item ID is correct! IDs span from **0-129!**');
+    return message.error('Invalid Item ID!', 'Please ensure the item ID is correct! IDs span from **0-119!**');
   }
 
   // Fetch user balance from economy database

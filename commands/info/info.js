@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
         .addField('Uptime', uptime, true);
 
       // Send the embed
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
       break;
     }
     case 'user': {
@@ -84,7 +84,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
         .addField('Status', activity, true);
 
       // Send the embed
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
       break;
     }
     case 'server':
@@ -99,7 +99,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
         .addField('Member Count', message.guild.memberCount, true);
 
       // Send the embed
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
       break;
     default:
       // If an invalid flag is used, error on invalid flag

@@ -22,7 +22,7 @@ module.exports.run = (client, message, args, level, Discord) => {
 
   // Set the embed footer to the total amount of members and send the embed
   embed.setFooter(`Total: ${total} members`);
-  message.channel.send(embed);
+  message.channel.send({ embeds: [embed] });
 };
 
 module.exports.conf = {

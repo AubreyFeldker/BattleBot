@@ -39,7 +39,7 @@ module.exports.run = (client, message, args, level, Discord) => {
       if (resultStatic.length) {
         embedAdd(resultStatic, embed, 'Static');
 
-        message.channel.send(embed);
+        message.channel.send({ embeds: [embed] });
       } else {
         message.error('No Static Emotes Found!', "This server doesn't have any static emotes!");
       }
@@ -50,7 +50,7 @@ module.exports.run = (client, message, args, level, Discord) => {
       if (resultAnimated.length) {
         embedAdd(resultAnimated, embed, 'Animated');
 
-        message.channel.send(embed);
+        message.channel.send({ embeds: [embed] });
       } else {
         message.error('No Animated Emotes Found!', "This server doesn't have any animated emotes!");
       }
@@ -72,7 +72,7 @@ module.exports.run = (client, message, args, level, Discord) => {
             .setColor('GREEN');
 
           embedAdd(resultStatic, staticEmbed, 'Static');
-          message.channel.send(staticEmbed);
+          message.channel.send({ embeds: [staticEmbed] });
         }
 
         // If the animated emotes array is not empty, run the helper method to add fields to the embed and send the embed
@@ -82,7 +82,7 @@ module.exports.run = (client, message, args, level, Discord) => {
             .setColor('GREEN');
 
           embedAdd(resultAnimated, animatedEmbed, 'Animated');
-          message.channel.send(animatedEmbed);
+          message.channel.send({ embeds: [animatedEmbed] });
         }
       }
       break;
