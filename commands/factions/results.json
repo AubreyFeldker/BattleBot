@@ -174,7 +174,7 @@
         },
         "june": {
             "year": "2019",
-            "month": "June",
+            "month": "June-July",
             "image": "https://cdn.discordapp.com/attachments/415992268391055380/584473543115407424/Mario_with_Pride_Mushroom_2.png",
             "matchup": "Super Mario Makeathon",
             "winner": "Luigi",
@@ -182,7 +182,7 @@
         },
         "july": {
             "year": "2019",
-            "month": "July",
+            "month": "June-July",
             "image": "https://cdn.discordapp.com/attachments/415992268391055380/584473543115407424/Mario_with_Pride_Mushroom_2.png",
             "matchup": "Super Mario Makeathon",
             "winner": "Luigi",
@@ -190,7 +190,7 @@
         },
         "august": {
             "year": "2019",
-            "month": "August",
+            "month": "August-September",
             "image": "https://cdn.discordapp.com/attachments/415992268391055380/608318203675803668/icon_mw.png",
             "matchup": "Mario vs. Wario: Battle of the Builders",
             "winner": "Wario",
@@ -198,7 +198,7 @@
         },
         "september": {
             "year": "2019",
-            "month": "October",
+            "month": "August-September",
             "image": "https://cdn.discordapp.com/attachments/415992268391055380/608318203675803668/icon_mw.png",
             "matchup": "Mario vs. Wario: Battle of the Builders",
             "winner": "Wario",
@@ -206,7 +206,7 @@
         },
         "october": {
             "year": "2019",
-            "month": "October",
+            "month": "October-November",
             "image": "https://media.discordapp.net/attachments/415992268391055380/628442768254959616/icon_6.png?width=671&height=671",
             "matchup": "Gooigi vs. Shadow Mario: Scarescraper Showdown",
             "winner": "Gooigi",
@@ -214,7 +214,7 @@
         },
         "november": {
             "year": "2019",
-            "month": "November",
+            "month": "October-November",
             "image": "https://media.discordapp.net/attachments/415992268391055380/628442768254959616/icon_6.png?width=671&height=671",
             "matchup": "Gooigi vs. Shadow Mario: Scarescraper Showdown",
             "winner": "Gooigi",
@@ -225,8 +225,188 @@
             "month": "December",
             "image": "https://cdn.discordapp.com/attachments/357328011889999873/650246549057830932/01_Mario_Santa_2.gif",
             "matchup": "1-Up World Winterfest",
-            "winner": "NO ONE",
-            "points": "Mario"
+            "winner": "Everyone!",
+            "points": "N/A"
+        }
+    },
+    "2020": {
+        "january": {
+            "year": "2020",
+            "month": "January-April",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom",
+            "winner": "Everyone!",
+            "points": "N/A"
+        },
+        "february": {
+            "year": "2020",
+            "month": "January-April",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom",
+            "winner": "Everyone!",
+            "points": "N/A"
+        },
+        "march": {
+            "year": "2020",
+            "month": "January-April",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom",
+            "winner": "Everyone!",
+            "points": "N/A"
+        },
+        "april": {
+            "year": "2020",
+            "month": "January-April",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom",
+            "winner": "Everyone!",
+            "points": "N/A"
+        },
+        "may": {
+            "year": "2020",
+            "month": "May-June",
+            "image": "https://1up.world/assets/images/gallery12/7906fac7.gif?v=b59e8a6c",
+            "matchup": "SMB vs SMB3 vs SMW vs NSMBU vs SM3DW: Game Style Showdown",
+            "winner": "New Super Mario Bros. U",
+            "points": "Super Mario Bros.: 26 1-UPS\nSuper Mario Bros. 3: 32 1-UPS\nSuper Mario World: 42 1-UPS\nNew Super Mario Bros. U: 45 1-UPS\nSuper Mario 3D World: 35 1-UPS"
+        },
+        "june": {
+            "year": "2020",
+            "month": "May-June",
+            "image": "https://1up.world/assets/images/gallery12/7906fac7.gif?v=b59e8a6c",
+            "matchup": "SMB vs SMB3 vs SMW vs NSMBU vs SM3DW: Game Style Showdown",
+            "winner": "New Super Mario Bros. U",
+            "points": "Super Mario Bros.: 26 1-UPS\nSuper Mario Bros. 3: 32 1-UPS\nSuper Mario World: 42 1-UPS\nNew Super Mario Bros. U: 45 1-UPS\nSuper Mario 3D World: 35 1-UPS"
+        },
+        "july": {
+            "year": "2020",
+            "month": "July-August",
+            "image": "https://1up.world/assets/images/gallery12/c5880378.jpg?v=b59e8a6c",
+            "matchup": "Rawk Hawk Boss Battle: 1-Up World Gets RAWKED",
+            "winner": "The 10,000-Fold Titans (1-Up World)",
+            "points": "Tubba Blubba: 0/10 HP\nJr. Troopa: 0/15 HP\nO' Chunks: 0/25 HP\nRawk Hawk: 0/120 HP"
+        },
+        "august": {
+            "year": "2020",
+            "month": "July-August",
+            "image": "https://1up.world/assets/images/gallery12/c5880378.jpg?v=b59e8a6c",
+            "matchup": "Rawk Hawk Boss Battle: 1-Up World Gets RAWKED",
+            "winner": "The 10,000-Fold Titans (1-Up World)",
+            "points": "Tubba Blubba: 0/10 HP\nJr. Troopa: 0/15 HP\nO' Chunks: 0/25 HP\nRawk Hawk: 0/120 HP"
+        },
+        "september": {
+            "year": "2020",
+            "month": "September",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Mario Kart Extravaganza: A Day at the Races",
+            "winner": "BR Dasher, Panazel, mit, Momo, and DanielDapple",
+            "points": "N/A"
+        },
+        "october": {
+            "year": "2020",
+            "month": "October-November",
+            "image": "https://1up.world/assets/images/gallery12/c8fa11b5.gif?v=b59e8a6c",
+            "matchup": "64 vs Sunshine vs Galaxy: 3D All-Stars Faction Battle",
+            "winner": "Super Mario Galaxy",
+            "points": "Super Mario 64 + Super Mario Sunshine: 23 1-UPS\nSuper Mario Galaxy: 25 1-UPS"
+        },
+        "november": {
+            "year": "2020",
+            "month": "October-November",
+            "image": "https://1up.world/assets/images/gallery12/c8fa11b5.gif?v=b59e8a6c",
+            "matchup": "64 vs Sunshine vs Galaxy: 3D All-Stars Faction Battle",
+            "winner": "Super Mario Galaxy",
+            "points": "Super Mario 64 + Super Mario Sunshine: 23 1-UPS\nSuper Mario Galaxy: 25 1-UPS"
+        },
+        "december": {
+            "year": "2020",
+            "month": "December",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom",
+            "winner": "Everyone!",
+            "points": "N/A"
+        }
+    },
+    "20210": {
+        "january": {
+            "year": "2021",
+            "month": "January",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom",
+            "winner": "Everyone!",
+            "points": "N/A"
+        },
+        "february": {
+            "year": "2021",
+            "month": "February-March",
+            "image": "https://1up.world/assets/images/gallery03/14e1fd05.gif?v=b59e8a6c",
+            "matchup": "Fury Bowser Boss Battle: Fury Bowser Rises...",
+            "winner": "1-Up World (with Bowser Jr.'s Help!)",
+            "points": "Fury Bowser: 0/300 HP"
+        },
+        "march": {
+            "year": "2021",
+            "month": "February-March",
+            "image": "https://1up.world/assets/images/gallery03/14e1fd05.gif?v=b59e8a6c",
+            "matchup": "Fury Bowser Boss Battle: Fury Bowser Rises...",
+            "winner": "1-Up World (with Bowser Jr.'s Help!)",
+            "points": "Fury Bowser: 0/300 HP"
+        },
+        "april": {
+            "year": "2021",
+            "month": "April",
+            "image": "https://1up.world/assets/images/gallery03/f324266a.gif?v=b59e8a6c",
+            "matchup": "Wario & Waluigi Takeover!",
+            "winner": "1-Up World; Consolation Prize: Wario",
+            "points": "Wario: 15 1-UPS\n Waluigi: 13 1-UPS"
+        },
+        "may": {
+            "year": "2021",
+            "month": "May-June",
+            "image": "https://1up.world/assets/images/gallery12/7906fac7.gif?v=b59e8a6c",
+            "matchup": "Magic vs Science: Eyes to the Future",
+            "winner": "Science Specialists",
+            "points": "Magical Maniacs: 15 1-UPS\nScience Specialists: 17 1-UPS"
+        },
+        "june": {
+            "year": "2021",
+            "month": "June",
+            "image": "https://1up.world/assets/images/gallery12/51afe58c.gif?v=b59e8a6c",
+            "matchup": "Peace in the Mushroom Kingdom: E3 Season!",
+            "winner": "Everyone!",
+            "points": "N/A"
+        },
+        "july": {
+            "year": "2021",
+            "month": "July-September",
+            "image": "https://1up.world/assets/images/gallery03/25b5948d.gif?v=b59e8a6c",
+            "matchup": "Cranky Kong Boss Battle: Cranky's Kongtest",
+            "winner": "1-Up World (with The Chimp's Help!)",
+            "points": "1,000,000"
+        },
+        "august": {
+            "year": "2021",
+            "month": "July-September",
+            "image": "https://1up.world/assets/images/gallery03/25b5948d.gif?v=b59e8a6c",
+            "matchup": "Cranky Kong Boss Battle: Cranky's Kongtest",
+            "winner": "1-Up World (with The Chimp's Help!)",
+            "points": "1,000,000"
+        },
+        "september": {
+            "year": "2021",
+            "month": "September-October",
+            "image": "https://1up.world/assets/images/gallery03/1cb24f45.png?v=b59e8a6c",
+            "matchup": "Birds vs Beans: Mass Reincarnation Event",
+            "winner": "TBD!",
+            "points": "TBD!"
+        },
+        "october": {
+            "year": "2021",
+            "month": "September-October",
+            "image": "https://1up.world/assets/images/gallery03/1cb24f45.png?v=b59e8a6c",
+            "matchup": "Birds vs Beans: Mass Reincarnation Event",
+            "winner": "TBD!",
+            "points": "TBD!"
         }
     }
 }
