@@ -40,8 +40,8 @@ module.exports.run = async (client, message, args, level, Discord) => {
 
 module.exports.conf = {
   guildOnly: true,
-  aliases: ['sh'],
-  permLevel: 'Verified',
+  aliases: ['sh','store'],
+  permLevel: 'User',
 };
 
 module.exports.help = {

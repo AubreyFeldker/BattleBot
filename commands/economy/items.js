@@ -51,7 +51,7 @@ module.exports.run = (client, message, args, level) => {
 module.exports.conf = {
   guildOnly: true,
   aliases: ['item', 'inventory', 'inv'],
-  permLevel: 'Verified',
+  permLevel: 'User',
 };
 
 module.exports.help = {

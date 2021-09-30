@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
 module.exports.conf = {
   guildOnly: true,
   aliases: ['g'],
-  permLevel: 'Verified',
+  permLevel: 'User',
   args: 1,
   cooldown: 60,
 };

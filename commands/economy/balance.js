@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
 module.exports.conf = {
   guildOnly: true,
   aliases: ['bal', 'money', 'starbits'],
-  permLevel: 'Verified',
+  permLevel: 'User',
 };
 
 module.exports.help = {
