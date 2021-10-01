@@ -60,7 +60,7 @@ module.exports = async (client, message) => {
     '355139881531342859',
   ];
   // Ensure the user exists in the userDB
-  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0 });
+  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0, prestige: 0 });
 
   // If the message was NOT sent in a protected channel or the channel of a protected category
   if (!protectedChannels.includes(message.channel.id) && !protectedChannels.includes(message.channel.parentID)) {
