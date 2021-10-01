@@ -54,205 +54,99 @@ module.exports = async (client, message) => {
     '355139801676120074',
     '415992061955932160',
     '356505464944459778',
-    '809203591406813205',
-    '809203591406813205',
     '356505383700922370',
     '355139881531342859',
   ];
   // Ensure the user exists in the userDB
-  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0 });
+  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556', prestige: 0) ? 1 : 0 });
 
-  // If the message was NOT sent in a protected channel or the channel of a protected category
-  if (!protectedChannels.includes(message.channel.id) && !protectedChannels.includes(message.channel.parentID)) {
-    // If the user has a previous entry in the pointCooldowns collection and their cooldown expired, increment their points and reset their cooldown
-    // If the user does not have a previous entry, increment their points and create them an entry
-    if (pointCooldowns.has(message.author.id) ? (Date.now() - pointCooldowns.get(message.author.id)) > 120000 : true) {
-      client.userDB.inc(message.author.id, 'points');
-      pointCooldowns.set(message.author.id, Date.now());
+  // If the user has a previous entry in the pointCooldowns collection and their cooldown expired, increment their points and reset their cooldown
+  // If the user does not have a previous entry, increment their points and create them an entry
+  if (pointCooldowns.has(message.author.id) ? (Date.now() - pointCooldowns.get(message.author.id)) > 120000 : true) {
+    client.userDB.inc(message.author.id, 'points');
+    pointCooldowns.set(message.author.id, Date.now());
+  }
+
+  // If the member does not have the highest role you can attain
+  if (!message.member.roles.cache.has('754395863597711360')) {
+
+    // Array of role objects of each rank
+    const userRoles = [
+      message.guild.roles.cache.get('391877990277185556'), // Shroom
+      message.guild.roles.cache.get('751118834206769293'), // Shell
+      message.guild.roles.cache.get('751118889869377656'), // Flower
+      message.guild.roles.cache.get('751616251759165440'), // Leaf
+      message.guild.roles.cache.get('754394768473194607'), // Bell
+      message.guild.roles.cache.get('751616457430925342'), // Feather
+      message.guild.roles.cache.get('754395250042208336'), // Egg
+      message.guild.roles.cache.get('754395466598187148'), // Starbit
+      message.guild.roles.cache.get('751616582307807323'), // Moon
+      message.guild.roles.cache.get('751616793092817038'), // Shine
+      message.guild.roles.cache.get('754395863597711360'), // Special
+      message.guild.roles.cache.get('893381701659656202'), // 1-Up
+    ];
+    // Array if emotes tied to each level-up
+    const levelUpEmojis = [
+      '751523400681259110', // Shroom
+      '751523400782053567', // Shell
+      '751523400421474516', // Flower
+      '751523400803024927', // Leaf
+      '754054543238627389', // Bell
+      '751523400173879486', // Feather
+      '754044526166933654', // Egg
+      '754129851245658112', // Starbit
+      '751523400538783775', // Moon
+      '754060026146193419', // Shine
+      '754044526460665856', // Special
+      '893392833925505075', // 1-Up
+    ];
+    // Points at which each rankup is obtained at
+    const levelUpPoints = [ 15, 150, 500, 1000, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
+
+    // Pre-define leveledUp and newRank to be false and 0 respectively as a starting point
+    let leveledUp = false;
+    let newRank = 0;
+
+    const userRank = userFromDB.rank;
+    if (userFromDB.points >= levelUpPoints[userRank]) {
+      await message.member.roles.add([userRank]);
+      if (userRank != 0) { await message.member.roles.remove([userRank - 1]); }
+
+      client.userDB.inc(message.author.id, 'rank');
+      leveledUp = true;
+      newRank = userRank++;
+
+      if (newRank == 12) { enmap.set(message.author.id, { points: 0, rank: 0, presige: userFromDB.prestige + 1 }); }
     }
 
-    // If the member does not have the highest role you can attain
-    if (!message.member.roles.cache.has('754395863597711360')) {
-      // Get role objects of each rank
-      const shroomRole = message.guild.roles.cache.get('391877990277185556');
-      const shellRole = message.guild.roles.cache.get('751118834206769293');
-      const flowerRole = message.guild.roles.cache.get('751118889869377656');
-      const leafRole = message.guild.roles.cache.get('751616251759165440');
-      const bellRole = message.guild.roles.cache.get('754394768473194607');
-      const featherRole = message.guild.roles.cache.get('751616457430925342');
-      const eggRole = message.guild.roles.cache.get('754395250042208336');
-      const starbitRole = message.guild.roles.cache.get('754395466598187148');
-      const moonRole = message.guild.roles.cache.get('751616582307807323');
-      const shineRole = message.guild.roles.cache.get('751616793092817038');
-      const specialRole = message.guild.roles.cache.get('754395863597711360');
-      // Pre-define leveledUp and newRank to be false and 0 respectively as a starting point
-      let leveledUp = false;
-      let newRank = 0;
-
-      // Find the user's current rank to determine which value of points to look for
-      switch (userFromDB.rank) {
-        // If the user is currently rank 0
-        case 0:
-          // If the user has 10 or more points, give them the shroom role, increase their rank, and set leveledUp to true and newRank to 1
-          if (userFromDB.points >= 10) {
-            await message.member.roles.add(shroomRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 1;
-          }
-          break;
-        // If the user is currently rank 1
-        case 1:
-          // If the user has 150 or more points, give them the shell role, remove the shroom role, increase their rank, and set leveledUp to true and newRank to 2
-          if (userFromDB.points >= 150) {
-            await message.member.roles.add(shellRole);
-            await message.member.roles.remove(shroomRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 2;
-          }
-          break;
-        // If the user is currently rank 2
-        case 2:
-          // If the user has 500 or more points, give them the flower role, remove the shell role, increase their rank, and set leveledUp to true and newRank to 3
-          if (userFromDB.points >= 500) {
-            await message.member.roles.add(flowerRole);
-            await message.member.roles.remove(shellRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 3;
-          }
-          break;
-        // If the user is currently rank 3
-        case 3:
-          // If the user has 1000 or more points, give them the leaf role, remove the flower role, increase their rank, and set leveledUp to true and newRank to 4
-          if (userFromDB.points >= 1000) {
-            await message.member.roles.add(leafRole);
-            await message.member.roles.remove(flowerRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 4;
-          }
-          break;
-        // If the user is currently rank 4
-        case 4:
-          // If the user has 2500 or more points, give them the bell role, remove the leaf role, increase their rank, and set leveledUp to true and newRank to 5
-          if (userFromDB.points >= 2500) {
-            await message.member.roles.add(bellRole);
-            await message.member.roles.remove(leafRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 5;
-          }
-          break;
-        // If the user is currently rank 5
-        case 5:
-          // If the user has 5000 or more points, give them the feather role, remove the bell role, increase their rank, and set leveledUp to true and newRank to 6
-          if (userFromDB.points >= 5000) {
-            await message.member.roles.add(featherRole);
-            await message.member.roles.remove(bellRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 6;
-          }
-          break;
-        // If the user is currently rank 6
-        case 6:
-          // If the user has 7500 or more points, give them the egg role, remove the feather role, increase their rank, and set leveledUp to true and newRank to 7
-          if (userFromDB.points >= 7500) {
-            await message.member.roles.add(eggRole);
-            await message.member.roles.remove(featherRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 7;
-          }
-          break;
-        // If the user is currently rank 7
-        case 7:
-          // If the user has 9999 or more points, give them the starbit role, remove the egg role, increase their rank, and set leveledUp to true and newRank to 8
-          if (userFromDB.points >= 9999) {
-            await message.member.roles.add(starbitRole);
-            await message.member.roles.remove(eggRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 8;
-          }
-          break;
-        // If the user is currently rank 8
-        case 8:
-          // If the user has 13000 or more points, give them the moon role, remove the starbit role, increase their rank, and set leveledUp to true and newRank to 9
-          if (userFromDB.points >= 13000) {
-            await message.member.roles.add(moonRole);
-            await message.member.roles.remove(starbitRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 9;
-          }
-          break;
-        // If the user is currently rank 9
-        case 9:
-          // If the user has 17000 or more points, give them the shine role, remove the moon role, increase their rank, and set leveledUp to true and newRank to 10
-          if (userFromDB.points >= 17000) {
-            await message.member.roles.add(shineRole);
-            await message.member.roles.remove(moonRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 10;
-          }
-          break;
-        // If the user is currently rank 10
-        case 10:
-          // If the user has 22000 or more points, give them the special role, remove the shine role, increase their rank, and set leveledUp to true and newRank to 11
-          if (userFromDB.points >= 22000) {
-            await message.member.roles.add(specialRole);
-            await message.member.roles.remove(shineRole);
-            client.userDB.inc(message.author.id, 'rank');
-            leveledUp = true;
-            newRank = 11;
-          }
-          break;
-        default:
-          // Do nothing as the user will never be anything other than the ranks above
+    // If the member is delayed a level up
+    // (A level up can only be delayed if the user reached the required number of points in #serious-discussion)
+    if (memberLevelUpDelays.has(message.author.id)) {
+      // If the message is not in #serious-discussion
+      // IE. the next message after a level up is outside #serious-discussion
+      if (message.channel.id !== '687843926937305236') {
+        // React to the message with the level up emoji and the emoji corresponding to the new rank of the member
+        if (newRank == 12)
+          await message.react(client.emojis.cache.get('INSERT HERE')); // prestige emote
+        else
+          await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
+        await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
+        // Delete the member's level up delay
+        memberLevelUpDelays.delete(message.author.id);
       }
+    } else if (leveledUp) {
+      // If the member is not delayed a level up and they did in fact level up
 
-      // Ids of the emojis corresponding to each rank
-      const levelUpEmojis = [
-        '751523400681259110', // Shroom
-        '751523400782053567', // Shell
-        '751523400421474516', // Flower
-        '751523400803024927', // Leaf
-        '754054543238627389', // Bell
-        '751523400173879486', // Feather
-        '754044526166933654', // Egg
-        '754129851245658112', // Starbit
-        '751523400538783775', // Moon
-        '754060026146193419', // Shine
-        '754044526460665856', // Special
-      ];
-
-      // If the member is delayed a level up
-      // (A level up can only be delayed if the user reached the required number of points in #serious-discussion)
-      if (memberLevelUpDelays.has(message.author.id)) {
-        // If the message is not in #serious-discussion
-        // IE. the next message after a level up is outside #serious-discussion
-        if (message.channel.id !== '687843926937305236') {
-          // React to the message with the level up emoji and the emoji corresponding to the new rank of the member
-          await message.react(client.emojis.cache.get('751623091200983050'));
-          await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
-          // Delete the member's level up delay
-          memberLevelUpDelays.delete(message.author.id);
-        }
-      } else if (leveledUp) {
-        // If the member is not delayed a level up and they did in fact level up
-
-        // If the channel the member leveled up in is #serious-discussion, delay the emoji reactions until the next message outside of #serious-discussion
-        if (message.channel.id === '687843926937305236') {
-          memberLevelUpDelays.set(message.author.id, newRank);
-        } else {
-          // If the message is not in #serious-discussion, react to the message with the level up emoji and the emoji corresponding to the new rank of the member
-          await message.react(client.emojis.cache.get('751623091200983050'));
-          await message.react(client.emojis.cache.get(levelUpEmojis[newRank - 1]));
-        }
+      // If the channel the member leveled up in is #serious-discussion, delay the emoji reactions until the next message outside of #serious-discussion
+      if (message.channel.id === '687843926937305236') {
+        memberLevelUpDelays.set(message.author.id, newRank);
+      } else {
+        // If the message is not in #serious-discussion, react to the message with either the level up emoji or prestige emote and the emoji corresponding to the new rank of the member
+        if (newRank == 12)
+          await message.react(client.emojis.cache.get('INSERT HERE')); // prestige emote
+        else
+          await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
+        await message.react(client.emojis.cache.get(levelUpEmojis[newRank - 1]));
       }
     }
   }

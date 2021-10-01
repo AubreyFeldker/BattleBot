@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, level) => {
     const characterObject = teamSettings.unlockableTeams.find((c) => c.teams.includes(character));
     // If the user is a high enough rank to join this team, set validTeam to true
     // If the user does not have a high enough rank, error on team not unlocked
-    if (characterObject.rankNeeded <= user.rank) {
+    if (characterObject.rankNeeded <= user.rank || user.prestige > 0) {
       validTeam = true;
     } else {
       message.error('Not Unlocked!', `You haven't unlocked that team yet! You must reach \`rank ${characterObject.rankNeeded}\` to unlock **${character}**! Read more about the ranking system in <#714725324239405096>!`);
