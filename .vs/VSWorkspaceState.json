@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\commands",
+    "\\commands\\economy",
     "\\commands\\moderation",
     "\\commands\\roles",
     "\\events",
