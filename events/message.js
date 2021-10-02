@@ -127,7 +127,7 @@ module.exports = async (client, message) => {
       if (message.channel.id !== '687843926937305236') {
         // React to the message with the level up emoji and the emoji corresponding to the new rank of the member
         if (newRank == 12)
-          await message.react(client.emojis.cache.get('INSERT HERE')); // prestige emote
+          await message.react(client.emojis.cache.get('751623091200983050')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
         await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
@@ -143,7 +143,7 @@ module.exports = async (client, message) => {
       } else {
         // If the message is not in #serious-discussion, react to the message with either the level up emoji or prestige emote and the emoji corresponding to the new rank of the member
         if (newRank == 12)
-          await message.react(client.emojis.cache.get('INSERT HERE')); // prestige emote
+          await message.react(client.emojis.cache.get('751623091200983050')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
         await message.react(client.emojis.cache.get(levelUpEmojis[newRank - 1]));
