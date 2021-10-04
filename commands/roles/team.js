@@ -7,6 +7,8 @@ module.exports.run = async (client, message, args, level) => {
   // Pre-define validTeam to determine if the provided team exists and is unlocked
   let validTeam = false;
 
+  excessiveCharacterArray = ['Mario', 'Luigi', 'Peach', 'Daisy', 'Toad', 'Yoshi', 'Bowser', 'DK', 'Wario', 'Waluigi', 'Goomba', 'Koopa', 'Bowser Jr.', 'Diddy', 'Dixie', 'Cranky', 'Toadette', 'Toadsworth', 'Petey', 'Bobomb', 'Boo', 'E. Gadd', 'Kamek', 'Luma', 'Funky', 'Rosalina', 'King Boo', 'K. Rool', 'Metal Mario', 'Pink Gold Peach', 'Dry Bowser', 'Vampire Wario', 'Pyoro', 'Pianta', 'BROS', 'Bayonetta', 'Marty'];
+
   // Define a helper method to check if a string is uppercase
   const isUpperCase = (string) => /^[A-Z_0-9]*$/.test(string);
   // Find the team in the teams array
@@ -41,8 +43,8 @@ module.exports.run = async (client, message, args, level) => {
     // If the member does not have this team role
     if (!message.member.roles.cache.has(role.id)) {
       // If the member has a different team role, find it and remove it
-      if (message.member.roles.cache.some((r) => r.name.includes('Team'))) {
-        await message.member.roles.remove(message.member.roles.cache.find((r) => r.name.includes('Team')));
+      if (message.member.roles.cache.some((r) => r.name.includes('Team') && excessiveCharacterArray.includes(r.name.substr(r.name.indexOf(' ')+1)))) {
+        await message.member.roles.remove(message.member.roles.cache.find((r) => r.name.includes('Team')&& excessiveCharacterArray.includes(r.name.substr(r.name.indexOf(' ')+1))));
       }
 
       // Add the team role to the member, display a success message, and delete the message that initiated the command

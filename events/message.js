@@ -58,7 +58,7 @@ module.exports = async (client, message) => {
     '355139881531342859',
   ];
   // Ensure the user exists in the userDB
-  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556', prestige: 0) ? 1 : 0 });
+  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0 , prestige: 0});
 
   // If the user has a previous entry in the pointCooldowns collection and their cooldown expired, increment their points and reset their cooldown
   // If the user does not have a previous entry, increment their points and create them an entry
@@ -101,7 +101,7 @@ module.exports = async (client, message) => {
       '893392833925505075', // 1-Up
     ];
     // Points at which each rankup is obtained at
-    const levelUpPoints = [ 15, 150, 500, 1000, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
+    const levelUpPoints = [ 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
 
     // Pre-define leveledUp and newRank to be false and 0 respectively as a starting point
     let leveledUp = false;
@@ -109,14 +109,14 @@ module.exports = async (client, message) => {
 
     const userRank = userFromDB.rank;
     if (userFromDB.points >= levelUpPoints[userRank]) {
-      await message.member.roles.add([userRank]);
-      if (userRank != 0) { await message.member.roles.remove([userRank - 1]); }
+      await message.member.roles.add(userRoles[userRank]);
+      if (userRank != 0) { await message.member.roles.remove(userRoles[userRank - 1]); }
 
       client.userDB.inc(message.author.id, 'rank');
       leveledUp = true;
-      newRank = userRank++;
+      newRank = userRank + 1;
 
-      if (newRank == 12) { enmap.set(message.author.id, { points: 0, rank: 0, presige: userFromDB.prestige + 1 }); }
+      if (newRank == 12) { enmap.set(message.author.id, { points: userFromDB.points - 27000, rank: 0, presige: userFromDB.prestige + 1 }); }
     }
 
     // If the member is delayed a level up
@@ -127,7 +127,7 @@ module.exports = async (client, message) => {
       if (message.channel.id !== '687843926937305236') {
         // React to the message with the level up emoji and the emoji corresponding to the new rank of the member
         if (newRank == 12)
-          await message.react(client.emojis.cache.get('751623091200983050')); // prestige emote
+          await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
         await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
@@ -143,7 +143,7 @@ module.exports = async (client, message) => {
       } else {
         // If the message is not in #serious-discussion, react to the message with either the level up emoji or prestige emote and the emoji corresponding to the new rank of the member
         if (newRank == 12)
-          await message.react(client.emojis.cache.get('751623091200983050')); // prestige emote
+          await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
         await message.react(client.emojis.cache.get(levelUpEmojis[newRank - 1]));
