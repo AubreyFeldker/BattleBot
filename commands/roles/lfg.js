@@ -7,16 +7,18 @@ module.exports.run = async (client, message, args, level) => { // eslint-disable
     // Some fancy regex action
     // Basically find whether the user said he, him, she, her, they, or them and set the pronoun variable
     // If all user provided something different, error on invalid pronoun
-    if (/(SUPER MARIO)? 3D WORLD|3DW/i.test(input.toUpperCase())) {
+    if (/3D WORLD|3DW/i.test(input.toUpperCase())) {
         game = '3D World';
-    } else if (/(S)?MM2|(SUPER)? MARIO MAKER (2)?/i.test((input.toUpperCase()))) {
+    } else if (/MM|MAKER/i.test((input.toUpperCase()))) {
         game = 'Mario Maker 2';
-    } else if (/MARIO PARTY|(S)?MP(SS)?/i.test((input.toUpperCase()))) {
+    } else if (/PARTY|MP/i.test((input.toUpperCase()))) {
         game = 'Mario Party';
-    } else if (/(SUPER)? SMASH (BROS(\.)?)? (ULTIMATE)?|SSB(U)?/i.test((input.toUpperCase()))) {
+    } else if (/SMASH|SSB/i.test((input.toUpperCase()))) {
         game = 'Smash Bros.';
+    } else if (/KART|MK/i.test((input.toUpperCase()))) {
+        game = 'Mario Kart';
     } else {
-      return message.error('Invalid Game!', 'Please input a game with a LFG role! These games are \`Mario Kart\`, \`Super Smash Bros.\`, \`Super Mario 3D World\`, and \`Mario Party\`!');
+      return message.error('Invalid Game!', 'Please input a game with a LFG role! These games are \`Mario Party\`, \`Super Smash Bros.\`, \`Super Mario 3D World\`, \`Mario Kart\`, and \`Super Mario Maker 2\`!');
     }
   
     // Find the role corresponding to the inputted game
@@ -49,9 +51,9 @@ module.exports.run = async (client, message, args, level) => { // eslint-disable
   };
   
   module.exports.help = {
-    name: 'goesby',
+    name: 'lfg',
     category: 'roles',
-    description: 'Gives the user the specified pronoun role',
-    usage: 'goesby <he|she|they>',
-    details: 'goesby <he|she|they> => The pronoun role to add',
+    description: 'Gives the user the specified LFG role',
+    usage: 'lfg <Mario Party/Super Smash Bros./Super Mario 3D World/Mario Kart/Super Mario Maker 2>',
+    details: 'lfg <Mario Kart/Super Smash Bros./Super Mario 3D World/Mario Kart/Super Mario Maker 2> => The LFG role to add',
   };
