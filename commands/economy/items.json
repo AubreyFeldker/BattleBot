@@ -575,6 +575,11 @@
         "price": 2004
     },
     {
+        "name": " Vintage \"Cranky Kong vs The Champ Showdown - 1981\" poster",
+        "id": 115,
+        "price": 198100
+    },
+    {
         "name": "1 million starbits (cosmetic)",
         "id": 116,
         "price": 100000
@@ -590,7 +595,7 @@
         "price": 50000
     },
     {
-        "name": "one of Giga Bowser's spikes",
+        "name": "One of Fury Bowser's spikes",
         "id": 119,
         "price": 80000
     }

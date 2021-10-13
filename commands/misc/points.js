@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args, level) => {
   }
 
   // Concatenate the user's information and points and send the stats
-  msg += `\n**${member.displayName}** (${args[0]}) - ${user.points} points -  Rank ${user.rank}`;
+  msg += `\n**${member.displayName}** (${args[0]}) - ${user.points} points -  Rank ${user.rank} - Prestige ${user.prestige}`;
   return message.channel.send(`**Ranked Statistics**\nName - Points - Rank${msg}`, { split: true });
 
   // ALL THE BELOW CODE IS AN IDEA TO EXPAND UPON THE POINTS COMMAND

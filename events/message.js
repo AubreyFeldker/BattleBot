@@ -68,7 +68,7 @@ module.exports = async (client, message) => {
   }
 
   // If the member does not have the highest role you can attain
-  if (!message.member.roles.cache.has('754395863597711360')) {
+  if (true) {
 
     // Array of role objects of each rank
     const userRoles = [
@@ -105,7 +105,7 @@ module.exports = async (client, message) => {
 
     // Pre-define leveledUp and newRank to be false and 0 respectively as a starting point
     let leveledUp = false;
-    let newRank = 0;
+    let newRank = userFromDB.rank + 1;
 
     const userRank = userFromDB.rank;
     if (userFromDB.points >= levelUpPoints[userRank]) {
@@ -115,8 +115,10 @@ module.exports = async (client, message) => {
       client.userDB.inc(message.author.id, 'rank');
       leveledUp = true;
       newRank = userRank + 1;
-
-      if (newRank == 12) { enmap.set(message.author.id, { points: userFromDB.points - 27000, rank: 0, presige: userFromDB.prestige + 1 }); }
+      if (userRank === 11) {
+	client.userDB.set(message.author.id, { points: userFromDB.points - 27000, rank: 0}); // CHANGE THIS
+	client.userDB.inc(message.author.id, 'prestige');
+      }
     }
 
     // If the member is delayed a level up
@@ -126,7 +128,7 @@ module.exports = async (client, message) => {
       // IE. the next message after a level up is outside #serious-discussion
       if (message.channel.id !== '687843926937305236') {
         // React to the message with the level up emoji and the emoji corresponding to the new rank of the member
-        if (newRank == 12)
+        if (userRank === 11)
           await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
@@ -142,11 +144,11 @@ module.exports = async (client, message) => {
         memberLevelUpDelays.set(message.author.id, newRank);
       } else {
         // If the message is not in #serious-discussion, react to the message with either the level up emoji or prestige emote and the emoji corresponding to the new rank of the member
-        if (newRank == 12)
+        if (userRank === 11)
           await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
-        await message.react(client.emojis.cache.get(levelUpEmojis[newRank - 1]));
+        await message.react(client.emojis.cache.get(levelUpEmojis[userRank]));
       }
     }
   }
