@@ -79,9 +79,9 @@ module.exports = (client) => {
         }
 
         if (client.config.affiliateUsers.includes(tweet.user.id_str)) {
-          client.twitterHookAffiliate.send(`http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, { username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });
+          client.twitterHookAffiliate.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.screen_name, avatarURL: `${tweet.user.profile_image_url_https}` });
         } else if (client.config.officialUsers.includes(tweet.user.id_str)) {
-          client.twitterHookOfficial.send(`http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, { username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });
+          client.twitterHookOfficial.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.screen_name, avatarURL: `${tweet.user.profile_image_url_https}` });
         }
       })
       .on('error', (error) => console.error(error))
