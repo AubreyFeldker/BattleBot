@@ -19,6 +19,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'balance',
   category: 'economy',
+  minidesc: 'Shows user balance',
   description: 'Shows your current balance or the balance of a mentioned user',
   usage: 'balance <@user>',
   details: '<@user> => (Optional) Any valid member of the server',

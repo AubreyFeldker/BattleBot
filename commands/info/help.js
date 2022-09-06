@@ -20,7 +20,7 @@ module.exports.run = (client, message, [command], level) => {
 
     // Building the help menu then send it with the asciidoc code
     let currentCategory = '';
-    let output = `= Command List =\n\n[Use ${settings.prefix}help <command name> for details]\n`;
+    let output = `\`\`\`asciidoc\n= Command List =\n\n[Use ${settings.prefix}help <command name> for details]\n`;
     const sorted = commands.array().sort((p, c) => (p.help.category > c.help.category ? 1 // eslint-disable-line no-nested-ternary
       : p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1));
     sorted.forEach((c) => {
@@ -29,15 +29,16 @@ module.exports.run = (client, message, [command], level) => {
         output += `\u200b\n== ${cat} ==\n`;
         currentCategory = cat;
       }
-      output += `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
+      output += `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.minidesc}\n`;
     });
+    output += '```';
     message.channel.send(output, { code: 'asciidoc', split: { char: '\u200b' } });
   } else if (client.commands.has(command) || client.aliases.has(command)) {
     // If provided command exists, get it from the commands Enmap
     const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 
     // Start building the output
-    let output = `= ${cmd.help.name} = \n${cmd.help.description}\n\nUsage :: ${settings.prefix}${cmd.help.usage}`;
+    let output = `\`\`\`asciidoc\n= ${cmd.help.name} = \n${cmd.help.description}\n\nUsage :: ${settings.prefix}${cmd.help.usage}`;
 
     // If the command has aliases, add them to the output
     if (cmd.conf.aliases) {
@@ -52,6 +53,7 @@ module.exports.run = (client, message, [command], level) => {
     output += `\nGuild Only :: ${cmd.conf.guildOnly}\nPerm Level :: ${cmd.conf.permLevel}`;
 
     // Send the output
+    output += '```';
     message.channel.send(output, { code: 'asciidoc' });
   } else {
     // if the command provided does not exist, error on invalid command

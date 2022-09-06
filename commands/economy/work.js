@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   const rJob = Math.floor(Math.random() * jobs.length);
 
   // Create final string and get output from pre-built work function
-  const final = `${characters[rChar]}'s ${jobs[rJob]}`;
+  const final = `${characters[rChar]}'s ${jobs[rJob]}`; //'
   const output = await eco.ecoWork(message.author.id, {
     failurerate: 20, // Failure rate of 20%
     money: Math.floor(Math.random() * 4996) + 5, // Random money output between 5 and 5000
@@ -36,6 +36,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'work',
   category: 'economy',
-  description: 'Earns you starbits by working various jobs. Gives you 5-5000 starbits randomly. Has a failure rate of 20%',
+  minidesc: 'Earn more starbits by working an hourly job',
+  description: 'Earns you starbits by working various jobs, once per hour. Gives you 5-5000 starbits randomly. Has a failure rate of 20%',
   usage: 'work',
 };

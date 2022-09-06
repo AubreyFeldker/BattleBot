@@ -57,6 +57,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'items',
   category: 'economy',
+  minidesc: 'Check items you purchased',
   description: 'Displays your collection of purchased items',
   usage: 'items',
 };

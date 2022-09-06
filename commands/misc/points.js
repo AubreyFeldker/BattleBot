@@ -139,6 +139,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'points',
   category: 'misc',
+  minidesc: 'Controls user points',
   description: 'Gives ranking info on users',
   usage: 'points <id>',
   details: '<id> => The id of the user to display points for',

@@ -46,6 +46,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'buy',
   category: 'economy',
+  minidesc: 'Buy an item with a specified ID',
   description: 'Adds the specified item to your collection and deducts the item amount from your starbit count',
   usage: 'buy <item id #>',
   details: '<item id #> => The ID of the item you wish to buy, can be found in the shop command',

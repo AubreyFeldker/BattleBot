@@ -81,6 +81,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'friendcode',
   category: 'misc',
+  minidesc: 'Add and see your friendcode',
   description: 'Controls the friendcode db',
   usage: 'friendcode <-set|-get|-del> <code|@member>',
   details: "<-set|-get|-del> => Whether to set a new friend code, get an existing one, or delete an existing one. (Notice the - it's important)\n<code|@member> => Only necessary if you're setting a new code or getting the code of another member.",

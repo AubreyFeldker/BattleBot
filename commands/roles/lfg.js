@@ -17,6 +17,8 @@ module.exports.run = async (client, message, args, level) => { // eslint-disable
         game = 'Smash Bros.';
     } else if (/KART|MK/i.test((input.toUpperCase()))) {
         game = 'Mario Kart';
+    } else if (/STRIKERS|FOOTBALL|MS/i.test((input.toUpperCase()))) {
+        game = 'Mario Strikers';
     } else {
       return message.error('Invalid Game!', 'Please input a game with a LFG role! These games are \`Mario Party\`, \`Super Smash Bros.\`, \`Super Mario 3D World\`, \`Mario Kart\`, and \`Super Mario Maker 2\`!');
     }
@@ -53,6 +55,7 @@ module.exports.run = async (client, message, args, level) => { // eslint-disable
   module.exports.help = {
     name: 'lfg',
     category: 'roles',
+    minidesc: 'Get a LFG role',
     description: 'Gives the user the specified LFG role',
     usage: 'lfg <Mario Party/Super Smash Bros./Super Mario 3D World/Mario Kart/Super Mario Maker 2>',
     details: 'lfg <Mario Kart/Super Smash Bros./Super Mario 3D World/Mario Kart/Super Mario Maker 2> => The LFG role to add',

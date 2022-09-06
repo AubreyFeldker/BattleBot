@@ -3,6 +3,17 @@ module.exports.run = async (client, message, args, level) => {
   // Ensure the factionSettings object exists
   const factionSettings = client.factionSettings.ensure(message.guild.id, client.config.factionSettings);
 
+  //Hardcore Ullumination Fan finder
+  const input = args.join(' ');
+  if (/pratt/.test(input.toLowerCase())) {
+	const role = message.guild.roles.cache.find((r) => r.name == "Hardcore Illumination Fan");
+	message.member.roles.add(role)
+        .then(() => {
+          message.success('Success!', `${message.author} has successfully joined the ranks of **Hardcore Illumination Fan**!`);
+          message.delete().catch(console.error);
+        }).catch(console.error);
+  } else {
+
   // Define a helper method to check if a string is uppercase
   const isUpperCase = (string) => /^[A-Z_0-9]*$/.test(string);
   // Find the character in the factionSettings object
@@ -44,7 +55,7 @@ module.exports.run = async (client, message, args, level) => {
   } else {
     // If the character provided is not found, error on invalid character
     message.error('Invalid Character!', `Valid characters include: **${factionSettings.chars.join('**, **')}**`);
-  }
+  }}
 };
 
 module.exports.conf = {
@@ -57,6 +68,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'join',
   category: 'roles',
+  minidesc: 'Join a current faction',
   description: 'Joins the specified faction/fan',
   usage: 'join <character>',
   details: '<character> => One of the current characters available to join',

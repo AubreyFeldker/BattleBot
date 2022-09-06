@@ -28,6 +28,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'eval',
   category: 'system',
+  minidesc: 'Executes JS code',
   description: 'Executes the given JavaScript code',
   usage: 'eval <code>',
   details: '<code> => Any valid JavaScript code',

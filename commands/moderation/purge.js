@@ -24,6 +24,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'purge',
   category: 'moderation',
+  minidesc: 'Purges a stated # of messages',
   description: 'Purges the stated number of messages in a channel',
   usage: 'purge <number>',
   details: "<number> => From 1-100. I wish it could be more but Discord's API doesn't allow that...",

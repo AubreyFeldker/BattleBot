@@ -47,9 +47,11 @@ fs.readdir('./events/', (err, files) => {
 
   // For each file in the events directory, require it, get the name, and bind it to the client, allowing the client object to be used in every event
   return files.forEach((file) => {
+  	 if (! file.includes('~')) {
     const event = require(`./events/${file}`);
     const eventName = file.split('.')[0];
-    client.on(eventName, event.bind(null, client));
+    console.log(file);
+    client.on(eventName, event.bind(null, client)); }
   });
 });
 
@@ -126,9 +128,15 @@ client.twitterHookOfficial = new Discord.WebhookClient({
 id: client.config.twitterHookOfficialID,
 token: client.config.twitterHookOfficialToken
 });
+client.monsterHunterTwitter = new Discord.WebhookClient({ 
+id: client.config.monsterHunterOfficialID,
+token: client.config.monsterHunterOfficialToken
+});
+
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'friendCodes', 'results', 'enabledCmds', 'teamSettings', 'selfAssignRoles', 'userDB'], { ensureProps: true }));
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'selfAssignRoles', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats'], { ensureProps: true }));
 
 // Login to the Discord API using the token in config.js
+console.log('test and seethe');
 client.login(config.token);

@@ -49,6 +49,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'goesby',
   category: 'roles',
+  minidesc: 'Gives a pronoun role',
   description: 'Gives the user the specified pronoun role',
   usage: 'goesby <he|she|they>',
   details: 'goesby <he|she|they> => The pronoun role to add',

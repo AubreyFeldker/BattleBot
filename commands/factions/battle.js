@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
     // If there's not an existing message, send the initial embed and save the id.
     // If there is, get that message and edit the embed
     if (!embedMsg) {
-      const msg = await message.channel.send(embed);
+      const msg = await message.channel.send({embeds: [embed]});
       embedMsg = msg.id;
     } else {
       const fetchedEmbed = message.channel.messages.cache.get(embedMsg) || await message.channel.messages.fetch(embedMsg);
@@ -122,6 +122,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'battle',
   category: 'factions',
+  minidesc: 'Start/end of Faction Battle',
   description: 'Controls faction battle settings through an interactive dialogue',
   usage: 'battle <-start|-end>',
 };

@@ -21,7 +21,8 @@ module.exports.conf = {
 module.exports.help = {
   name: 'meme',
   category: 'fun',
-  description: 'Posts a meme',
+  minidesc: 'Posts a meme',
+  description: 'Posts a meme, can only be used in #mario-memes',
   usage: '<fun>',
   details: '<fun> => There. I just memed',
 };

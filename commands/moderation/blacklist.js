@@ -22,6 +22,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'blacklist',
   category: 'moderation',
+  minidesc: 'Blacklist a word from being said',
   description: 'Blacklists the given word/phrase/link. Any member who uses a blacklisted item will be automatically kicked.',
   usage: 'blacklist <word|phrase|link>',
   details: '<word|phrase|link> => Any word, phrase, or link you wish to blacklist',

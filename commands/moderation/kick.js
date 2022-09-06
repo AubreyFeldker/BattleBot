@@ -35,6 +35,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'kick',
   category: 'moderation',
+  minidesc: 'Kick a user',
   description: 'kicks the mentioned member. Can be used with or without a stated reason.',
   usage: 'kick <@member> <reason>',
   details: '<@member> => Any valid member of the server that does not have a higher role and is not the owner.\n<reason> => The reason for the kick. Totally optional.',

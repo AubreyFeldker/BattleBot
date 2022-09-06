@@ -17,13 +17,28 @@ module.exports = (client) => {
     client.user.setActivity(activitiesList[index]);
   }, 30000);
 
-  try {
-    client.startTwitterFeed();
-  } catch (err) {
-    // The stream function returned an error
-    console.error(err);
-  }
+    var currStream = client.startTwitterFeed();
+
+  // Every 12 hours, the bot will restart the twitter feed to ensure it doesn't break every time
+    setTimeout(() => {
+    client.clearAllTimers();
+    process.exit(0);
+  }, (3600000 * 12)); 
+
+    const now = new Date();
+    const noon = new Date(
+	now.getFullYear(),
+	now.getMonth(),
+	now.getDate(),
+	12, 0, 0);
+
+    if (noon.getTime() > now.getTime()) {
+	    setTimeout(() => {
+		client.sendOutQuestion();
+	    }, (noon.getTime() - now.getTime()));
+    }
+	console.log(`${noon.getTime() - now.getTime()}`);
 
   // Logging a ready message on first boot
-  console.log(`Ready to follow orders sir, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+  console.log(`Ready to follow orders ma'am, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
 };

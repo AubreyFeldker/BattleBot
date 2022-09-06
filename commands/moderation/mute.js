@@ -27,6 +27,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'mute',
   category: 'moderation',
+  minidesc: 'Brick Blocks a user',
   description: 'Gives the mentioned user the Brick Block role',
   usage: 'mute <@user>',
   details: '<@user> => Any valid member of the server',

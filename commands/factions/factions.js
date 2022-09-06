@@ -34,6 +34,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'factions',
   category: 'factions',
+  minidesc: 'See current faction standings',
   description: 'Displays the current amount of users in each faction as well as how many 1-Ups each faction has',
   usage: 'factions',
 };

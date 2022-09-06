@@ -39,6 +39,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'gamble',
   category: 'economy',
+  minidesc: 'Gambles specified # of starbits',
   description: 'Gambles the specified amount of starbits',
   usage: 'gamble <amount>',
   details: '<amount> => The amount you wish to gamble. Must be equal to or less than what you own',

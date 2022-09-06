@@ -111,7 +111,6 @@ module.exports.run = async (client, message, args, level, Discord) => {
     const owner = await client.fetchOwner();
 
     const rankEmbed = new Discord.MessageEmbed()
-        .setAuthor(message.author.tag)
         .setColor(color)
         .setFooter(`Created and Maintained by ${owner.tag} | ${client.version}`, client.user.displayAvatarURL())
         .setTimestamp()
@@ -138,7 +137,8 @@ args: 0,
 
 module.exports.help = {
 name: 'myprogress',
-category: 'points',
+category: 'misc',
+minidesc: 'See your journey to the next level',
 description: 'Checks your progress to the next rank-up',
 usage: 'myprogress',
 };

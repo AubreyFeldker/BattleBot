@@ -37,7 +37,8 @@ module.exports.conf = {
 module.exports.help = {
   name: 'sell',
   category: 'economy',
-  description: 'Sells the specified item and adds the item amount to your coin count',
+  minidesc: 'Sell an item for half its asking price',
+  description: 'Sells the specified item and adds 50% of the item amount to your starbit count',
   usage: 'sell <item id #>',
   details: '<item id #> => The ID of the item you wish to sell, can be found in the shop command',
 };

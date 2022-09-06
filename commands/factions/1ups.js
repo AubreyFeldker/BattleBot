@@ -48,6 +48,7 @@ module.exports.conf = {
 module.exports.help = {
   name: '1ups',
   category: 'factions',
+  minidesc: 'Add or remove faction 1-ups',
   description: 'Controls the 1-up database',
   usage: '1ups <-add|-remove> <character> <number>',
   details: "<-add|-remove> => The operation to use, (notice the - it's important!) \n<character> => The name of the character you wish to give 1-ups to \n<number> => Obviously the number of 1-ups to give, 1-∞",

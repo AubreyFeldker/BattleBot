@@ -23,6 +23,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'daily',
   category: 'economy',
+  minidesc: 'Get starbits once a day',
   description: 'Gives you your daily starbits which reset every 12 hours',
   usage: 'daily',
 };

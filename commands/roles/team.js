@@ -72,6 +72,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'team',
   category: 'roles',
+  minidesc: 'Join one of the teams',
   description: 'Joins the specified team',
   usage: 'team <character>',
   details: '<character> => One of the current characters available to join',

@@ -39,6 +39,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'results',
   category: 'factions',
+  minidesc: 'Look through previous Faction Battle results',
   description: 'Displays the results of the specified Faction Battle',
   usage: 'results <month> <year>',
   details: '<month> => between January and December\n<year> => between 2017 and the current year\nNOTE: The server was not around before September, 2017!',

@@ -33,6 +33,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'reload',
   category: 'system',
+  minidesc: 'Reloads a command',
   description: 'Deletes the cache and reloads the speciied command',
   usage: 'reload <command name>',
   details: '<command name> => Any valid command name',

@@ -35,6 +35,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'ban',
   category: 'moderation',
+  minidesc: 'Ban a user',
   description: 'Bans the mentioned member. Can be used with or without a stated reason.',
   usage: 'ban <@member> <reason>',
   details: '<@member> => Any valid member of the server that does not have a higher role and is not the owner.\n<reason> => The reason for the ban. Totally optional.',

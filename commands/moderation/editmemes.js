@@ -55,6 +55,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'editmemes',
   category: 'moderation',
+  minidesc: 'Edit the list of memes',
   description: 'Edits the list of memes available through the `.meme` command',
   usage: '.editmemes <add/remove> <link>',
 };

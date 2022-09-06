@@ -56,6 +56,7 @@ module.exports.conf = {
 module.exports.help = {
 	name: 'reincarnate',
 	category: 'roles',
+        minidesc: 'An arcane command from another time',
 	description: 'Allows you to be reborn as either a bird or a bean',
 	usage: 'reincarnate',
 	details: '',

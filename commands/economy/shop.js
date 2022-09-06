@@ -47,6 +47,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'shop',
   category: 'economy',
+  minidesc: 'Got a selection of good things on sale, stranger',
   description: 'Displays the items available for purchase',
   usage: 'shop',
 };

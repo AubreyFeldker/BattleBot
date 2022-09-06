@@ -5,7 +5,7 @@ module.exports.run = (client, message, args, level, Discord) => {
 
   // Build the initial emotes embed
   const embed = new Discord.MessageEmbed()
-    .setAuthor(`${message.guild.name}'s Emotes`, message.guild.iconURL({ format: 'gif' }))
+    .setAuthor(`${message.guild.name}'s Emotes`, message.guild.iconURL({ format: 'gif' })) //'
     .setColor('GREEN');
 
   // Simple split functon
@@ -68,7 +68,7 @@ module.exports.run = (client, message, args, level, Discord) => {
         // We need to create separate embeds so one does not overwrite the other
         if (resultStatic.length) {
           const staticEmbed = new Discord.MessageEmbed()
-            .setAuthor(`${message.guild.name}'s Emotes`, message.guild.iconURL({ format: 'gif' }))
+            .setAuthor(`${message.guild.name}'s Emotes`, message.guild.iconURL({ format: 'gif' })) //'
             .setColor('GREEN');
 
           embedAdd(resultStatic, staticEmbed, 'Static');
@@ -78,7 +78,7 @@ module.exports.run = (client, message, args, level, Discord) => {
         // If the animated emotes array is not empty, run the helper method to add fields to the embed and send the embed
         if (resultAnimated.length) {
           const animatedEmbed = new Discord.MessageEmbed()
-            .setAuthor(`${message.guild.name}'s Emotes`, message.guild.iconURL({ format: 'gif' }))
+            .setAuthor(`${message.guild.name}'s Emotes`, message.guild.iconURL({ format: 'gif' })) //'
             .setColor('GREEN');
 
           embedAdd(resultAnimated, animatedEmbed, 'Animated');
@@ -103,6 +103,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'emotes',
   category: 'misc',
+  minidesc: 'See server emotes',
   description: "Lists a server's emotes",
   usage: 'emotes <-static|-animated|-all>',
   details: "<-static|-animated|-all> => Whether to show static emotes, animated emotes, or all emotes. (Notice the - it's important",

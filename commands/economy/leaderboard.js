@@ -52,6 +52,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'leaderboard',
   category: 'economy',
+  minidesc: 'Ranks users by their amount of starbits',
   description: 'Shows the top 10 users on the server. If a user is mentioned, tells the position of the user on the leaderboard',
   usage: 'leaderboard <@user>',
   details: '<@user> => (Optional) Any valid member of the server',

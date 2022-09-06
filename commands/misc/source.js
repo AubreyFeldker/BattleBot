@@ -31,6 +31,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'source',
   category: 'misc',
+  minidesc: 'Gives raw code source of a message',
   description: "Gets the specified message and displays it's raw code blocks form",
   usage: 'source <channel> <messageID>',
   details: "<channel> The channel the message is from. (Only necessary if the message is not from the current channel.)\n<messageID> => The ID of the message. Can be found by right clicking a message and clicking 'Copy ID' with Developer Mode enabled.",

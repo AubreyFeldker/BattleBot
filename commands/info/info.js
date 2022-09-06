@@ -117,6 +117,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'info',
   category: 'info',
+  minidesc: 'Various types of info',
   description: 'Provides info of the specified source',
   usage: 'info <-bot|-user|-server>',
   details: "<-bot|-user|-server> => The source of info, (notice the - it's important)",

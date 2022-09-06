@@ -11,7 +11,7 @@ const pointCooldowns = new Discord.Collection();
 const memberLevelUpDelays = new Discord.Collection();
 
 module.exports = async (client, message) => {
-  // Ignore all bots
+	// Ignore all bots
   if (message.author.bot) {
     return;
   }
@@ -48,6 +48,17 @@ module.exports = async (client, message) => {
     }
   }
 
+  // Deletes messages about the illumination mario movie from #mario-movie (april fools)
+  //if (message.channel.id == 'a') {
+//	if (/illumination|animated|chris|pratt|jack|2022|minion|seth|rogan|illumination|cranky|dk|kong|kamek|peach|charlie|anya|taylorjoy|sonic|angrybirds/.test(message.content.toLowerCase().replace(/\s+/g, ''))) {
+//		message.delete();
+//		message.channel.send(`<@${message.member.id}> This channel is for discussion of the *Super Mario Bros.* movie **exclusively**. Discussion of all other movies will be deleted.`)
+//		.then(msg => {
+ //   			setTimeout(() => msg.delete(), 10000)
+ //		});
+//	}
+ // }
+
   // Channels and categories ignored from ranking
   const protectedChannels = [
     '355186664869724161',
@@ -58,16 +69,19 @@ module.exports = async (client, message) => {
     '355139881531342859',
   ];
   // Ensure the user exists in the userDB
-  const userFromDB = client.userDB.ensure(message.author.id, { points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0 , prestige: 0});
+  if (typeof client.userDB.get(message.author.id) === "undefined") { //Bandaid solution to new users not being correctly added idk idk
+		client.userDB.set  (message.author.id, { id: message.author.id, points: 0, rank: 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
+  }
+  const userFromDB = client.userDB.ensure(message.author.id, { id: message.author.id, points: 0, rank: 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
+  
 
   // If the user has a previous entry in the pointCooldowns collection and their cooldown expired, increment their points and reset their cooldown
   // If the user does not have a previous entry, increment their points and create them an entry
-  if (pointCooldowns.has(message.author.id) ? (Date.now() - pointCooldowns.get(message.author.id)) > 120000 : true) {
+  if ((pointCooldowns.has(message.author.id) ? (Date.now() - pointCooldowns.get(message.author.id)) > 120000 : true) && !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
     client.userDB.inc(message.author.id, 'points');
     pointCooldowns.set(message.author.id, Date.now());
   }
 
-  // If the member does not have the highest role you can attain
   if (true) {
 
     // Array of role objects of each rank
@@ -100,6 +114,22 @@ module.exports = async (client, message) => {
       '754044526460665856', // Special
       '893392833925505075', // 1-Up
     ];
+
+    const levelUpEmojis8Bit = [
+        '891851922615701565', // Start
+        '893516899550367804', // Mushroom
+        '893516899315494912', // Shell
+        '893516899378421771', // Flower
+        '893516899428728862', // Leaf
+        '893516899365826641', // Bell
+        '893516899416154122', // Feather
+        '893516899307122708', // Egg
+        '893516899541975050', // Starbit
+        '893516899315482674', // Moon
+        '893516899449704518', // Shine
+        '893516899323875338', // Special
+        '893516899495866440', // Prestige
+    ];
     // Points at which each rankup is obtained at
     const levelUpPoints = [ 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
 
@@ -115,9 +145,8 @@ module.exports = async (client, message) => {
       client.userDB.inc(message.author.id, 'rank');
       leveledUp = true;
       newRank = userRank + 1;
-      if (userRank === 11) {
-	client.userDB.set(message.author.id, { points: userFromDB.points - 27000, rank: 0}); // CHANGE THIS
-	client.userDB.inc(message.author.id, 'prestige');
+      if (userRank === 11) { //Prestige up
+	client.userDB.set(message.author.id, { points: userFromDB.points - 27000, rank: 0, prestige: userFromDB.prestige + 1});
       }
     }
 
@@ -127,12 +156,22 @@ module.exports = async (client, message) => {
       // If the message is not in #serious-discussion
       // IE. the next message after a level up is outside #serious-discussion
       if (message.channel.id !== '687843926937305236') {
-        // React to the message with the level up emoji and the emoji corresponding to the new rank of the member
-        if (userRank === 11)
-          await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
-        else
-          await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
-        await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
+	if (Math.random() > .1) { // Easter egg -> 10% chance to have the level up reactions be 8bit
+		// React to the message with the level up emoji and the emoji corresponding to the new rank of the member
+		if (newRank == 12) {
+		  await message.react(client.emojis.cache.get('894461229383450624')); } // prestige emote
+		else {
+		  await message.react(client.emojis.cache.get('751623091200983050')); } // level up emote
+		await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
+	}
+	else {
+		// React to the message with the level up emoji and the emoji corresponding to the new rank of the member
+		if (newRank == 12) {
+		  await message.react(client.emojis.cache.get('894461229383450624')); } // prestige emote
+		else {
+		  await message.react(client.emojis.cache.get('893516899143532555')); } // level up emote
+		await message.react(client.emojis.cache.get(levelUpEmojis8Bit[memberLevelUpDelays.get(message.author.id) - 1]));
+	}
         // Delete the member's level up delay
         memberLevelUpDelays.delete(message.author.id);
       }
@@ -144,7 +183,7 @@ module.exports = async (client, message) => {
         memberLevelUpDelays.set(message.author.id, newRank);
       } else {
         // If the message is not in #serious-discussion, react to the message with either the level up emoji or prestige emote and the emoji corresponding to the new rank of the member
-        if (userRank === 11)
+        if (newRank == 12)
           await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
         else
           await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
@@ -182,10 +221,10 @@ module.exports = async (client, message) => {
     // Custom functions to make uniform success and error functions
     // Basically all they do is run message.channel.send with some special formatting
     message.success = (suc, msg) => {
-      message.channel.send(`${client.emoji.checkMark} **${suc}**\n${msg}`);
+      return message.channel.send(`${client.emoji.checkMark} **${suc}**\n${msg}`);
     };
     message.error = (err, msg) => {
-      message.channel.send(`${client.emoji.redX} **${err}**\n${msg}`);
+      return message.channel.send(`${client.emoji.redX} **${err}**\n${msg}`);
     };
 
     // If the user's level is less than 2 (Mod), and the channel the command is used in is not #robotic-operating-buddy or #bot-testing, delete the message, direct the user to use #robotic-operating-buddy, then delete that message with a 10 second timeout
@@ -194,7 +233,9 @@ module.exports = async (client, message) => {
       await message.delete().catch(console.error);
       return message.channel.send('Please use **all** bot commands in <#355186664869724161>!')
         .then((msg) => {
-          msg.delete({ timeout: 10000}).catch(console.error);
+          setTimeout(() => {
+    		msg.delete()
+  }, (10000));
         });
     }
 
@@ -276,6 +317,8 @@ module.exports = async (client, message) => {
     // Log the command run
     console.log(`**${message.author.tag}** *(${message.author.id})* ran cmd \`${cmd.help.name}\` in ${message.guild ? `**${message.guild.name}** *(${message.guild.id})*` : '**DMs**'}!`);
     // Run the command
+    client.userStats.ensure(message.author.id, {id: message.author.id, usage: 0, blue_coins: 0, starbits: 0, emotes: 0, spotlights: 0, trivia_nights: 0, mario_karts: 0, achievements: 0});
+    client.userStats.observe(message.author.id).usage++;
     cmd.run(client, message, args, level[1], Discord, eco);
   }
 };

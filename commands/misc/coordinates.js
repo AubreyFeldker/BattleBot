@@ -55,6 +55,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'coordinates',
   category: 'misc',
+  minidesc: 'For Battlebeans',
   description: '...',
   usage: 'coordinates',
 };

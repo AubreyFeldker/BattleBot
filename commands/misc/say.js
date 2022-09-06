@@ -34,6 +34,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'say',
   category: 'misc',
+  minidesc: 'Echo into another channel',
   description: 'Relays the given message into a channel',
   usage: 'say <channel> <message>',
   details: "<channel> => The channel you wish to send the message to. (Only needed if you're sending a message to a channel other than the current one)\n<message> => Any message you wish to be relayed",

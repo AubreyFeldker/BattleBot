@@ -20,6 +20,7 @@ module.exports.conf = {
 module.exports.help = {
   name: '8ball',
   category: 'fun',
+  minidesc: 'Ask questions, get answers',
   description: 'Provides random responses to an asked Yes-or-No question',
   usage: '<question>',
   details: '<question> => Any Yes-or-No question will suffice',

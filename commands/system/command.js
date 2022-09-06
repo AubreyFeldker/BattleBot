@@ -58,6 +58,7 @@ module.exports.conf = {
 module.exports.help = {
   name: 'command',
   category: 'system',
+  minidesc: 'Enable/disable commands',
   description: 'Controls command settings',
   usage: 'command <-enable|-disable> <command name>',
 };
