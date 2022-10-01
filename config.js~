@@ -2,7 +2,7 @@
 
 //GitHub Token: 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
 const config = {
-  token: 'NTA5MTY1NzAxMzcwNDc4NjEy.GhTQ4U.JnHEmjvpJou0GE6BBmp5QZ7uhb5ZOrY5B2YRSc',
+  token: 'NTA5MTY1NzAxMzcwNDc4NjEy.GKQ2uz.cxpcIihYMCXG-i86k_gS_EZSeeInVqFigkgWhQ',
 
   // Twitter
   twitterAPIKey: 'T5580wZpmQqJZOPp4lInaMgBb',
@@ -62,6 +62,7 @@ const config = {
   ],
   
   daily_starbits: 5000,
+  daily_bluecoins: 5,
 
   // Guild Perms and Stuff
   permLevels: [

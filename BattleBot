@@ -6828,3 +6828,2203 @@ DiscordAPIError: Unknown Channel
     files: []
   }
 }
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1567461626323894272',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1567666443201744897',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1567845208896806912',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1567928773936562176',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1568223068367077378',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1568313370599739393',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1568615395396882433',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+TypeError: Cannot read properties of undefined (reading 'send')
+    at Client.client.sendOutQuestion (/home/pi/BattleBot/src/functions.js:385:12)
+    at Timeout._onTimeout (/home/pi/BattleBot/events/ready.js:37:10)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1569385519494189056',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1569672344918016000',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1569748088801185792',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1569997783448563713',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570049884203683844',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570203328981729280',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570408447752945666',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570414974647803906',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570432145222676480',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570454119462371328',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570480116337098758',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570502938711425025',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570550008335765505',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570722961874722816',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1570886493446770688',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1571152110250606597',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1571923527430971393',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1571967579186679809',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572043114713419776',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572161508725133313',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572163838614863872',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572209005367173120',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572231034296762369',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572292123638267905',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572334588562907136',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572405501999996928',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572596647938375682',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572654318045769728',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572692196184424450',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572738458694606851',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572873925045927937',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572888556405915649',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572933747623837696',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572959852410073088',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1572994792413622272',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1573024491399450624',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1573688833656471552',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1574051218820804610',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1574098856026873856',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1574338099529891840',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:298:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:50:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:169:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575070833248440320',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+/home/pi/BattleBot/commands/moderation/dropdowntest.js:23
+			return message.channel.send({ 'Test', components: [row] });
+			                                    ^
+
+SyntaxError: Unexpected token ','
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:86:23
+/home/pi/BattleBot/commands/moderation/dropdowntest.js:23
+			return message.channel.send({ 'Test', components: [row] });
+			                                    ^
+
+SyntaxError: Unexpected token ','
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:86:23
+/home/pi/BattleBot/commands/moderation/dropdowntest.js:23
+			return message.channel.send({ 'Test', components: [row] });
+			                                    ^
+
+SyntaxError: Unexpected token ','
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:86:23
+/home/pi/BattleBot/commands/moderation/dropdowntest.js:23
+			return message.channel.send({ 'Test', components: [row] });
+			                                    ^
+
+SyntaxError: Unexpected token ','
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:86:23
+ReferenceError: ActionRowBuilder is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:4:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+ReferenceError: Discord is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:4:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Discord.ActionRowBuilder is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:4:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: ActionRowBuilder is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:6:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Discord.SelectMenuBuilder is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:8:5)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Discord.SelectMenu is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:8:5)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Discord.SelectMenuComponent is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:8:5)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: (intermediate value).setCustomId(...).setPlaceholder is not a function
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:10:7)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Discord.SelectMenuComponent is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:8:5)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:23:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:345:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:443:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:300:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/ws/lib/event-target.js:132:16)
+    at WebSocket.emit (node:events:390:28)
+(node:26736) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Discord.SelectMenuComponent is not a constructor
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:8:5)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575254557457793025',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:26736) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:26736) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:26736) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575279990937161729',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575300194286989312',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:29832) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:29832) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:29832) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:29832) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:381) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:381) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:381) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:381) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575620434350862336',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:3389) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:3389) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:3389) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:3389) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:6515) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575982202596184066',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1575983895681433600',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:6515) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:6515) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:6515) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:9456) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9456) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:9456) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:9456) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+RangeError [EMBED_FIELD_VALUE]: MessageEmbed field values must be non-empty strings.
+    at Function.verifyString (/home/pi/BattleBot/node_modules/discord.js/src/util/Util.js:427:41)
+    at Function.normalizeField (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageEmbed.js:555:19)
+    at /home/pi/BattleBot/node_modules/discord.js/src/structures/MessageEmbed.js:576:14
+    at Array.map (<anonymous>)
+    at Function.normalizeFields (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageEmbed.js:575:8)
+    at MessageEmbed.addFields (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageEmbed.js:339:42)
+    at MessageEmbed.addField (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageEmbed.js:330:17)
+    at embedAdd (/home/pi/BattleBot/commands/misc/emotes.js:24:13)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/emotes.js:74:11)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9) {
+  [Symbol(code)]: 'EMBED_FIELD_VALUE'
+}
+(node:11451) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+/home/pi/BattleBot/commands/misc/myprogress.js:71
+	 excessiveCharacterArray.forEach((c) => { client.characterRoleEmotes.set(c, {name: c, emote: charEmotes.get(c)));
+	                                                                                                              ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+/home/pi/BattleBot/commands/misc/myprogress.js:71
+	 excessiveCharacterArray.forEach((c) => { client.characterRoleEmotes.set(c, {name: c, emote: charEmotes.get(c))});
+	                                                                                                              ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+TypeError: Cannot read properties of undefined (reading 'set')
+    at /home/pi/BattleBot/commands/misc/myprogress.js:71:71
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+TypeError: Cannot read properties of undefined (reading 'ensure')
+    at /home/pi/BattleBot/commands/misc/myprogress.js:71:71
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+(node:11451) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:11451) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:11451) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:11567) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'ensure')
+    at /home/pi/BattleBot/commands/misc/myprogress.js:71:71
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+(node:11661) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'ensure')
+    at /home/pi/BattleBot/commands/misc/myprogress.js:71:71
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+ReferenceError: characterRoleEmotes is not defined
+    at /home/pi/BattleBot/commands/misc/myprogress.js:72:44
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:72:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+(node:11661) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:11661) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:11848) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11896) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: nuEnmap is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+ReferenceError: nuEnmap is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+ReferenceError: nuEnmap is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:11896) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:11896) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:11896) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+ReferenceError: nuEnmap is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:71:15)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+ReferenceError: character is not defined
+    at /home/pi/BattleBot/commands/misc/myprogress.js:78:86
+    at Map.find (/home/pi/BattleBot/node_modules/@discordjs/collection/dist/index.js:122:11)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:78:47)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /home/pi/BattleBot/commands/misc/myprogress.js:80:102
+    at Map.some (/home/pi/BattleBot/node_modules/@discordjs/collection/dist/index.js:197:11)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:80:33)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+ReferenceError: charEmotes is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/misc/myprogress.js:84:48)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:12069) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12069) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12069) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+ReferenceError: message is not defined
+    at Client.client.createProgEmbed (/home/pi/BattleBot/src/functions.js:145:5)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:30:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:12103) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12103) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12103) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:12136) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12136) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12136) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:12195) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12195) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12195) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+/home/pi/BattleBot/commands/roles/team.js:31
+      message.error('Not Unlocked!', `You haven't unlocked that team yet! You must reach \`rank ${characterObject.rankNeeded}\` to unlock **${character}**! Read more about the ranking system in <#714725324239405096>!`); \\'
+                                                                                                                                                                                                                            ^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+TypeError: teamSettings.get is not a function
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:46:149)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:46:160)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: teamSettings.get is not a function
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:47:149)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:12327) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: teamSettings.get is not a function
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:47:149)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+ReferenceError: r is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:47:183)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:12327) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12327) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:12327) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+/home/pi/BattleBot/commands/roles/editteams.js:8
+  if (args[0] > 11) { return message.error('Invalid level', 'The second argument of the command must be a number -1 to 11.'}
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:86:23
+/home/pi/BattleBot/commands/roles/editteams.js:8
+  if (args[0] > 11) { return message.error('Invalid level', 'The second argument of the command must be a number -1 to 11.'}
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:86:23
+(node:12733) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12733) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:12733) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12733) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+TypeError: Cannot read properties of undefined (reading 'slice')
+    at Client.client.stripEmote (/home/pi/BattleBot/src/functions.js:244:31)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:5:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+TypeError: Cannot read properties of undefined (reading 'slice')
+    at Client.client.stripEmote (/home/pi/BattleBot/src/functions.js:244:31)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:5:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+(node:12837) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'substring')
+    at Client.client.stripEmote (/home/pi/BattleBot/src/functions.js:244:31)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:5:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:11:38)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Cannot read properties of undefined (reading 'teams')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:32:44)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Cannot read properties of undefined (reading 'teams')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:30:44)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Cannot read properties of undefined (reading 'teams')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:30:41)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Cannot read properties of undefined (reading 'substring')
+    at Client.client.stripEmote (/home/pi/BattleBot/src/functions.js:244:31)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:4:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+(node:12998) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'slice')
+    at Client.client.stripEmote (/home/pi/BattleBot/src/functions.js:244:31)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/editteams.js:4:27)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+/home/pi/BattleBot/commands/roles/editteams.js:7
+  if (args[0] > 12 && != 999) { return message.error('Invalid level', 'The second argument of the command must be a number -1 to 11.'); }
+                      ^^
+
+SyntaxError: Unexpected token '!='
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+ReferenceError: teamEmote is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:62:104)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:12998) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:12998) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+TypeError: Cannot read properties of undefined (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:108)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:113)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
