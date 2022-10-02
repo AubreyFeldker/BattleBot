@@ -9028,3 +9028,2608 @@ TypeError: Cannot read properties of undefined (reading 'name')
     at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
     at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
     at WebSocket.emit (node:events:390:28)
+(node:13429) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:13429) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:13429) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+TypeError: Cannot read properties of null (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:114)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:13429) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+ReferenceError: row is not defined
+    at Object.module.exports.run (/home/pi/BattleBot/commands/moderation/dropdowntest.js:24:64)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+Error: Cannot find module '../../commands/roles/dropdowntest.js'
+Require stack:
+- /home/pi/BattleBot/commands/system/reload.js
+- /home/pi/BattleBot/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:15:32)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/pi/BattleBot/commands/system/reload.js',
+    '/home/pi/BattleBot/index.js'
+  ]
+}
+Error: Cannot find module '../../commands/roles/dropdowntest.js'
+Require stack:
+- /home/pi/BattleBot/commands/system/reload.js
+- /home/pi/BattleBot/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:15:32)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/pi/BattleBot/commands/system/reload.js',
+    '/home/pi/BattleBot/index.js'
+  ]
+}
+(node:14915) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: Cannot find module '../../commands/roles/getroles.js'
+Require stack:
+- /home/pi/BattleBot/commands/system/reload.js
+- /home/pi/BattleBot/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:15:32)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/pi/BattleBot/commands/system/reload.js',
+    '/home/pi/BattleBot/index.js'
+  ]
+}
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options: Must be between 1 and 25 in length.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+TypeError: Cannot read properties of undefined (reading 'get')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/getroles.js:22:21)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+RangeError: SELECT_OPTION_LABEL
+    at Function.verifyString (/home/pi/BattleBot/node_modules/discord.js/src/util/Util.js:427:41)
+    at Function.normalizeOption (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:194:18)
+    at /home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:208:54
+    at Array.map (<anonymous>)
+    at Function.normalizeOptions (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:208:35)
+    at MessageSelectMenu.addOptions (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:144:43)
+    at /home/pi/BattleBot/commands/roles/getroles.js:23:22
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/getroles.js:22:35)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+RangeError: SELECT_OPTION_LABEL
+    at Function.verifyString (/home/pi/BattleBot/node_modules/discord.js/src/util/Util.js:427:41)
+    at Function.normalizeOption (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:194:18)
+    at /home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:208:54
+    at Array.map (<anonymous>)
+    at Function.normalizeOptions (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:208:35)
+    at MessageSelectMenu.addOptions (/home/pi/BattleBot/node_modules/discord.js/src/structures/MessageSelectMenu.js:144:43)
+    at /home/pi/BattleBot/commands/roles/getroles.js:23:22
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/getroles.js:22:35)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+(node:14915) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:14915) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+/home/pi/BattleBot/commands/roles/getroles.js:11
+			);
+			^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+TypeError: Cannot read properties of null (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:114)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+/home/pi/BattleBot/commands/roles/getroles.js:39
+	});
+	 ^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+DiscordAPIError: Invalid Form Body
+components[2].components[0].options: This field is required
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:15786) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:15912) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:75:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:15966) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:76:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+ReferenceError: message is not defined
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:9:16)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+ReferenceError: message is not defined
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:9:16)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:76:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:16065) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:12:44)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+(node:16123) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:12:44)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:15
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:16
+	}
+	^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:16
+	}
+	^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:16
+	}
+	^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+(node:17823) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: emote is not defined
+    at /home/pi/BattleBot/commands/roles/getroles.js:13:58
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/getroles.js:11:35)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+/home/pi/BattleBot/commands/roles/getroles.js:13
+		row1.components[0].addOptions([{label: `Team ${char} ${emote}`, value: `dropdown-1-Team`, emoji: { id: emote.id}]);
+		                                                                                                                ^
+
+SyntaxError: Unexpected token ']'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+/home/pi/BattleBot/commands/roles/getroles.js:13
+		row1.components[0].addOptions({label: `Team ${char} ${emote}`, value: `dropdown-1-Team`, emoji: { id: emote.id});
+		                                                                                                               ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[0].emoji.name: Invalid emoji
+components[0].components[0].options[1].emoji.name: Invalid emoji
+components[0].components[0].options[2].emoji.name: Invalid emoji
+components[0].components[0].options[3].emoji.name: Invalid emoji
+components[0].components[0].options[4].emoji.name: Invalid emoji
+components[0].components[0].options[5].emoji.name: Invalid emoji
+components[0].components[0].options[6].emoji.name: Invalid emoji
+components[0].components[0].options[7].emoji.name: Invalid emoji
+components[0].components[0].options[8].emoji.name: Invalid emoji
+components[0].components[0].options[9].emoji.name: Invalid emoji
+components[0].components[0].options[10].emoji.name: Invalid emoji
+components[0].components[0].options[11].emoji.name: Invalid emoji
+components[0].components[0].options[12].emoji.name: Invalid emoji
+components[0].components[0].options[13].emoji.name: Invalid emoji
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:18284) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+ReferenceError: characters is not defined
+    at /home/pi/BattleBot/commands/roles/getroles.js:12:39
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/getroles.js:11:35)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+TypeError: Discord.SelectMenuOption is not a constructor
+    at /home/pi/BattleBot/commands/roles/getroles.js:14:33
+    at Array.forEach (<anonymous>)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/getroles.js:11:35)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options[1]: The specified option value is already used
+components[0].components[0].options[2]: The specified option value is already used
+components[0].components[0].options[3]: The specified option value is already used
+components[0].components[0].options[4]: The specified option value is already used
+components[0].components[0].options[5]: The specified option value is already used
+components[0].components[0].options[6]: The specified option value is already used
+components[0].components[0].options[7]: The specified option value is already used
+components[0].components[0].options[8]: The specified option value is already used
+components[0].components[0].options[9]: The specified option value is already used
+components[0].components[0].options[10]: The specified option value is already used
+components[0].components[0].options[11]: The specified option value is already used
+components[0].components[0].options[12]: The specified option value is already used
+components[0].components[0].options[13]: The specified option value is already used
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+ReferenceError: message is not defined
+    at /home/pi/BattleBot/events/interactionCreate.js:18:43
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:8:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+ReferenceError: message is not defined
+    at /home/pi/BattleBot/events/interactionCreate.js:18:43
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:8:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+(node:18603) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:85:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:85:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:85:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+TypeError: interaction.followup is not a function
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:24:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+(node:18678) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'id')
+    at Client.client.createProfEmbed (/home/pi/BattleBot/src/functions.js:48:50)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:84:20)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:18678) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:18678) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:18678) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+/home/pi/BattleBot/commands/roles/getroles.js:29
+			}
+			^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.module.exports.run (/home/pi/BattleBot/commands/system/reload.js:18:17)
+DiscordAPIError: Invalid Form Body
+components[0].components[0].options: Must be between 1 and 25 in length.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+DiscordAPIError: Invalid Form Body
+components[1].components[0].custom_id: Component custom id cannot be duplicated
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:176:15) {
+  method: 'post',
+  path: '/channels/417918334621712384/messages',
+  code: 50035,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'Test',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:19172) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:19172) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:19172) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:19211) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:19211) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:19211) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.update({ content: interaction.message.content, components: interaction.message.components });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+/home/pi/BattleBot/events/interactionCreate.js:22
+					await interaction.reply({ content: 'Pong!', ephemeral: true });
+					^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at /home/pi/BattleBot/index.js:51:19
+(node:20178) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20303) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20303) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:20303) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+ReferenceError: addedRoles is not defined
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:48:48)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+    at Receiver.receiverOnMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/websocket.js:1178:20)
+(node:20354) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20354) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:20354) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:20520) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20666) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20740) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20799) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20799) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:20799) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+DiscordAPIError: Unknown Channel
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async WebhookClient.send (/home/pi/BattleBot/node_modules/discord.js/src/structures/Webhook.js:196:15) {
+  method: 'post',
+  path: '/webhooks/787521770923753492/W7LLrjxighBJ5hBC2voIPzxBsoZ8wD-IWLbt0fCi1gGUXofENqd1yPXSZL4cIcG7EJLB?thread_id=888559682036305942&wait=true',
+  code: 10003,
+  httpStatus: 400,
+  requestData: {
+    json: {
+      content: 'http://twitter.com/monsterhunter/status/1576361407754510336',
+      tts: false,
+      nonce: undefined,
+      embeds: undefined,
+      components: undefined,
+      username: 'Monster Hunter',
+      avatar_url: 'https://pbs.twimg.com/profile_images/1511528423805493264/Udcszaly_normal.jpg',
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined
+    },
+    files: []
+  }
+}
+(node:20994) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:21057) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:21097) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:21160) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: teamSettings is not defined
+    at /home/pi/BattleBot/events/interactionCreate.js:34:18
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:15:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+DiscordAPIError: Unknown interaction
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025922775786991646/aW50ZXJhY3Rpb246MTAyNTkyMjc3NTc4Njk5MTY0NjpFRXk3cHB4dlUyZmJyOTQ0Qm8zZnlEem9Kcm81MVBKN21zcDNyd0QzTXEyVkZRcGMwVnVzcHdwYzM2VVcwN0tLbUxaQTRJa0YwekJuQlZRVDAySEFxSFZ0ck5vQ2I5ZjJVTnJubFV3NUpBclBDb2tTaXJ0dTBjMlZod3Bxb0E4Yw/callback',
+  code: 10062,
+  httpStatus: 404,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:21235) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: character is not defined
+    at /home/pi/BattleBot/events/interactionCreate.js:34:90
+    at Array.find (<anonymous>)
+    at /home/pi/BattleBot/events/interactionCreate.js:34:61
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:15:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+(node:21235) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:21235) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:21235) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:21340) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025923958777856140/aW50ZXJhY3Rpb246MTAyNTkyMzk1ODc3Nzg1NjE0MDphVkRFakJLU2JIQ01QMTJxSFBGRTNDYzJMa0Y4QkpYZmVRbW9heHRXQXlBTkFHQUhXRDZFaXlicXQ3Y3hJdERlbk5EVUtyTnA0aVJzOXpuMUoyQjV2YkNCOXpsSVhPeU40V2Jkakl4UzU5VEpSV2xGb3lpMnJNTmJrWnhDU1BVeg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924027073703966/aW50ZXJhY3Rpb246MTAyNTkyNDAyNzA3MzcwMzk2Njo5bDk3VDg0U29mWllRN1RqUm1sZkU3SE1lTXEwTkJJeDZvMWk4V0NTV3dGeUlOODVWUWJYRTRjVUc1NGUwZmlBd0ZpSThlVjIydmNlWVdHdEpzdHlIam9yVlVFTFlkNzNJZTF2UkpndjBSSDRoOHZqMDVwNU55b2kzQ1JsM2Jidg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924058971373579/aW50ZXJhY3Rpb246MTAyNTkyNDA1ODk3MTM3MzU3OTp3V0pKYVEzSUhlN2d5MnByc2NPckhqZlZVWWtpV1dabWlpRzJxdGpIS2Roc1NVb2RlT1NjWkhOaDZ2OElkOGN5aW51djc1TFpLbTMyZW1WWDl0OHpCOGZEdDk5RUF4RVFCTWxnUlhQc2hCTFRsdldnNWpFWkNva3NLa294WGJUVg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924083399016488/aW50ZXJhY3Rpb246MTAyNTkyNDA4MzM5OTAxNjQ4ODpxZzhmWHRJVWNSWE5JMWxWVGtjZHh2S0ZLemVjNHFzYjZYbXlVdmJnTmFPdGljN3pWRUVUZEZoNlhOcVZybHlvUVUydkoybnNJaVVod1hoaE5lUElLQzlQZW81QVF3UGs0azZYandYYXZaRkZHY2QzYXlna2hjaXpFanFYUGdFQQ/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924100331425835/aW50ZXJhY3Rpb246MTAyNTkyNDEwMDMzMTQyNTgzNTpPcFRVNGNjT0dINUpZU1NOQzJLVDkwMjI2RXo5Umt0b0FvQ0phbTVsOXQ0YmlzMm5YMGxQNkZ3c0NqR2lpT3RzMDFEb1BrM09LOWlXTlRCbTdjeVFCejFBd1AzTUs5b3FQNHZMTGJIVXFmaDFwYlU5VHJrYThORllhNFR1Qlpraw/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924309203562506/aW50ZXJhY3Rpb246MTAyNTkyNDMwOTIwMzU2MjUwNjpLMFFNTXY2YXExS3MxbVJ4WjFjaVpSVjVjY3BDQ1M3NVU0c1NZYzhsc3RYaEExWmp3U1d6NG5LdWdpV3JIbENOcmZXUFZYU0pRbDJMV3pKcDJrVkNpT0h4Q2NKd3pJd3RGQkFTenlieTFLamR5QkpGT3BhQU9VSllVMVBDZWNqZQ/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924339838763108/aW50ZXJhY3Rpb246MTAyNTkyNDMzOTgzODc2MzEwODpaN2tiUHZWYklETktLZm9jbWNRMU4wcHVLYjFMd3R3ZHhJYnhnazJJclNoYk9vQ01xcGx3eEhTZVcwaDhFeUNwU2dnbkVEU1hZR3ZSQkJvWjJCZkxJOVM0UXNHVEtlM1hTZ3FpNFNoanVjSzBNMUtmbUMwRWU5NTRtQk9rWWMwdg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924357341581312/aW50ZXJhY3Rpb246MTAyNTkyNDM1NzM0MTU4MTMxMjpaekd3eW1TQ2daaWlodXE4U2JaQURLeW1pbmVtRHRTZVRDRzRXUm93eGF6NHNNTThpZldCd3VDSGxWaVc5dThmQ3lJcDJkWENvQVJzQ1JkZGdpejNFYk9vTkpUZEh2M3pocjBGeU1qTW9hVmNaYjZ1WWl0YXU4cERHSVNSclp1Ng/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025924377587495014/aW50ZXJhY3Rpb246MTAyNTkyNDM3NzU4NzQ5NTAxNDpuS3Bwb2tpV3p0d2JZUHlNOFZyNm5ReGZkUnR0bkF2VjQxc08wM0NYVVN1RUlKS1B1Rlc1WmNEVGRDYU95c0lCWTVoNnh4bDRWQjhFbW5LcEdaYXNtcWRlVlpEYmNYT29KdVVVd2x2azVUUE1zUGhESzJtWmp4RlE1U1A4OFBLeA/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:21468) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025926620864847932/aW50ZXJhY3Rpb246MTAyNTkyNjYyMDg2NDg0NzkzMjo0eHptVGhJdUQyVnYwdXRPTVI0Y1NDcXc3THlOeXlucGszVThkNlRXUjB0ZHlXVzM5SHN5Vm1XWVN3THdBZDkzOVlGUkZzdWYzaVNnY05aeEJhR0RnZE9xNTE2UHM4dmloRTdOYVdaOEdXQ0ZoclBEQWZvdVF5clVxUXhTZDZQYg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025926649398693968/aW50ZXJhY3Rpb246MTAyNTkyNjY0OTM5ODY5Mzk2ODo3djM4WmdzaUszaWQ0dGNqYmJua1ZGNUZFdTN0Rk5kWGxmSE1JV1c2U2ZETzJwU1hnY2laNGlmZFRjaG9pR0xZRXlHWU5Oc2tJYjl6UURCbG5adTNtdG9qZ2p0MmRhYjQ2c1pKUXFWNWxjU04zcUNyRVBFZ3Q1SUhnOG80b2ZRRg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025926663265067068/aW50ZXJhY3Rpb246MTAyNTkyNjY2MzI2NTA2NzA2ODoxa3YzRWVYWnJSRDhCeGlRZDlYT1paeFlWeHVHMUJQMHVFZDFuYjQzOXpZcmFLRnJnaG9TWGdOU2pHU0VaREV6a3VZM25UV3ZZTlkzRDZIWHp5Wlp6Zmx2Tmo4VFFISUJXMVBjYm9wbXJ4ZjJWMmN1TFFLTDkwQzZ5Qm4wR0VJSQ/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025926679664807966/aW50ZXJhY3Rpb246MTAyNTkyNjY3OTY2NDgwNzk2NjprMnlyaHVkQzh4ZWppZkNXU3cweUp4c2Ztbnl3SXRrdEF1dDVFZGUydjFJYTZJUFdkbWJBdncyOWRwcnRDOW1DcHBvdWFIUzE4UlNxTWR1bjA0eWFPZURIbnRoMFlCZThiaThERm9yR0Q4cEwyV1I3dklPRlNJdFlhaEZPSE1rdg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927112735076432/aW50ZXJhY3Rpb246MTAyNTkyNzExMjczNTA3NjQzMjo1VFI2T3FJc2hyM1B2TFVqRE1KUTlnYWQ4MkpISjdUN3U1Rmx6NUp1M0hwMldSNVpBcEJ4UmhMWVR0THJDR3h3Rmp1Zk9haW0xdk5QelJ1RUpvVUxITFJFUE8yWndyRTJyMzZkM1ZodVl0eW9mS3hldnJEblJGSWZ4c2RUd2ZCRg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927132376993823/aW50ZXJhY3Rpb246MTAyNTkyNzEzMjM3Njk5MzgyMzpneFdmbWhDVlIzd2EwRmhZWVRHcEZORENEd2NUbkQyanRRNmdNbUVVUzJicEszRVZIUmZ4Tzl6eEVXcGx5VFRYc1FEZk1HU1BMSzR5NUFqakIzMFU3NDhkMEpFdWlkN01wSGVVald4NzJpZnk0V2tuNHVoMzFvRVRtY1B2Nmw4MA/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927153021354004/aW50ZXJhY3Rpb246MTAyNTkyNzE1MzAyMTM1NDAwNDo2c0VnUHNPWldQZHBqNDVMVDJ6UWthWkVKaGxBZFFVeDBibEdmZTI5Q0R1MUtDSVhvMjJuQW9rdFUxU001YXE5UGdqUER6aVpYUDRoelM1eTZtUXRRME5RMnVRaUZmaVZ2b3hidXQ2RFlXbURrSDNNQ1Jpam5IdTZCVGRGNjdKcA/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927306092486747/aW50ZXJhY3Rpb246MTAyNTkyNzMwNjA5MjQ4Njc0NzpWSkVTQW9zSEZKOVVmSlhVV1RXOWQ5a0N6dzRBQWlpWU0ybWMzNjRvR1BHamhUV3dIYkZUeHdGZ0czUkFWVjhiVXBNanByMkZ2ZGhsYUJTR0tPSkpkanltWmhmVFd1ZzBPWG1CODRxejBsRWw3TEJZZWp6QlI1cHN1Nmd3RGxqUA/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:21673) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927612809363486/aW50ZXJhY3Rpb246MTAyNTkyNzYxMjgwOTM2MzQ4NjpJZjFlQms2RjZ3Tk5vZ1lMVDI2OEFXWkRqanJnWDI2TEh5YmdyS2pmSmFmRTROamg1OWdCRmtlbHlYY1R5MGliU3hxR2pMeHFDTDY3bFEwM0FHdFVMbGpJcWxZWWFadUxTajRXUEVVSlRLNGhPUktxMWxHMkUyOXUwRXBKOVV4Mw/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927633629880380/aW50ZXJhY3Rpb246MTAyNTkyNzYzMzYyOTg4MDM4MDpnTUJSN2FveWhIYXo5Y0tvNjJoSFl5RUZMamptbEpuMXlwY1BGS3BpYzdCb3VrUnA3TXczN2J1YXhiR3JORkVpRlZ2RHpCRHVVdnFwTFZBWXRuTXlIZXZCQWE3TW85aW5BY1VVN2FNampDbDl3cEFCYkJyV3RLUTFLcEUyR3FZeg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927648037318676/aW50ZXJhY3Rpb246MTAyNTkyNzY0ODAzNzMxODY3Njo3b3VXZGRWeGhuVnl1NlplcnNFVk93ZHB4bkNyNFZ4Y2MzNkg4N1IxRmY2VDVLT0JrTzFHNXd6VnNyU2R5OUticnltakJaRlR1SUZOcUxNNUdVdExVZE9qMzYzVnBUTjdjNDVzTjRBS2FrRUJPNVI3cW95dGNWTEZhdk13dGdyTQ/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:21719) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927931987509328/aW50ZXJhY3Rpb246MTAyNTkyNzkzMTk4NzUwOTMyODp5OWZVUDdKM2llMEU3d29YalVtRHFKOGZpdUJHa2JOMFFoamZoOU1RdVlxVWp1RnlmclNLR2NKZ1Jlc0JsR3h1M2o4NHh0cDJySlR6cHBTaUtrUERzVWpQVDhEMlh2eHpLTngzbUFTaVJHazZiNWxDVHNVVmlQWlYxMHZlOGhDdg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025927952610889769/aW50ZXJhY3Rpb246MTAyNTkyNzk1MjYxMDg4OTc2OTplbVVaVThPdFRLb2JISjl5OVdYZ0ZnTUNqZlNnaElIelo3bWh0SVJ4bHBySWpwUjVBd1pLRUdmWXoyV0RZMUJMdWh4SEZXV0hqM3VMR0JVZGdUTXk5Z01xdjNaVThmZUhRR3hydGZkS1ZjWVI0T3hYUHptZHNkUEFzdjViWmJCZA/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:21719) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:21719) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025930385093312623/aW50ZXJhY3Rpb246MTAyNTkzMDM4NTA5MzMxMjYyMzoydzN1bVh6S2FmVmRPODIzVEczOTdrb0dvWE5raXg2ck9aWThjU1BhNUlOeE9BS01kaTc1WHZmNVBDVFBHZWtoeDMxenNsSXRMZHVoVnpqN3FBZmJjMzZoZk1wOWU2OERlcGp6ZGxtdTFMV2oxRlpqbjdUaGp3UVJDUmRkRWRiYw/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:21719) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025933748807671839/aW50ZXJhY3Rpb246MTAyNTkzMzc0ODgwNzY3MTgzOTpHTnpCUU53b0JSMmx2allvZDJuN3FFMkN0WXhzVmVjQzFncGlzcnFwbTM0TjJKSU01aEFickV0QkQzNkV1bWl6ZWhQVFRWMnlQVHk4d0tlRG5LUlprRHFINk93VnZjVERIUmhna3RpUXRSa0swcWN4MU14OE9qcENkb3pyZ2JoQg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}

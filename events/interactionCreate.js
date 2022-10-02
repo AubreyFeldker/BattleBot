@@ -2,7 +2,56 @@ const Discord = require('discord.js');
 const eco = require('discordenvo');
 
 module.exports = async (client, interaction) => {
-	if (!interaction.isButton()) return;
+	//console.log(interaction);
+	if (interaction.isSelectMenu() && interaction.customId.split('-')[0] == 'dropdown') {
+	
+		let addedRoles = [];
+		let removedRoles = [];
+		let cont = 1;
+		const user = client.userDB.get(interaction.member.id);
+		//const roleArray = [['He/Him', 'She/Her', 'They/Them', 'Any Pronouns', 'Ask for Pronouns'], ['3D World', 'Mario Maker 2', 'Mario Kart', 'Mario Strikers', 'Mario Party', 'Smash Bros.'], ['Happening Space', 'Question of the Day']];
+		
+		
+		interaction.values.forEach((val) => {
+		const buttonId = val.split('-');
+		const role = interaction.guild.roles.cache.find((r) => r.name === buttonId[2]);
+		
+		if (buttonId[1] != 1) { //Toggle role on/off
+			if(interaction.member.roles.cache.has(role.id)) {
+				interaction.member.roles.remove(role);
+				removedRoles.push(role.name);
+			}
+			else { 
+				interaction.member.roles.add(role); 
+				addedRoles.push(role.name);
+			}
+		}
+		else {
+			const characters = client.characterRoleEmotes;
+			
+			//Check user is appropriate level for the role
+			if(buttonId[3] == 2) {
+				const rank = client.teamSettings.get('unlockableTeams').find((c) => c.teams.includes(role.name.slice(5)));
+				console.log(`${interaction.member} ${user.rank + user.prestige * 12} ${rank.rankNeeded} ${buttonId[3]}`);
+				if(user.rank + (user.prestige * 12) < rank.rankNeeded) {
+					interaction.reply({ content: 'You are not a high enough level to obtain that team role!', ephemeral: true });
+					cont = 0;
+				}
+			}
+			if (cont == 1) {
+			// Remove other character roles besides special ones if the user has one
+			if (interaction.member.roles.cache.some((r) => r.name.includes('Team') && characters.has(r.name.substr(r.name.indexOf(' ')+1)) && ! client.teamSettings.get('otherTeams').includes(r.name.substr(r.name.indexOf(' ')+1)))) {
+        		removedRoles.push(interaction.member.roles.cache.find((r) => r.name.includes('Team')&& characters.has(r.name.substr(r.name.indexOf(' ')+1)) && ! client.teamSettings.get('otherTeams').includes(r.name.substr(r.name.indexOf(' ')+1))).name);
+        		interaction.member.roles.remove(interaction.member.roles.cache.find((r) => r.name.includes('Team')&& characters.has(r.name.substr(r.name.indexOf(' ')+1)) && ! client.teamSettings.get('otherTeams').includes(r.name.substr(r.name.indexOf(' ')+1))));
+		}
+			//Give the user the new character role
+			interaction.member.roles.add(role);
+			addedRoles.push(role.name);
+		}}
+	});
+		interaction.reply({ content: `Added roles: ${addedRoles.join(', ')}\nRemoved roles: ${removedRoles.join(', ')}`, ephemeral: true });
+	}
+	else {
 	
 	const buttonId = interaction.customId.split(" ");
 	
@@ -70,5 +119,6 @@ module.exports = async (client, interaction) => {
 		
 		
 	}
+}
 };
 

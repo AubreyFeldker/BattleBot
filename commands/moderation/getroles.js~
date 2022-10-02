@@ -32,7 +32,7 @@ module.exports.conf = {
 };
 
 module.exports.help = {
-  name: 'dropdowntest',
+  name: 'getroles',
   category: 'roles',
   minidesc: 'Role dropdown',
   description: 'Dropdown menu for more efficient role adding',
