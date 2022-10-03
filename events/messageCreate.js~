@@ -69,7 +69,11 @@ module.exports = async (client, message) => {
     '355139881531342859',
   ];
   // Ensure the user exists in the userDB
-  const userFromDB = client.userDB.ensure(message.author.id, { id: message.author.id, points: 0, rank: message.member.roles.cache.has('391877990277185556') ? 1 : 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
+  if (typeof client.userDB.get(message.author.id) === "undefined") { //Bandaid solution to new users not being correctly added idk idk
+		client.userDB.set  (message.author.id, { id: message.author.id, points: 0, rank: 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
+  }
+  const userFromDB = client.userDB.ensure(message.author.id, { id: message.author.id, points: 0, rank: 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
+  
 
   // If the user has a previous entry in the pointCooldowns collection and their cooldown expired, increment their points and reset their cooldown
   // If the user does not have a previous entry, increment their points and create them an entry

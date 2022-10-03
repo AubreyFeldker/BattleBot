@@ -11633,3 +11633,1822 @@ DiscordAPIError: Interaction has already been acknowledged.
   httpStatus: 400,
   requestData: { json: { type: 4, data: [Object] }, files: [] }
 }
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025949065311178772/aW50ZXJhY3Rpb246MTAyNTk0OTA2NTMxMTE3ODc3MjpDdWc1U2wxaFZDWlFFQkNEc1htWlJ6WDJhVjZkbER4WnF3Z0JZR2RvNWVEdkRkemFkSHp4cHloTTlPOTJJQ0FBUmM0dGh5dU0zV1pDN3dWOEcxdmNzZmhzbnNrOTloU3paSm1vRFZxV3YxeU5ocDNnRkZwRlJEeUxnbnFqSkpzVQ/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1025951154288476182/aW50ZXJhY3Rpb246MTAyNTk1MTE1NDI4ODQ3NjE4Mjp6R2VZV1FVanZ4ZnoxdFNjUmkwNkNSTExrVTJuTmdGWm5mTmo3bVhkVndzQ1RaS1hxTEptZENXSnBOdmxUZlNzcE5OeW9nYk9leFdUSmlOY1FWQzU1STlaSENuWE1RS0o2T3pWbVpSMzd6WUhSSU9sM3R4aW5nSXI4NXFUOXFGNg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+TypeError: Cannot read properties of null (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:114)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:322:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:27360) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:27360) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+(node:27360) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:27360) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1026126351272509470/aW50ZXJhY3Rpb246MTAyNjEyNjM1MTI3MjUwOTQ3MDoybktMS1VXTHBWM1dDdGk2eHZQaVNOclhjYlBLdDdWN2NpNXNCY3paR3pvYndiVkhnVmJBb0hSR2Jqa2V0enhpc0dKNE9tOUFNREZhRWNiNTVpcm1xdHJlUlBvbEF1Y0FnamwwVGpuWDRScmlNRXlRVDFjRml3QWJxMk13MzZCYg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1026126385913278534/aW50ZXJhY3Rpb246MTAyNjEyNjM4NTkxMzI3ODUzNDo1Nk9IMGVVdXpqZHR1TnB5M1BHQ2pWbGJzT1JEd25tVERsUFFEZ1NBQ2NSZUtUNnhsa0VmU2FyYXZJY0FsOG42TVZrWXVYaDhqRnlPb1RMNTNwVVZwczNvNENlOFFPTzN1STBKRGRrOUpsYnBETkhxZERqWDdhR3ZWWm9RT01XeQ/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+TypeError [INVALID_TYPE]: Supplied roles is not a Role, Snowflake or Array or Collection of Roles or Snowflakes.
+    at GuildMemberRoleManager.add (/home/pi/BattleBot/node_modules/discord.js/src/managers/GuildMemberRoleManager.js:121:15)
+    at /home/pi/BattleBot/events/interactionCreate.js:48:29
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:15:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10) {
+  [Symbol(code)]: 'INVALID_TYPE'
+}
+TypeError: Cannot read properties of undefined (reading 'name')
+    at /home/pi/BattleBot/events/interactionCreate.js:49:25
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:15:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1026167340355817473/aW50ZXJhY3Rpb246MTAyNjE2NzM0MDM1NTgxNzQ3Mzpicmp4Y1kySkF0bFp1SWxxNng5N2pYT2NkTkoyeExUaWVYVjd3a25zV3ppRUd3TDFtSGYxSDZmaHRFZ0E2U3E4RmlJeHVLNkhSbEdUSHY2MnN6QWU3MXV1S1c0ZURMcjNtclNybGlIMFhCc21mamNIMk04NDFweUZBUHdqVWp2cA/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+TypeError: Cannot read properties of undefined (reading 'rank')
+    at /home/pi/BattleBot/events/interactionCreate.js:35:47
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:15:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+TypeError: Cannot read properties of undefined (reading 'rank')
+    at /home/pi/BattleBot/events/interactionCreate.js:35:47
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/pi/BattleBot/events/interactionCreate.js:15:22)
+    at Client.emit (node:events:390:28)
+    at InteractionCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at Object.module.exports [as INTERACTION_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+(node:798) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:881) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+CustomError [EnmapTypeError]: The value for key "state" is not of type "Object" or "Array" in the enmap "consolevars" (value was of type "Number")
+    at Map.[check] (/home/pi/BattleBot/node_modules/enmap/src/index.js:1066:13)
+    at Map.observe (/home/pi/BattleBot/node_modules/enmap/src/index.js:356:17)
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:5:34)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+(node:938) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1037) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async MessageManager.delete (/home/pi/BattleBot/node_modules/discord.js/src/managers/MessageManager.js:212:5)
+    at async Message.delete (/home/pi/BattleBot/node_modules/discord.js/src/structures/Message.js:795:5) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026229606077972630',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+(node:1076) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async MessageManager.delete (/home/pi/BattleBot/node_modules/discord.js/src/managers/MessageManager.js:212:5)
+    at async Message.delete (/home/pi/BattleBot/node_modules/discord.js/src/structures/Message.js:795:5) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026229782427471972',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+(node:1120) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async MessageManager.delete (/home/pi/BattleBot/node_modules/discord.js/src/managers/MessageManager.js:212:5)
+    at async Message.delete (/home/pi/BattleBot/node_modules/discord.js/src/structures/Message.js:795:5) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026230623746129982',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+(node:1168) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of null (reading 'delete')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:18:47)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:1205) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1250) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1286) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of null (reading 'delete')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:23:47)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:1342) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1377) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async MessageManager.delete (/home/pi/BattleBot/node_modules/discord.js/src/managers/MessageManager.js:212:5)
+    at async Message.delete (/home/pi/BattleBot/node_modules/discord.js/src/structures/Message.js:795:5) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026232774329389097',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+TypeError: Cannot read properties of null (reading 'delete')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:25:47)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:1416) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1503) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1559) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: msg.delete is not a function
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:25:37)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:1644) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:8
+		let message;
+		    ^
+
+SyntaxError: Identifier 'message' has already been declared
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+(node:2249) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:2294) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError [MESSAGE_BULK_DELETE_TYPE]: The messages must be an Array, Collection, or number.
+    at TextChannel.bulkDelete (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:330:11)
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:10:11)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18) {
+  [Symbol(code)]: 'MESSAGE_BULK_DELETE_TYPE'
+}
+(node:2334) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.bulkDelete (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:302:9) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026236021555351643',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+DiscordAPIError: Interaction has already been acknowledged.
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1026236391509741718/aW50ZXJhY3Rpb246MTAyNjIzNjM5MTUwOTc0MTcxODpyckJWU3R4ZVJaTzJxeHJtb29SREZpQVZyQ2Z0elZpZWc1dUcwUFhnSXRYVk5ZWU5wY0FrZk8wd3drckF5TGU0eXI2bVdFSTRDV1VPSnpOWnBxTjgxSjhDZDR6ZUtiaFZlTmdZN1h5QjRzeUZtUDA0eTlNS1hvNXpodTBERGdiSg/callback',
+  code: 40060,
+  httpStatus: 400,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+ReferenceError: state is not defined
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:15:5)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:2420) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:2471) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:2471) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:2471) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+TypeError: Cannot read properties of null (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:114)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:326:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+/home/pi/BattleBot/src/console-handler.js:27
+  							result.forEach((char) => msg += "\n- " + char.FILE;
+  							                                              ^^^^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:27
+  							result.forEach((char) => msg += "\n- " + char.FILE;
+  							                                              ^^^^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:27
+  							result.forEach((char) => msg += "\n- " + char.FILE;
+  							                                              ^^^^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:27
+  							result.forEach((char) => msg += "\n- " + char.FILE;
+  							                                              ^^^^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 331
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 592
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 592
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 592
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 592
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 592
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token } in JSON at position 592
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected string in JSON at position 2841
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+(node:8132) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: result is not defined
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:27:10)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:8219) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: result is not defined
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:27:10)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:8264) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8298) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: chars.forEach is not a function
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:27:16)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:8343) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+/home/pi/BattleBot/src/console-handler.js:28
+  								msg += "\n- " + char.FILE);
+  								                         ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:28
+  								msg += "\n- " + char.FILE);
+  								                         ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:28
+  								msg += "\n- " + char.FILE);
+  								                         ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:28
+  								msg += "\n- " + char.FILE);
+  								                         ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:28
+  								msg += "\n- " + char.FILE);
+  								                         ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:28
+  								msg += "\n- " + char.FILE);
+  								                         ^
+
+SyntaxError: Unexpected token ')'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+(node:8591) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8647) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8708) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8759) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8836) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9124) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'NAME')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:80:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+DiscordAPIError: Unknown interaction
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async SelectMenuInteraction.reply (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:103:5) {
+  method: 'post',
+  path: '/interactions/1026310984597508166/aW50ZXJhY3Rpb246MTAyNjMxMDk4NDU5NzUwODE2Njo1Sks0MlJnYUM3bUlsWTJUcURPRjlqVmtZZUg1S1pWQUd2UENLOHluUFJDRTVYNW5QVTVLRnhjdXlMVjZ5eFB6d2drV2JFd1l5RXpQZW95U2I4UVlWMkY3SWZVVlpSbzRKUVV0Y0t5TDF3TGF2VnJOUWY2azl6ZDBaTnh3djhuZg/callback',
+  code: 10062,
+  httpStatus: 404,
+  requestData: { json: { type: 4, data: [Object] }, files: [] }
+}
+(node:9158) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9244) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'NAME')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:80:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:9294) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9329) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:80:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:9422) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9530) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'NAME')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:80:67)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:9577) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9577) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:9577) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:9577) DeprecationWarning: Passing strings for MessageEmbed#setAuthor is deprecated. Pass a sole object instead.
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token S in JSON at position 1945
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+SyntaxError: /home/pi/BattleBot/src/console-logs-0.json: Unexpected token f in JSON at position 1960
+    at parse (<anonymous>)
+    at Object.Module._extensions..json (node:internal/modules/cjs/loader:1167:22)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/src/console-handler.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+(node:10261) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:80:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:10302) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10398) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of null (reading 'name')
+    at Object.module.exports.run (/home/pi/BattleBot/commands/roles/team.js:16:114)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:326:9)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:10551) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10595) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10647) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10647) DeprecationWarning: Passing strings for MessageEmbed#setFooter is deprecated. Pass a sole object instead.
+(node:10647) DeprecationWarning: MessageEmbed#addField is deprecated and will be removed in the next major update. Use MessageEmbed#addFields instead.
+(node:10733) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: chars is not iterable
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:59:25)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:10799) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'file')
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:61:24)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:10848) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'file')
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:62:24)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:10888) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'file')
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:62:24)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+/home/pi/BattleBot/src/console-handler.js:38
+  								for(const char for profile_names)
+  								          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:80:39)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/pi/BattleBot/index.js:35:1)
+(node:11298) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: Cannot read properties of undefined (reading 'file')
+    at Client.client.consoleHandler (/home/pi/BattleBot/src/console-handler.js:62:24)
+    at module.exports (/home/pi/BattleBot/events/messageCreate.js:197:12)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (/home/pi/BattleBot/node_modules/discord.js/src/client/actions/MessageCreate.js:26:14)
+    at Object.module.exports [as MESSAGE_CREATE] (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:482:22)
+    at WebSocketShard.onMessage (/home/pi/BattleBot/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+    at WebSocket.onMessage (/home/pi/BattleBot/node_modules/discord.js/node_modules/ws/lib/event-target.js:199:18)
+    at WebSocket.emit (node:events:390:28)
+(node:11345) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11403) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ReferenceError: char is not defined
+    at Timeout._onTimeout (/home/pi/BattleBot/src/console-handler.js:88:63)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+(node:11456) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11496) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11539) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11593) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.bulkDelete (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:302:9) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026326554919313428',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/pi/BattleBot/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async TextChannel.bulkDelete (/home/pi/BattleBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:302:9) {
+  method: 'delete',
+  path: '/channels/1026215798097846344/messages/1026326868649054318',
+  code: 10008,
+  httpStatus: 404,
+  requestData: { json: undefined, files: [] }
+}
+(node:11664) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12069) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:12284) DeprecationWarning: Message#deleted is deprecated, see https://github.com/discordjs/discord.js/issues/7091.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+TypeError: message.send is not a function
+    at /home/pi/BattleBot/commands/roles/goopllc.js:29:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

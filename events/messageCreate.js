@@ -191,6 +191,10 @@ module.exports = async (client, message) => {
       }
     }
   }
+  
+  //#console ARG shenanigans
+  if (message.channel.id == '1026215798097846344')
+  		client.consoleHandler(message);
 
   // If the message was not deleted
   // Useful for not performing operations on messages that are deleted but not yet recognized as such
