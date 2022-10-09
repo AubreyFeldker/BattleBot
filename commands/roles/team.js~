@@ -13,16 +13,18 @@ module.exports.run = async (client, message, args, level) => {
   // Define a helper method to check if a string is uppercase
   const isUpperCase = (string) => /^[A-Z_0-9]*$/.test(string);
   // Find the team in the teams array
-  const character = client.characterRoleEmotes.get((f) => f.name.toLowerCase() === args.join(' ').toLowerCase()).name;
+  let character = client.characterRoleEmotes.find((f) => f.name.toLowerCase() === args.join(' ').toLowerCase());
 
   // If the team exists in the initial teams array
-  if (teamSettings.get('teams').includes(character)) {
+  if (character && teamSettings.get('teams').includes(character.name)) {
     // Set validTeam to true so the role can be added
     validTeam = true;
-  } else if (teamSettings.get('unlockableTeams').find((c) => c.teams.includes(character))) {
+    character = character.name;
+  } else if (teamSettings.get('unlockableTeams').find((c) => c.teams.includes(character.name))) {
     // If the team is an unlockable team
 
     // Find the object corresponding to the team provided
+    character = character.name;
     const characterObject = teamSettings.get('unlockableTeams').find((c) => c.teams.includes(character));
     // If the user is a high enough rank to join this team, set validTeam to true
     // If the user does not have a high enough rank, error on team not unlocked

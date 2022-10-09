@@ -1,5 +1,5 @@
 // Require the items.json file
-const fetch = require('node-fetch');
+const fetch = import('node-fetch');
 const {writeFile} = require('fs');
 const {promisify} = require('util');
 const Enmap = require('enmap');

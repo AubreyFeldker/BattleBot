@@ -48,10 +48,14 @@ module.exports = (client) => {
   				}
   				else {
   					channel.send("```INVALID LOGIN```");
-  					setTimeout(() => { 
+  					setTimeout(() => {
   						channel.bulkDelete(1);
-  						channel.send("```PLEASE LOG IN TO ACCESS CONSOLE```");
-  						client.config.inUse = false;
+  						channel.send("```HINT: 02```");
+  						setTimeout(() => { 
+  							channel.bulkDelete(1);
+  							channel.send("```PLEASE LOG IN TO ACCESS CONSOLE```");
+  							client.config.inUse = false;
+  						}, 5000);
   					}, 5000);
   				}
   				break;

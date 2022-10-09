@@ -79,7 +79,7 @@ fs.readdir('./commands/', (err, folders) => {
       // Loop through all files in the folder
       files.forEach((file) => {
         // If the file isn't a .js file and thus not a command file, return
-        if (!file.endsWith('.js')) {
+        if (!file.endsWith('.js') || file == 'SaveSchema.js') {
           return;
         }
 

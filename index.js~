@@ -79,7 +79,7 @@ fs.readdir('./commands/', (err, folders) => {
       // Loop through all files in the folder
       files.forEach((file) => {
         // If the file isn't a .js file and thus not a command file, return
-        if (!file.endsWith('.js')) {
+        if (!file.endsWith('.js') || file. == 'SaveSchema.js') {
           return;
         }
 
@@ -136,7 +136,7 @@ token: client.config.monsterHunterOfficialToken
 
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleHandler'], { ensureProps: true }));
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars'], { ensureProps: true }));
 
 // Login to the Discord API using the token in config.js
 console.log('test and seethe');

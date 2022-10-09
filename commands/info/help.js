@@ -29,7 +29,7 @@ module.exports.run = (client, message, [command], level) => {
         output += `\u200b\n== ${cat} ==\n`;
         currentCategory = cat;
       }
-      if (!! c.help.show)
+      if (c.help.name != 'goopllc')
       	output += `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.minidesc}\n`;
     });
     output += '```';

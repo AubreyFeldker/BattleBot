@@ -51,6 +51,14 @@ module.exports = async (client, interaction) => {
 		interaction.reply({ content: `Added roles: ${addedRoles.join(', ')}\nRemoved roles: ${removedRoles.join(', ')}`, ephemeral: true });
 	}
 	else {
+		
+		if (interaction.customId == 'gooigi') {
+			interaction.guild.channels.cache.get('370373520745693199').permissionOverwrites.edit(interaction.guild.id, { VIEW_CHANNEL: true });
+		
+			interaction.message.edit('OPENING CONSOLE');
+			interaction.deferUpdate();
+			return;
+		}
 	
 	const buttonId = interaction.customId.split(" ");
 	

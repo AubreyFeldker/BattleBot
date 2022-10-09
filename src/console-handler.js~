@@ -97,7 +97,7 @@ module.exports = (client) => {
   				break;
   			case 2:
   				if (content.toUpperCase() == "BACK") {
-  					channel.bulkDelete(1);
+  					channel.bulkDelete(2);
   							
   					//Building file directory message
   					let msg = "```PLEASE SELECT A FILE TO READ";

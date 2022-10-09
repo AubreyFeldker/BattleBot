@@ -32,7 +32,6 @@ module.exports = async (client, interaction) => {
 			//Check user is appropriate level for the role
 			if(buttonId[3] == 2) {
 				const rank = client.teamSettings.get('unlockableTeams').find((c) => c.teams.includes(role.name.slice(5)));
-				console.log(`${interaction.member} ${user.rank + user.prestige * 12} ${rank.rankNeeded} ${buttonId[3]}`);
 				if(user.rank + (user.prestige * 12) < rank.rankNeeded) {
 					interaction.reply({ content: 'You are not a high enough level to obtain that team role!', ephemeral: true });
 					cont = 0;
@@ -52,6 +51,13 @@ module.exports = async (client, interaction) => {
 		interaction.reply({ content: `Added roles: ${addedRoles.join(', ')}\nRemoved roles: ${removedRoles.join(', ')}`, ephemeral: true });
 	}
 	else {
+		
+		if (interaction.customId == 'gooigi') {
+			interaction.guild.channels.cache.get('370373520745693199').permissionOverwrites.edit(interaction.guild.id, { VIEW_CHANNEL: true });
+		
+			interaction.message.edit('** **');
+			return;
+		}
 	
 	const buttonId = interaction.customId.split(" ");
 	

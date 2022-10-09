@@ -1,5 +1,5 @@
 // Require the items.json file
-const fetch = require('node-fetch');
+const fetch = import('node-fetch');
 const {writeFile} = require('fs');
 const {promisify} = require('util');
 const Enmap = require('enmap');
@@ -38,7 +38,7 @@ module.exports.run = (client, message, args, level) => {
 				client.guilds.cache.get('984303759603695696').emojis.create(filepath, emote.name)
 					.then(emoji => {
 						console.log(`Created new emoji with name ${emoji.name}!`); 
-						client.emotes.ensure(emoji.id, {id: emoji.id, name: emoji.name, rarity: args[2], alt_name: args.length > 3 ? [args.slice(3).join(' ')] : [], origin_server: emoji.guild.id, is_spotlight: false});
+						client.emotes.ensure(emoji.id, {id: emoji.id, name: emoji.name, rarity: parseInt(args[2]), alt_name: args.length > 3 ? [args.slice(3).join(' ')] : [], origin_server: emoji.guild.id, is_spotlight: false});
 						console.log(client.emotes);
 						return message.success(`Added the new emote __${client.emotes.get(emoji.id, "alt_name").length > 0 ? client.emotes.get(emoji.id, "alt_name")[0] : emoji.name}__ ${client.emojis.cache.get(emoji.id)}`, `RARITY: ${emote_rarities.get(parseInt(args[2]))}`);
 					})

@@ -13,6 +13,9 @@ module.exports.run = async (client, message, args, level, Discord) => {
 		row1.components[0].addOptions([{label: `Team ${char}`, value: `dropdown-1-Team ${char}-1`, emoji: {id: emote.id}}]);
 	});
 	
+	row1.components[0].addOptions([{label: `Team Gooigi`, value: `dropdown-1-Team Gooigi-1`, description: 'DARK ROLE: Found in a mysterious console', emoji: {id: client.emojis.cache.get(client.characterRoleEmotes.get('Gooigi').emote).id}}]);
+	row1.components[0].addOptions([{label: `Team Foreman Spike`, value: `dropdown-1-Team Foreman Spike-1`, description: 'DARK ROLE: Found prior to the Ground Zero event', emoji: {id: client.emojis.cache.get(client.characterRoleEmotes.get('Foreman Spike').emote).id}}]);
+	
 	let row1_2 = new Discord.MessageActionRow()
 			.addComponents(
 				new Discord.MessageSelectMenu()
