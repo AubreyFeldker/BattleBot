@@ -3,7 +3,7 @@
         "id": "starbits-xsmall",
         "type": "starbits",
         "amount": 500,
-        "weight": 15,
+        "weight": 8,
         "cost_type": "coins",
         "cost": "1"
     },
@@ -11,7 +11,7 @@
         "id": "starbits-small",
         "type": "starbits",
         "amount": 1000,
-        "weight": 20,
+        "weight": 10,
         "cost_type": "coins",
         "cost": "2"
     },
@@ -19,7 +19,7 @@
         "id": "starbits-medium",
         "type": "starbits",
         "amount": 2500,
-        "weight": 15,
+        "weight": 10,
         "cost_type": "coins",
         "cost": "3"
     },
@@ -83,7 +83,7 @@
         "id": "emote-common",
         "type": "emote",
         "rarity": 1,
-        "weight": 4,
+        "weight": 5,
         "cost_type": "starbits",
         "cost": "10000"
     },
@@ -115,7 +115,7 @@
         "id": "emote-exclusive",
         "type": "emote-ex",
         "rarity": 5,
-        "weight": 2,
+        "weight": 40,
         "cost_type": "coins",
         "cost": "50"
     },

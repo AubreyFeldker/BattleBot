@@ -9,7 +9,8 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   const characters = ['Mario', 'Luigi', 'Bowser', 'Peach', 'Yoshi', 'E. Gadd', 'the Koopalings', 'Toad', 'Toadette', 'Cappy', 'Rosalina', 'Boo', 'Goomba', 'Koopa Troopa', 'Koopa the Quick', 'Donkey Kong', 'Daisy', 'Wario', 'Waluigi', 'Shy Guy', 'Chargin Chuck', 'Pyoro', 'Beaoro', 'Bayonetta', 'King K. Rool', 'Funky Kong', 'The Chimp', 'The Champ', 'Cranky Kong', 'Rabbid Peach', 'Judge Pianta', 'Plessie', 'King Augustus Septemberus Octoberus Koopa', 'Jr. Troopa', 'Wart', 'King Boo', 'Ninji', 'Pauline', 'Tiara', 'the Broodals', 'Jack Black', 'Foreman Spike', 'Diddy Kong', 'Dixie Kong', 'Whomp', 'Pidgit', 'Gooper Blooper', 'Scuttlebug', 'Nabbit\'s Ghost'];
   const jobs = ['Personal Chef', 'Minion', 'Bodyguard', 'Lawyer', 'Assistant', 'Babysitter', 'Personal Maid', 'Mailman', 'Driver', 'Gardener', 'Lawn-Mower', 'Consultant', 'Copyright Lawyer', 'Player 2', 'Trash Collector', 'Hair Stylist', 'Pet Sitter', 'Hitman', 'Therapist', 'Tour Guide', 'Photographer', 'Jester', 'Partner in Crime', 'DJ'];
   
-  const location = client.locations.some(loc => loc.name == args.join(' ')) ? client.locations.find(loc => loc.name == args.join(' ')) : client.locations.get(Math.floor(Date.now() / (3600 * 1000 * 24)) % client.locations.count + 1); //The location for working changes each day
+  // Location is different depending on the day
+  const location = client.locations.some(loc => loc.name == args.join(' ')) ? client.locations.find(loc => loc.name == args.join(' ')) : client.locations.get(Math.floor(Date.now() / (3600 * 1000 * 24)) % client.locations.count + 1);
   console.log(location);
   
   let user = client.userDB.observe(message.author.id);
