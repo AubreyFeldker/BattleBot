@@ -1,5 +1,5 @@
 // Require the items.json file
-const fetch = import('node-fetch');
+const fetch = require('node-fetch');
 const {writeFile} = require('fs');
 const {promisify} = require('util');
 const Enmap = require('enmap');
@@ -22,6 +22,7 @@ const emote_rarities = new Map([
 
 // eslint-disable-next-line no-unused-vars
 module.exports.run = (client, message, args, level) => {
+	// Format editemotes add [emote] [rarity] [name: optional]
 	if (args[0] == "add") { //Adding emote
 			const emote_id = client.stripEmote(args[1]);
 			const emote = client.emojis.cache.find(emoji => emoji.id == emote_id);
@@ -34,12 +35,13 @@ module.exports.run = (client, message, args, level) => {
 				else {
 					var filepath = `/home/pi/BattleBot/commands/emotes/emote_stash/${emote.name}.gif`;
 					downloadFile(`https://cdn.discordapp.com/emojis/${emote_id}.gif`, filepath); }
+				// Timeout to handle improper emote addition / Discord-side server errors to help maintain state
 				setTimeout(function(){	
 				client.guilds.cache.get('984303759603695696').emojis.create(filepath, emote.name)
 					.then(emoji => {
 						console.log(`Created new emoji with name ${emoji.name}!`); 
 						client.emotes.ensure(emoji.id, {id: emoji.id, name: emoji.name, rarity: parseInt(args[2]), alt_name: args.length > 3 ? [args.slice(3).join(' ')] : [], origin_server: emoji.guild.id, is_spotlight: false});
-						console.log(client.emotes);
+
 						return message.success(`Added the new emote __${client.emotes.get(emoji.id, "alt_name").length > 0 ? client.emotes.get(emoji.id, "alt_name")[0] : emoji.name}__ ${client.emojis.cache.get(emoji.id)}`, `RARITY: ${emote_rarities.get(parseInt(args[2]))}`);
 					})
 					.catch(console.error);}, 1000);
@@ -59,6 +61,7 @@ module.exports.run = (client, message, args, level) => {
 	}
 	if (args[0] == "setspotlight") {
 		let msg = "";
+		// Removes spotlight from emotes that are currently spotlighted
 		client.emotes.filter(emote => emote.is_spotlight == true).forEach(emote => { let v = client.emotes.observe(emote.id); v.is_spotlight = false;});
 		for (let i = 1; i < args.length; i++) {
 			if (client.emotes.has(client.stripEmote(args[i]))) {
