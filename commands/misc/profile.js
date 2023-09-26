@@ -21,7 +21,7 @@ module.exports.run = async (client, message, [page, id], level, Discord, eco) =>
 	
 	switch(page) {
 		case "summary":
-			embed = client.createProfEmbed(person, eco);
+			embed = client.createProfEmbed(person);
 			break;
 		case "level":
 		case "progress":
@@ -51,7 +51,7 @@ module.exports.run = async (client, message, [page, id], level, Discord, eco) =>
 				comp.push(arrows);
 				break;
 		default:
-			embed = client.createProfEmbed(person, eco);
+			embed = client.createProfEmbed(person);
 	}
 	
 	

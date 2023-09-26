@@ -3,7 +3,8 @@
  
 // Require necessary dependencies
 const Discord = require('discord.js');
-const eco = require('discordenvo');
+//const eco = require('discordenvo');
+const eco = 1;
 
 // Collections for command cooldowns, point cooldowns, and level up delays
 const cooldowns = new Discord.Collection();
@@ -195,6 +196,11 @@ module.exports = async (client, message) => {
   //#console ARG shenanigans
   if (message.channel.id == '1026215798097846344')
   		client.consoleHandler(message);
+  
+  //#console ARG shenanigans 2	
+  if (message.channel.id == '355186664869724161' && message.content.toUpperCase() == 'CHUCKOLA')
+  	message.channel.send('```COME BACK LATER```');
+  	//client.guilds.cache.get('355119082808541184').channels.cache.get('1026215798097846344').permissionOverwrites.edit('355119082808541184', { VIEW_CHANNEL: true});
 
   // If the message was not deleted
   // Useful for not performing operations on messages that are deleted but not yet recognized as such

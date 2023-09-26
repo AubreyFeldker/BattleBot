@@ -1,5 +1,5 @@
 const flatbuffers = require('flatbuffers');
-const pengu = require('./SaveSchema.js');
+const pengu = require('../../src/SaveSchema.js');
 const fetch = require('node-fetch');
 const fs = require('fs');
 

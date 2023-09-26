@@ -1,96 +1,112 @@
 // eslint-disable-next-line no-unused-vars
 module.exports.run = (client, message, args, level) => {
   // Reads from text file memes.txt in order to create an array of memes
+  
+  const ms_in_day = (3600 * 1000 * 24)
+  const today = Math.floor(Date.now() / ms_in_day);
 
   var fs = require('fs');
 
   if (args[0] == "add") {
-	let question = "";
+	let q = "";
 	for (let i = 2; i < args.length; i++) {
-		question = question + args[i] + " ";
+		q = q + args[i] + " ";
 	}
 
-	fs.appendFileSync('/home/pi/BattleBot/commands/moderation/questions.txt', question);
-	fs.appendFileSync('/home/pi/BattleBot/commands/moderation/questions.txt', "\n" + message.mentions.channels.first().id + "\n");
-	return message.success("New question added to the database!", `${question}`);
+	client.questions.set(client.questions.autonum, {channel: message.mentions.channels.first().id, question: q})
+	return message.success("New question added to the database!", `${q}`);
   }
-  if (args[0] == "addspecial") {
-	let question = "";
+  if (args[0] == "addtimed") {
+	let q = "";
 	for (let i = 3; i < args.length; i++) {
-		question = question + args[i] + " ";
+		q = q + args[i] + " ";
 	}
 
-	var parts = args[2].split('-');
+
+	let options = { weekday: 'long', month: 'short', day: 'numeric' };
+	
+	let parts = args[2].split('-');
+	let myDate = new Date();
+	let day = 0;
 	try {
-		var myDate = new Date(parts[0], parts[1] - 1, parts[2]); 
-		if (myDate < new Date()) { throw " "; }
+		myDate = new Date(parts[0], parts[1] - 1, parts[2]); 
+		day = Math.floor(myDate.getTime() / ms_in_day);
+		console.log(day);
 	}
-	catch (e) { return message.error("Improper date formation!", 'Proper formatting is `YYYY-MM-DD`. Date must be in the future.'); }
+	catch (e) { return message.error("Improper date formation!", 'Proper formatting is `YYYY-MM-DD`.'); }
 
-	let spQuestions = fs.readFileSync('/home/pi/BattleBot/commands/moderation/questions_special.txt').toString().split("\n");
-	for (let i = 2; i < spQuestions.length; i+=3) {
-		if (args[2] == spQuestions[i]) { return message.error("Question already found!", `There is already a question set to be posted on that day: "${spQuestions[i-1]}"`); }
+	if (day == NaN)
+		return message.error("Invalid date!", 'Proper formatting is `YYYY-MM-DD`.');
+	if (client.datedQuestions.has(day)) {
+		return message.error("Question already found!", `There is already a question set to be posted on that day: "${client.datedQuestions.get(day).question}"`);
 	}
 
-	fs.appendFileSync('/home/pi/BattleBot/commands/moderation/questions_special.txt', question);
-	fs.appendFileSync('/home/pi/BattleBot/commands/moderation/questions_special.txt', "\n" + message.mentions.channels.first().id + "\n" + args[2] + "\n");
-	return message.success("New question added to the database!", `${question}\nIt will be posted on ${myDate.toLocaleDateString("en-US", options)}.`);
+	client.datedQuestions.set(day.toString(), {channel: message.mentions.channels.first().id, question: q})
+	return message.success("New question added to the database!", `${q}\nIt will be posted on ${myDate.toLocaleDateString("en-US", options)}.`);
   }
   else if (args[0] == "remove") {
-	let questions = fs.readFileSync('/home/pi/BattleBot/commands/moderation/questions.txt').toString().split("\n");
-	let nuQuestions = ""
-	let removeQ = args.slice(1).join(' ');
-	let removed = false;
-
-	for (let i = 0; i < questions.length - 1; i+= 2) {
-		if (removeQ != questions[i]) {
-			nuQuestions += (questions[i] + "\n" + questions[i+1] + "\n"); }
-		else { removed = true; }
+	let id = parseInt(args[1]).toString(); //Idiot proof removal of leading zeroes :P
+	let text = "";
+	
+	if (client.datedQuestions.has(id) && id >= today) {
+		text = client.datedQuestions.get(id).question;
+		client.datedQuestions.delete(id);
 	}
+	else if (client.questions.has(id)) {
+		text = client.questions.get(id).question;
+		client.questions.delete(id);
+	}
+	else { return message.error("Question could not be found!", ""); }
+		
 
-	fs.writeFileSync('/home/pi/BattleBot/commands/moderation/questions.txt', nuQuestions);
-	if (removed) { return message.success("Question removed!", `${removeQ}`); }
-	else { return message.error("Question could not be found!", `${removeQ}`); }
+	return message.success("Question removed!", `Question: "${text}"`);
+	
 
   }	
   else if (args[0] == "show") { //Shows the next 10 questions in the queue
-	let num = (args.size > 1) ? parseInt(args[1]) * 2 : 20
-	let questions = fs.readFileSync('/home/pi/BattleBot/commands/moderation/questions.txt').toString().split("\n");
-	let spQuestions = fs.readFileSync('/home/pi/BattleBot/commands/moderation/questions_special.txt').toString().split("\n");
-
-	if (questions.length < 2) { message.channel.send("Question queue is empty."); }
-	else {
+	
+	let startDay = today;
+	
+	let rightNow = new Date();
+   const noon = new Date(
+	rightNow.getFullYear(),
+	rightNow.getMonth(),
+	rightNow.getDate(),
+	12, 0, 0);
+	
+	if (rightNow.getTime() > noon.getTime()) { startDay++; rightNow = new Date(
+	rightNow.getFullYear(),
+	rightNow.getMonth(),
+	rightNow.getDate() + 1);}
+	let undatedKeys = client.questions.keyArray();
 		let i = 0;
 		let j = 0;
 		let post = "";
 
 		// Stuff for showing what date a question will be posted, w/formatting
-		let day = new Date();
-		var options = { weekday: 'long', month: 'short', day: 'numeric' };
-
-		while (i < questions.length - 1 && i < num - 1) {
-			day.setDate(day.getDate() + 1)
-
-			if ( j < spQuestions.length - 2) {
-				let parts = spQuestions[j + 2].split('-');
-				var spDate = new Date(parts[0], parts[1] - 1, parts[2]);
-
-				if (day.getDate() == spDate.getDate()) { post += `${day.toLocaleDateString("en-US", options)} | <#${spQuestions[j+1]}> | ${spQuestions[j]}\n`; j += 3; continue; }
+		let options = { weekday: 'long', month: 'short', day: 'numeric' };
+		
+		while (i < 10) {
+			if (client.datedQuestions.has(startDay)) {
+				let questionInfo = client.datedQuestions.get(startDay);
+				post += `[${startDay}] | ${rightNow.toLocaleDateString("en-US", options)} | <#${questionInfo.channel}> | ${questionInfo.question}\n`
 			}
-			post += `${day.toLocaleDateString("en-US", options)} | <#${questions[i+1]}> | ${questions[i]}\n`;
-			i += 2;
+			else if (j < undatedKeys.length) {
+				let questionInfo = client.questions.get(undatedKeys[j]);
+				post += `[${undatedKeys[j].toString().padStart(5, '0')}] | ${rightNow.toLocaleDateString("en-US", options)} | <#${questionInfo.channel}> | ${questionInfo.question}\n`
+				j++;
+			}
+			rightNow = new Date(
+				rightNow.getFullYear(),
+				rightNow.getMonth(),
+				rightNow.getDate() + 1);
+			startDay++;
+			i++;
 		}
-
-		while (j < spQuestions.length - 1) {
-			let parts = spQuestions[j + 2].split('-');
-			var spDate = new Date(parts[0], parts[1] - 1, parts[2]);
-			if (spDate.getDate() > day.getDate() + 7) { break; }
-			post += `${spDate.toLocaleDateString("en-US", options)} | <#${spQuestions[j+1]}> | ${spQuestions[j]}\n`;
-			j += 3;
-		}
+		
+		if (post === "") {return message.channel.send("Question queue is empty.");}
 
 		message.channel.send(post);
-	}
   }
   else if (args[0] == "archive") { //Posts text document with archive of questions
 	message.channel.send({content: 'List of previously asked questions:', files: ['/home/pi/BattleBot/commands/moderation/questions_archive.txt']});
@@ -100,15 +116,20 @@ module.exports.run = (client, message, args, level) => {
 	for (let i = 1; i < args.length; i++) {
 		keyword = (keyword + args[i] + " ").slice(0, -1);
 	}
+	keyword = (keyword === "") ? " " : keyword;
+	
 	let list =  `LIST OF QUESTIONS CONTAINING "${keyword}":`
 	keyword = keyword.toLowerCase();
-
-	let archive = fs.readFileSync('/home/pi/BattleBot/commands/moderation/questions_archive.txt').toString().split("\n");
-	for (let j = 0; j < archive.length; j++) {
-		if (archive[j].toLowerCase().includes(keyword))
-			list += `\n  -  ${archive[j]}`
+	
+	let searchedQs = client.datedQuestions.filterArray(val => val.question.toLowerCase().includes(keyword));
+	for (let i = 0; i < searchedQs.length; i++) {
+		list += `\n  -  ${searchedQs[i].question}`	
 	}
 
+	if (list.length > 2000) {
+		fs.writeFileSync('/home/pi/BattleBot/commands/moderation/too_big_questions.txt', list);
+		message.channel.send({files: ['/home/pi/BattleBot/commands/moderation/too_big_questions.txt']});
+	}
 	message.channel.send(list);
   }
   else {
@@ -118,7 +139,7 @@ module.exports.run = (client, message, args, level) => {
 
 module.exports.conf = {
   guildOnly: true,
-  aliases: ['editqotd'],
+  aliases: ['editqotd', 'editq'],
   permLevel: 'Mod',
   args: 1,
 };

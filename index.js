@@ -51,7 +51,7 @@ fs.readdir('./events/', (err, files) => {
   	 if (! file.includes('~')) {
     const event = require(`./events/${file}`);
     const eventName = file.split('.')[0];
-    console.log(file);
+    //console.log(file);
     client.on(eventName, event.bind(null, client)); }
   });
 });
@@ -112,6 +112,7 @@ for (let i = 0; i < config.permLevels.length; i++) {
   client.levelCache[thislvl.name] = thislvl.level;
 }
 
+/* Thanks muskrat for nuking twitter's API
 // Twitter object for listening for tweets
 client.twitter = new Twitter({
   consumer_key: client.config.twitterAPIKey,
@@ -132,12 +133,11 @@ token: client.config.twitterHookOfficialToken
 client.monsterHunterTwitter = new Discord.WebhookClient({ 
 id: client.config.monsterHunterOfficialID,
 token: client.config.monsterHunterOfficialToken
-});
+});*/
 
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars'], { ensureProps: true }));
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions'], { ensureProps: true }));
 
 // Login to the Discord API using the token in config.js
-console.log('test and seethe');
 client.login(config.token);

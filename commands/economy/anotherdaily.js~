@@ -29,6 +29,10 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
 		user.blue_coins += (d_coin * multi);
 		user.last_daily = Date.now();
 		
+		let stats = client.userStats.observe(message.author.id);
+		stats.starbits += (d_star * multi);
+		stats.blue_coins += (d_coin * multi);
+		
 		return message.success('Dailies claimed!', `**${message.member.displayName}**, You collected ${d_star * multi} starbits ${starbits} and ${d_coin * multi} Blue Coins ${bluecoins}.\nYou now have ${user.starbits} starbits ${starbits} and ${user.blue_coins} Blue Coins ${bluecoins}!`);
   }
 };

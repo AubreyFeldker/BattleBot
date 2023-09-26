@@ -3,11 +3,16 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   const starbits = client.emojis.cache.get(client.emoji.starbits);
   // Pasre the amount from args
   const amount = parseInt(args[0], 10);
+  // Determine a random flip: 0 or 1
+  let flip = Math.floor(Math.random() * 2);
 
   // If amount is NaN (Not a Number) or less than 0, error on insufficient amount
   if (isNaN(amount) || amount <= 0) { // eslint-disable-line no-restricted-globals
     return message.error('Insufficient Amount!', 'Please specify a proper amount of starbits you wish to gamble!');
   }
+
+  // Set flip equal to heads if it was 0, or tails if it was 1
+  flip = flip === 0 ? 'heads' : 'tails';
 
   // Fetch user balance and check if it's less than the amount provided. If it is, error on insufficient funds
   let user = client.userDB.observe(message.author.id);
@@ -16,9 +21,8 @@ module.exports.run = async (client, message, args, level, Discord, eco) => {
   }
 
   // Use pre-built coinflip function to calculate outcome and add/subtract from user's balance
-  if (Math.floor(Math.random() * 2) > 1) {
+  if (flip == 1) {
   		user.starbits += amount;
-  		client.userStats.observe(message.author.id).starbits += amount;
   		return message.success('You got heads!', `You gambled ${amount} starbits ${starbits} and won! Now, you have **${user.starbits} starbits ${starbits}**!`);
   }
   else {

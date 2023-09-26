@@ -12,9 +12,15 @@ module.exports.run = async (client, message, args, level, Discord) => {
 		let emote = client.emojis.cache.get(client.characterRoleEmotes.get(char).emote)
 		row1.components[0].addOptions([{label: `Team ${char}`, value: `dropdown-1-Team ${char}-1`, emoji: {id: emote.id}}]);
 	});
+	client.teamSettings.get('secretTeams').forEach ((char) => {
+		if (char.desc) {
+			let emote = client.emojis.cache.get(client.characterRoleEmotes.get(char.name).emote)
+			row1.components[0].addOptions([{label: `Team ${char.name}`, value: `dropdown-1-Team ${char.name}-1`, emoji: {id: emote.id}, description: `DARK ROLE: ${char.desc}`}]);
+		}
+	});
 	
-	row1.components[0].addOptions([{label: `Team Gooigi`, value: `dropdown-1-Team Gooigi-1`, description: 'DARK ROLE: Found in a mysterious console', emoji: {id: client.emojis.cache.get(client.characterRoleEmotes.get('Gooigi').emote).id}}]);
-	row1.components[0].addOptions([{label: `Team Foreman Spike`, value: `dropdown-1-Team Foreman Spike-1`, description: 'DARK ROLE: Found prior to the Ground Zero event', emoji: {id: client.emojis.cache.get(client.characterRoleEmotes.get('Foreman Spike').emote).id}}]);
+	//row1.components[0].addOptions([{label: `Team Gooigi`, value: `dropdown-1-Team Gooigi-1`, description: 'DARK ROLE: Found in a mysterious console', emoji: {id: client.emojis.cache.get(client.characterRoleEmotes.get('Gooigi').emote).id}}]);
+	//row1.components[0].addOptions([{label: `Team Foreman Spike`, value: `dropdown-1-Team Foreman Spike-1`, description: 'DARK ROLE: Found prior to the Ground Zero event', emoji: {id: client.emojis.cache.get(client.characterRoleEmotes.get('Foreman Spike').emote).id}}]);
 	
 	let row1_2 = new Discord.MessageActionRow()
 			.addComponents(
@@ -45,13 +51,13 @@ module.exports.run = async (client, message, args, level, Discord) => {
 	});
 	
 	//LFG roles
-	const lfg = ['3D World', 'Mario Maker 2', 'Mario Kart', 'Mario Strikers', 'Mario Party', 'Smash Bros.'];
+	const lfg = ['3D World', 'Mario Maker 2', 'Mario Kart', 'Mario Party', 'Smash Bros.'];
 	let row3 = new Discord.MessageActionRow()
 			.addComponents(
 				new Discord.MessageSelectMenu()
 					.setCustomId('dropdown-3')
 					.setPlaceholder('Looking for Games Roles')
-					.setMaxValues(6)
+					.setMaxValues(5)
 			);
 	lfg.forEach ((lfg) => {
 		row3.components[0].addOptions([{label: lfg, value: `dropdown-3-${lfg} LFG`}]);

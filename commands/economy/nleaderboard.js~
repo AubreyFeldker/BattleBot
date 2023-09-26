@@ -1,10 +1,8 @@
-module.exports.run = async (client, message, [page, numb, just_return = false], level, Discord, eco) => {
+module.exports.run = async (client, message, [page, numb, just_return = false], level, Discord) => {
   // If a user was mentioned, find them on the leaderboard and display their placement
   const starbits = client.emojis.cache.get(client.emoji.starbits);
   const bluecoins = client.emojis.cache.get(client.emoji.bluecoins);
   
-   console.log(message);
-   console.log(client.guilds.cache.get('355119082808541184'));
 	let person = (typeof message.member !== 'undefined') ? message.member : client.guilds.cache.get('355119082808541184').members.cache.get(message.author.id);
 	const owner = await client.fetchOwner();
 	let num = (! numb) ? 1 : parseInt(numb);
@@ -18,7 +16,6 @@ module.exports.run = async (client, message, [page, numb, just_return = false], 
 	if (page) page = page.toLowerCase();
 	
 	let arrows = new Discord.MessageActionRow();
-	console.log('?');
 	const buttons = new Discord.MessageActionRow()
 		.addComponents(
 			new Discord.MessageButton().setCustomId(`lb ${person.id} points ${message.id}`).setLabel('Points').setStyle('PRIMARY'),

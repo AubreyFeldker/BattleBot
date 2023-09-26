@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const eco = require('discordenvo');
+//const eco = require('discordenvo');
 
 module.exports = async (client, interaction) => {
 	//console.log(interaction);
@@ -64,7 +64,7 @@ module.exports = async (client, interaction) => {
 	
 	if (buttonId[0] == 'lb') {
 		const num = buttonId.length == 6 ? parseInt(buttonId[3]) : 1;
-		interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('nleaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord, eco) );
+		interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('leaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord) );
 		
 	}
 	else {
@@ -80,7 +80,7 @@ module.exports = async (client, interaction) => {
 		
 		switch(page) {
 			case "summ":
-				embed = client.createProfEmbed(person, eco);
+				embed = client.createProfEmbed(person);
 				break;
 			case "prog":
 				embed = client.createProgEmbed(person);

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const eco = require('discordenvo');
+//const eco = require('discordenvo');
 
 module.exports = async (client, interaction) => {
 	//console.log(interaction);
@@ -55,7 +55,8 @@ module.exports = async (client, interaction) => {
 		if (interaction.customId == 'gooigi') {
 			interaction.guild.channels.cache.get('370373520745693199').permissionOverwrites.edit(interaction.guild.id, { VIEW_CHANNEL: true });
 		
-			interaction.message.edit('** **');
+			interaction.message.edit('OPENING CONSOLE');
+			interaction.deferUpdate();
 			return;
 		}
 	
@@ -63,7 +64,7 @@ module.exports = async (client, interaction) => {
 	
 	if (buttonId[0] == 'lb') {
 		const num = buttonId.length == 6 ? parseInt(buttonId[3]) : 1;
-		interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('nleaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord, eco) );
+		interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('leaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord) );
 		
 	}
 	else {

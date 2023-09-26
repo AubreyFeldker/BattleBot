@@ -17,6 +17,8 @@ module.exports.run = async (client, message, [page, id], level, Discord, eco) =>
 		
 	let comp = [buttons];
 	
+	
+	
 	switch(page) {
 		case "summary":
 			embed = client.createProfEmbed(person, eco);
