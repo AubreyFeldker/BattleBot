@@ -121,7 +121,6 @@ client.twitter = new Twitter({
   access_token_secret: client.config.twitterAccessTokenSecret,
 });
 
-
 // Start up the twitter webhook listener
 client.twitterHookAffiliate = new Discord.WebhookClient({ 
 id: client.config.twitterHookAffiliateID,

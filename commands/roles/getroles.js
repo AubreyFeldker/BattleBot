@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
 	});
 	
 	//LFG roles
-	const lfg = ['3D World', 'Mario Maker 2', 'Mario Kart', 'Mario Party', 'Smash Bros.'];
+	const lfg = ['Super Mario Bros. Wonder', '3D World', 'Mario Maker 2', 'Mario Kart', 'Mario Party', 'Smash Bros.'];
 	let row3 = new Discord.MessageActionRow()
 			.addComponents(
 				new Discord.MessageSelectMenu()

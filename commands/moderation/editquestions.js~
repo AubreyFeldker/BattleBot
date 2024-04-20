@@ -14,7 +14,10 @@ module.exports.run = (client, message, args, level) => {
 	}
 
 	client.questions.set(client.questions.autonum, {channel: message.mentions.channels.first().id, question: q})
-	return message.success("New question added to the database!", `${q}`);
+	message.success("New question added to the database!", `${q}`);
+	if (client.message_sent == 2) //there was no question today
+		client.sendOutQuestion();
+	return;
   }
   if (args[0] == "addtimed") {
 	let q = "";
@@ -36,7 +39,7 @@ module.exports.run = (client, message, args, level) => {
 	catch (e) { return message.error("Improper date formation!", 'Proper formatting is `YYYY-MM-DD`.'); }
 
 	if (day == NaN)
-		return message.error("Invalid date!", 'Proper formatting is `YYYY-MM-DD`.'`);
+		return message.error("Invalid date!", 'Proper formatting is `YYYY-MM-DD`.');
 	if (client.datedQuestions.has(day)) {
 		return message.error("Question already found!", `There is already a question set to be posted on that day: "${client.datedQuestions.get(day).question}"`);
 	}

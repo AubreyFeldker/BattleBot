@@ -14,7 +14,10 @@ module.exports.run = (client, message, args, level) => {
 	}
 
 	client.questions.set(client.questions.autonum, {channel: message.mentions.channels.first().id, question: q})
-	return message.success("New question added to the database!", `${q}`);
+	message.success("New question added to the database!", `${q}`);
+	if (client.message_sent == 2) //there was no question today
+		client.sendOutQuestion();
+	return;
   }
   if (args[0] == "addtimed") {
 	let q = "";

@@ -163,7 +163,6 @@ client.createProgEmbed = (person) => {
 		const items = require('../commands/economy/items.json');
 		const page_size = 12;
 		const userCollection = client.items.ensure(person.id, []);
-		console.log(userCollection);
 		
 		let cont = "";
 		
@@ -314,12 +313,15 @@ client.createProgEmbed = (person) => {
 		client.questions.delete(q_id)
 		client.datedQuestions.set(today.toString(), q)
 	}
-	else 
+	else {
+		client.question_sent = 2;
 		return client.guilds.cache.get('355119082808541184').channels.cache.get('357328011889999873').send(" @Moderator There is no question for today. Add one using the .editquestions command, then use the command `.eval client.sendOutQuestion();`.");
+	}
 
 	console.log(q);
 	const channel = client.guilds.cache.get('355119082808541184').channels.cache.get(q.channel);
 	channel.send(`Hey <@&${role.id}>!\n${q.question}`);
+	client.question_sent = 1;
   }; //'
 
   //Ends all current timeout/interval functions
@@ -328,6 +330,20 @@ client.createProgEmbed = (person) => {
 	  	clearInterval(i);
 	   	clearTimeout(i);
 	  }
+  };
+  
+  // Returns whether the member has either the mario or wario team role (or neither)
+  client.marioOrWario = (message) => {
+  		let mario_role_id = client.onePieceVars.get('marioRoleID');
+  		let wario_role_id = client.onePieceVars.get('warioRoleID');
+  		let mario_channel_id = client.onePieceVars.get('marioChannelID');
+  		let wario_channel_id = client.onePieceVars.get('warioChannelID');
+  		if(message.member.roles.cache.has(mario_role_id))
+  			return {team: 'mario', role_id: mario_role_id, channel_id: mario_channel_id, other_channel_id: wario_channel_id};
+  		else if(message.member.roles.cache.has(wario_role_id))
+  			return {team: 'mario', role_id: wario_role_id, channel_id: wario_channel_id, other_channel_id: mario_channel_id};
+  		else 
+  			return {team: 'none'};
   };
 
 

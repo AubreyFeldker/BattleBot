@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args, level, Discord) => {
 				new Discord.MessageSelectMenu()
 					.setCustomId('dropdown-3')
 					.setPlaceholder('Looking for Games Roles')
-					.setMaxValues(6)
+					.setMaxValues(5)
 			);
 	lfg.forEach ((lfg) => {
 		row3.components[0].addOptions([{label: lfg, value: `dropdown-3-${lfg} LFG`}]);

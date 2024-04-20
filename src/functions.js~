@@ -43,6 +43,11 @@ module.exports = (client) => {
     return owner;
   };
   
+  //Server wonderflower based functions
+  client.wonderEffect = (effect_num, message) => {
+		return 0;  
+  }
+  
 	//Profile-based functions
 	client.createProfEmbed = (person) => {
 		const userFromDB = client.userDB.ensure(person.id, { points: 0, rank: person.roles.cache.has('391877990277185556') ? 1 : 0, prestige: 0});
@@ -158,7 +163,6 @@ client.createProgEmbed = (person) => {
 		const items = require('../commands/economy/items.json');
 		const page_size = 12;
 		const userCollection = client.items.ensure(person.id, []);
-		console.log(userCollection);
 		
 		let cont = "";
 		
@@ -309,12 +313,15 @@ client.createProgEmbed = (person) => {
 		client.questions.delete(q_id)
 		client.datedQuestions.set(today.toString(), q)
 	}
-	else 
+	else {
+		client.question_sent = 2;
 		return client.guilds.cache.get('355119082808541184').channels.cache.get('357328011889999873').send(" @Moderator There is no question for today. Add one using the .editquestions command, then use the command `.eval client.sendOutQuestion();`.");
+	}
 
 	console.log(q);
 	const channel = client.guilds.cache.get('355119082808541184').channels.cache.get(q.channel);
 	channel.send(`Hey <@&${role.id}>!\n${q.question}`);
+	client.question_sent = 1;
   }; //'
 
   //Ends all current timeout/interval functions
@@ -324,73 +331,22 @@ client.createProgEmbed = (person) => {
 	   	clearTimeout(i);
 	  }
   };
+  
+  // Returns whether the member has either the mario or wario team role (or neither)
+  client.marioOrWario = (message) => {
+  		let mario_role_id = client.onePieceVars.get('marioRoleID');
+  		let wario_role_id = client.onePieceVars.get('warioRoleID');
+  		let mario_channel_id = client.onePieceVars.get('marioChannelID');
+  		let wario_channel_id = client.onePieceVars.get('warioChannelID');
+  		if(message.member.roles.cache.has(mario_role_id))
+  			return {team: 'mario', role_id: mario_role_id, channel_id: mario_channel_id, other_channel_id = wario_channel_id};
+  		else if(message.member.roles.cache.has(wario_role_id))
+  			return {team: 'mario', role_id: wario_role_id, channel_id: wario_channel_id, other_channel_id = mario_channel_id};
+  		else 
+  			return {team: 'none'};
+  };
 
-  /*client.startTwitterFeed = () => {
-    const stream = client.twitter.stream('statuses/filter', { follow: client.config.followedTwitterUsers.join(',') })
-      .on('start', () => {
-        console.log('Started Twitter Feed Stream');
-      })
-      .on('data', (tweet) => {
-        if (!tweet.user || tweet.in_reply_to_status_id !== null) {
-          return;
-        }
 
-        if (client.config.affiliateUsers.includes(tweet.user.id_str)) {
-          if (tweet.hasOwnProperty('retweeted_status')) {
-		  client.twitterHookAffiliate.send({content: `http://twitter.com/${tweet.retweeted_status.user.screen_name}/status/${tweet.retweeted_status.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` })
-	  } else {
-		  client.twitterHookAffiliate.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });}
-        } else if (client.config.officialUsers.includes(tweet.user.id_str)) {
-          client.twitterHookOfficial.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });
-        } else if (tweet.user.id_str == '306490355') {
-	  client.twitterHookOfficial.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}`, threadId: '888559682036305942' });
-	}
-      })
-      .on('error', (error) => console.error(error))
-      .on('end', () => {
-        console.log('Ended Twitter Feed Stream');
-        // Wait 10 seconds, then restart the twitter feed
-        //setTimeout(() => {
-        //  client.startTwitterFeed();
-        //}, 10000);
-	return stream;
-      });
-  };*/
-
-/*  client.startTwitterFeed = (oldStream) => {
-    try {
-	process.nextTick(() => oldStream.destroy());
-    }
-    finally {
-	    const stream = client.twitter.stream('statuses/filter', { follow: client.config.followedTwitterUsers.join(',') })
-	      .on('start', () => {
-		console.log('Started Twitter Feed Stream');
-	      })
-	      .on('data', (tweet) => {
-		if (!tweet.user || tweet.in_reply_to_status_id !== null) {
-		  return;
-		}
-
-		if (client.config.affiliateUsers.includes(tweet.user.id_str)) {
-		  if (tweet.hasOwnProperty('retweeted_status') {
-		  client.twitterHookAffiliate.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${retweeted_status.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` })
-		  } else {
-		  client.twitterHookAffiliate.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });}
-		} else if (client.config.officialUsers.includes(tweet.user.id_str)) {
-		  client.twitterHookOfficial.send({content: `http://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`, username: tweet.user.name, avatarURL: `${tweet.user.profile_image_url_https}` });
-		}
-	      })
-	      .on('error', (error) => console.error(error))
-	      .on('end', () => {
-		console.log('Ended Twitter Feed Stream');
-		// Wait 10 seconds, then restart the twitter feed
-		//setTimeout(() => {
-		//  client.startTwitterFeed();
-		//}, 10000);
-		return stream;
-	      });
-    }
-  };*/
 
   // Extend the String prototype to provide String.toProperCase() to make formatting easier
   // Basically sets stuff like 'donkey kong' to 'Donkey Kong'

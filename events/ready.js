@@ -16,12 +16,7 @@ module.exports = (client) => {
     const index = Math.floor(Math.random() * activitiesList.length);
     client.user.setActivity(activitiesList[index]);
   }, 30000);
-  
-  
-	setTimeout(() => {
-    	client.clearAllTimers();
-    	process.exit(0);
-  	}, (3600000 * 12)); 
+  client.question_sent = 0;
 
 
     const now = new Date();

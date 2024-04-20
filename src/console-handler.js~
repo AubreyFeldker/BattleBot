@@ -24,6 +24,8 @@ module.exports = (client) => {
 		client.config.inUse = true;
 		channel.bulkDelete((client.consoleVars.get("state") == 2 || client.consoleVars.get("state") == 6) ? 1 : 2);
 		
+		let userAlignment = client.marioOrWario(message);
+		
 		if(content.toUpperCase() == 'RESET') {
 			client.consoleVars.set('state', 0);
 			client.config.inUse = false;
@@ -61,6 +63,31 @@ module.exports = (client) => {
   					}, 5000);
   					client.consoleVars.inc('state');
   				}
+  			else if (content.toUpperCase() == 'CHAMELEON') {
+  				channel.send("```LOGIN SUCCESSFUL```");
+  					setTimeout(() => {
+  						channel.bulkDelete(1);
+  						channel.send("```WELCOME, PENGUIN_SO_EPIC```");
+  						setTimeout(() => {
+  							channel.bulkDelete(1);
+  							channel.send("```LOADING INTO DIRECTORY /SUPER-FAMICOM/PICROSS/SECRETS```");
+  							setTimeout(() => {
+  								channel.bulkDelete(1);
+  								channel.send("```TRANSMITTING FILES TO LOCAL SERVER...```");
+  								setTimeout(() => {
+  									channel.bulkDelete(1);
+  									channel.send("```AUTO-LOG OUT INITIATED...```");
+  									setTimeout(() => {
+  										channel.bulkDelete(1);
+  										channel.send("```PLEASE LOG IN TO ACCESS CONSOLE```");
+  										client.config.inUse = false;
+  									}, 5000);
+  								}, 3000);
+  							}, 3000);
+  						}, 3000);
+  						
+  					}, 3000);
+  			}
   			else if (content.toUpperCase() == 'BOTTLECAPS') {
   					channel.send("```LOGIN SUCCESSFUL```");
   					setTimeout(() => {
@@ -230,9 +257,7 @@ module.exports = (client) => {
 									channel.send("```RECYCLING GOAL REACHED!!! THE CORK AND CASK FOUNDATION IS FOREVER IN YOUR GRATITUDE!```");
 									setTimeout(() => { 
   										channel.bulkDelete(1);
-  										channel.send("```PLEASE CHECK YOUR LOCAL .GETROLES COMMAND FOR A COMMEMERATIVE GIFT!```");
-  										
-  										client.teamSettings.observe('secretTeams').map((char) => { if (char.name == 'Penguin') { char.desc = 'Given for a grand commitment to recycling'}});
+  										channel.send("```RETROFIT OVERRIDE... TRANSMITTING COORDINATES FOR THE SECRET OF THE 1-UP PIECE...```");
   										
   										setTimeout(() => { 
   											channel.bulkDelete(1);
@@ -286,7 +311,7 @@ module.exports = (client) => {
 				let clog;
   				for(const log of lognames) {
   					if (chatlogs[log].file == content.toUpperCase()) {
-  						clog = chars[char];
+  						clog = chatlogs[log];
   						break;
   					}
   				}
