@@ -23,8 +23,6 @@ async function clean (clientParam, text) {
 }
 
 module.exports = {
-  category: 'system',
-  localOnly: true,
 	data: new SlashCommandBuilder()
 		.setName('eval')
 		.setDescription('Code to run.')
@@ -54,4 +52,6 @@ module.exports = {
       interaction.followUp(`**Eval**\n\`\`\`xl\n${error.split('at', 3).join(' ')}\`\`\``);
     }
 	},
+  category: 'misc',
+  localOnly: false,
 };

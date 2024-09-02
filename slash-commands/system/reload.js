@@ -1,8 +1,6 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
-	category: 'system',
-  localOnly: true,
 	data: new SlashCommandBuilder()
 		.setName('reload')
 		.setDescription('Reloads a command.')
@@ -32,4 +30,6 @@ module.exports = {
 	        await interaction.reply(`There was an error while reloading a command \`${command.data.name}\`:\n\`${error.message}\``);
 		}
 	},
+  category: 'misc',
+  localOnly: true,
 };

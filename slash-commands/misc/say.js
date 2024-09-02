@@ -1,8 +1,6 @@
 const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
 
 module.exports = {
-  category: 'misc',
-  localOnly: true,
 	data: new SlashCommandBuilder()
 		.setName('say')
 		.setDescription('Relays the given message into a channel.')
@@ -39,4 +37,6 @@ module.exports = {
           interaction.reply({content: "Message sent!", ephemeral: true});
         }
 	},
+  category: 'misc',
+  localOnly: false,
 };

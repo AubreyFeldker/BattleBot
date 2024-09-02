@@ -54,68 +54,23 @@ for (const folder of commandFolders) {
 	}
 }
 
-//Level cache probably? no longer needed with slash cmds
-// For each permLevel in config.js, set its value in the levelCache object
-/*client.levelCache = {};
-for (let i = 0; i < config.permLevels.length; i++) {
-  const thislvl = config.permLevels[i];
-  client.levelCache[thislvl.name] = thislvl.level;
-}*/
+const eventsPath = path.join(__dirname, 'slash-events');
+const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
-/* Thanks muskrat for nuking twitter's API
-// Twitter object for listening for tweets
-client.twitter = new Twitter({
-  consumer_key: client.config.twitterAPIKey,
-  consumer_secret: client.config.twitterAPISecret,
-  access_token_key: client.config.twitterAccessToken,
-  access_token_secret: client.config.twitterAccessTokenSecret,
-});
-
-
-// Start up the twitter webhook listener
-client.twitterHookAffiliate = new Discord.WebhookClient({ 
-id: client.config.twitterHookAffiliateID,
-token: client.config.twitterHookAffiliateToken
-});
-client.twitterHookOfficial = new Discord.WebhookClient({ 
-id: client.config.twitterHookOfficialID,
-token: client.config.twitterHookOfficialToken
-});
-client.monsterHunterTwitter = new Discord.WebhookClient({ 
-id: client.config.monsterHunterOfficialID,
-token: client.config.monsterHunterOfficialToken
-});*/
-//Object.assign(client, Enmap.multi({names: ['settings']}));
+for (const file of eventFiles) {
+	const filePath = path.join(eventsPath, file);
+	const event = require(filePath);
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
+}
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
 const Enmap = (...args) => import('enmap').then(({default: Enmap}) => Enmap(...args)).then((n) => {
   Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions']));
 });
-client.once(Events.ClientReady, readyClient => {
-	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-});
 
 // Login to the Discord API using the token in config.js
 client.login(token);
-
-client.on(Events.InteractionCreate, async interaction => {
-	if (!interaction.isChatInputCommand()) return;
-
-	const command = interaction.client.commands.get(interaction.commandName);
-
-	if (!command) {
-		console.error(`No command matching ${interaction.commandName} was found.`);
-		return;
-	}
-
-	try {
-		await command.execute(interaction, client);
-	} catch (error) {
-		console.error(error);
-		if (interaction.replied || interaction.deferred) {
-			await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
-		} else {
-			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-		}
-	}
-});
