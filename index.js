@@ -26,12 +26,13 @@ const client = new Client({
 });
 client.commands = new Collection();
 const config = require('./config');
-const { token } = require('./config.json');
+const { token, makerId } = require('./config.json');
 const { version } = require('./package.json');
 const emoji = require('./src/emoji');
 
 // Bind the config object, the version, and the emoji object to the client so they can be used everywhere
 client.config = config;
+client.maker = makerId;
 client.version = `v${version}`;
 client.emoji = emoji;
 

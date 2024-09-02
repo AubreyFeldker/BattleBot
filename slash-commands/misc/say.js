@@ -1,7 +1,7 @@
-const { SlashCommandBuilder } = require('discord.js');
-const { PermissionsBitField } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
+  category: 'misc',
 	data: new SlashCommandBuilder()
 		.setName('say')
 		.setDescription('Relays the given message into a channel.')
@@ -31,10 +31,10 @@ module.exports = {
           interaction.reply({content: "I'm unable to send messages in that channel!", ephemeral: true});
         else if (!userPerms.has([PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages]))
           interaction.reply({content: "You're unable to send messages in that channel!", ephemeral: true});
-        else if (msgRef && ! channel.messages.cache.get(msgRef))
+        else if (msgRef && ! channel.messages.fetch(msgRef))
           interaction.reply({content: "I couldn't find the message you're trying to reply to!", ephemeral: true});
         else {
-          await channel.send({content: "message", reply: { messageReference: msgRef}});
+          await channel.send({content: message, reply: { messageReference: msgRef}});
           interaction.reply({content: "Message sent!", ephemeral: true});
         }
 	},
