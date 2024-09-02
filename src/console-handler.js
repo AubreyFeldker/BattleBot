@@ -5,7 +5,7 @@ const lognames =['message0', 'message1', 'message2', 'message3', 'message4', 'me
 
 const flatbuffers = require('flatbuffers');
 const pengu = require('./SaveSchema.js');
-const fetch = require('node-fetch');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const fs = require('fs');
 
 module.exports = (client) => {
