@@ -2,6 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
 	category: 'system',
+  localOnly: true,
 	data: new SlashCommandBuilder()
 		.setName('reload')
 		.setDescription('Reloads a command.')

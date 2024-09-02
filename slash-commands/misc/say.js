@@ -1,7 +1,8 @@
-const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
 
 module.exports = {
   category: 'misc',
+  localOnly: true,
 	data: new SlashCommandBuilder()
 		.setName('say')
 		.setDescription('Relays the given message into a channel.')

@@ -2,6 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
   category: 'misc',
+  localOnly: true,
 	data: new SlashCommandBuilder()
 		.setName('applezpoints')
 		.setDescription('? ? ? ?'),
