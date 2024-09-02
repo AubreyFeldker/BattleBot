@@ -6,8 +6,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const Enmap = require('enmap');
-const fs = require('fs');
 
 // Create the client instance, require config.json, emoji.js, and the version from package.json
 const client = new Client({
@@ -15,32 +13,29 @@ const client = new Client({
   fetchAllMembers: true,
   disableMentions: 'everyone',
   intents: [
-      Discord.Intents.FLAGS.GUILDS,
-      Discord.Intents.FLAGS.GUILD_MEMBERS,
-      Discord.Intents.FLAGS.GUILD_BANS,
-      Discord.Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS,
-      Discord.Intents.FLAGS.GUILD_WEBHOOKS,
-      Discord.Intents.FLAGS.GUILD_PRESENCES,
-      Discord.Intents.FLAGS.GUILD_MESSAGES,
-      Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-      Discord.Intents.FLAGS.DIRECT_MESSAGES,
-      Discord.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildModeration,
+    GatewayIntentBits.GuildEmojisAndStickers,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMessagePolls,
     ],
 });
+client.commands = new Collection();
 const config = require('./config');
+const { token } = require('./config.json');
 const { version } = require('./package.json');
 const emoji = require('./src/emoji');
-
-// Bind all functions in functions.js to the client
-require('./src/functions')(client);
-require('./src/console-handler')(client);
 
 // Bind the config object, the version, and the emoji object to the client so they can be used everywhere
 client.config = config;
 client.version = `v${version}`;
 client.emoji = emoji;
 
-const foldersPath = path.join(__dirname, 'commands');
+const foldersPath = path.join(__dirname, 'slash-commands');
 const commandFolders = fs.readdirSync(foldersPath);
 
 for (const folder of commandFolders) {
@@ -89,14 +84,37 @@ client.monsterHunterTwitter = new Discord.WebhookClient({
 id: client.config.monsterHunterOfficialID,
 token: client.config.monsterHunterOfficialToken
 });*/
-
+//Object.assign(client, Enmap.multi({names: ['settings']}));
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions', 'onePieceVars'], { ensureProps: true }));
-
+const Enmap = (...args) => import('enmap').then(({default: Enmap}) => Enmap(...args)).then((n) => {
+  Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions']));
+});
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
 // Login to the Discord API using the token in config.js
 client.login(token);
+
+client.on(Events.InteractionCreate, async interaction => {
+	if (!interaction.isChatInputCommand()) return;
+
+	const command = interaction.client.commands.get(interaction.commandName);
+
+	if (!command) {
+		console.error(`No command matching ${interaction.commandName} was found.`);
+		return;
+	}
+
+	try {
+		await command.execute(interaction, client);
+	} catch (error) {
+		console.error(error);
+		if (interaction.replied || interaction.deferred) {
+			await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
+		} else {
+			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+		}
+	}
+});
