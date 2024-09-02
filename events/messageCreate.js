@@ -239,7 +239,7 @@ module.exports = async (client, message) => {
 
     // If the user's level is less than 2 (Mod), and the channel the command is used in is not #robotic-operating-buddy or #bot-testing, delete the message, direct the user to use #robotic-operating-buddy, then delete that message with a 10 second timeout
     // If the user is a mod or higher, this is bypassed
-    if (!(level[1] >= 2 || message.channel.id == '355186664869724161' || message.channel.id == '682337815031447597') && !(command == 'meme' && message.channel.id == '355139801676120074')) {
+    if (!(level[1] >= 2 || message.channel.id == '355186664869724161' || message.channel.id == '682337815031447597') && !(command == 'meme' && message.channel.id == '355139801676120074') && !((command == 'decode' || command == 'roll') && (message.channel.id == '1231099130718191676'|| message.channel.id == '1231099610634784799'))) {
       await message.delete().catch(console.error);
       return message.channel.send('Please use **all** bot commands in <#355186664869724161>!')
         .then((msg) => {

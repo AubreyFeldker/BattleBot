@@ -3,7 +3,8 @@
  
 // Require necessary dependencies
 const Discord = require('discord.js');
-const eco = require('discordenvo');
+//const eco = require('discordenvo');
+const eco = 1;
 
 // Collections for command cooldowns, point cooldowns, and level up delays
 const cooldowns = new Discord.Collection();
@@ -198,7 +199,8 @@ module.exports = async (client, message) => {
   
   //#console ARG shenanigans 2	
   if (message.channel.id == '355186664869724161' && message.content.toUpperCase() == 'CHUCKOLA')
-  	client.guilds.cache.get('355119082808541184').channels.cache.get('1026215798097846344').permissionOverwrites.edit('355119082808541184', { VIEW_CHANNEL: true});
+  	message.channel.send('```COME BACK LATER```');
+  	//client.guilds.cache.get('355119082808541184').channels.cache.get('1026215798097846344').permissionOverwrites.edit('355119082808541184', { VIEW_CHANNEL: true});
 
   // If the message was not deleted
   // Useful for not performing operations on messages that are deleted but not yet recognized as such
@@ -237,7 +239,7 @@ module.exports = async (client, message) => {
 
     // If the user's level is less than 2 (Mod), and the channel the command is used in is not #robotic-operating-buddy or #bot-testing, delete the message, direct the user to use #robotic-operating-buddy, then delete that message with a 10 second timeout
     // If the user is a mod or higher, this is bypassed
-    if (!(level[1] >= 2 || message.channel.id == '355186664869724161' || message.channel.id == '682337815031447597') && !(command == 'meme' && message.channel.id == '355139801676120074')) {
+    if (!(level[1] >= 2 || message.channel.id == '355186664869724161' || message.channel.id == '682337815031447597') && !(command == 'meme' && message.channel.id == '355139801676120074') && !(command == 'decode' && (message.channel.id == '1231099130718191676'|| message.channel.id == '1231099610634784799'))) {
       await message.delete().catch(console.error);
       return message.channel.send('Please use **all** bot commands in <#355186664869724161>!')
         .then((msg) => {

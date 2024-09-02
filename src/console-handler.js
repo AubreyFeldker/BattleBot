@@ -1,7 +1,7 @@
 const chars = require('./console-logs-0.json');
 const chatlogs = require('./console-logs-1.json');
 const profile_names = ['redacted0', 'bin', 'ashley', 'thwomp', 'mc', 'unknown0', 'poochy', 'stu', 'redacted1', 'wendy', 'redacted2', 'jimmy', 'unknown1', 'spike', 'dry', 'redacted3', 'gooigi']
-const lognames =['message0', 'message1', 'message2', 'message3', 'message4', 'message5', 'message6', 'message7'];
+const lognames =['message0', 'message1', 'message2', 'message3', 'message4', 'message5', 'message6', 'message7', 'message8', 'message9', 'message10'];
 
 const flatbuffers = require('flatbuffers');
 const pengu = require('./SaveSchema.js');
@@ -24,7 +24,8 @@ module.exports = (client) => {
 		client.config.inUse = true;
 		channel.bulkDelete((client.consoleVars.get("state") == 2 || client.consoleVars.get("state") == 6) ? 1 : 2);
 		
-		let userAlignment = client.marioOrWario(message);  //TODO: add the fucking thing with the different users on different teams and such bwehhhhhhhhhhhhhhhhhhh
+		let userAlignment = client.marioOrWario(message); 
+		let key = userAlignment.team + 'Caps';
 		
 		if(content.toUpperCase() == 'RESET') {
 			client.consoleVars.set('state', 0);
@@ -76,6 +77,10 @@ module.exports = (client) => {
   								channel.send("```TRANSMITTING FILES TO LOCAL SERVER...```");
   								setTimeout(() => {
   									channel.bulkDelete(1);
+  									message.guild.channels.cache.get(userAlignment.channel_id).send("https://imgur.com/a/LBG05uh");
+  									setTimeout(() => {
+  										message.guild.channels.cache.get(userAlignment.other_channel_id).send("Looks like the other team has found a great discovery regarding the console... A spy was able to get you that information though, take a look! https://imgur.com/a/LBG05uh");
+  									}, 7200000);
   									channel.send("```AUTO-LOG OUT INITIATED...```");
   									setTimeout(() => {
   										channel.bulkDelete(1);
@@ -225,10 +230,12 @@ module.exports = (client) => {
 									bottleCount += inventory.collectables(i).collectables(0).collectablesLength();
 							}	
 						}
-						
-						if (client.consoleVars.get('cappedUsers').includes(user.id)) {
+						let prev_caps = client.consoleVars.get('cappedUsers').filter((element) => element.id == user.id).reduce((a, b) => Math.max(a, b.caps), 0);
+						if (prev_caps != null)
+							bottleCount -= prev_caps;
+						if (bottleCount <= 0) {
 							channel.bulkDelete(1);
-							channel.send("```ERROR! THESE CAPS HAVE ALREADY BEEN RECYCLED```");
+							channel.send("```ERROR! NO NEW CAPS FOUND TO RECYCLE.```");
 							setTimeout(() => { 
   								channel.bulkDelete(1);
   								channel.send("```SUBMIT BOTTLECAP FILE```");
@@ -237,14 +244,14 @@ module.exports = (client) => {
   							}, 3000);
 						}
 						else {
-							client.consoleVars.set('bottleCaps', client.consoleVars.get('bottleCaps') + bottleCount);
+							client.consoleVars.math(key, "+", bottleCount);
 							channel.bulkDelete(1);
 							channel.send(`\`\`\`${bottleCount} CAPS INSERTED. THANK YOU FOR YOUR COMMITMENT TO RECYCLING!\`\`\``);
-							client.consoleVars.push('cappedUsers', user.id);
+							client.consoleVars.push('cappedUsers', {id: user.id, caps: bottleCount + prev_caps});
 							setTimeout(() => { 
-								if (client.consoleVars.get('bottleCaps') < client.consoleVars.get('totCaps')) {
+								if (client.consoleVars.get(key) < userAlignment.tot_caps) {
 									channel.bulkDelete(1);
-									channel.send(`\`\`\`${client.consoleVars.get('bottleCaps')}/${client.consoleVars.get('totCaps')} CAPS TO REACH GOAL\`\`\``);
+									channel.send(`\`\`\`${client.consoleVars.get(key)}/${userAlignment.tot_caps} CAPS TO REACH GOAL\`\`\``);
 									setTimeout(() => { 
   										channel.bulkDelete(1);
   										channel.send("```SUBMIT BOTTLECAP FILE```");

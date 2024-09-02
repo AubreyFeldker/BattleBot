@@ -20,18 +20,19 @@ module.exports = (client) => {
 
 
     const now = new Date();
-    const noon = new Date(
+    let noon = new Date(
 	now.getFullYear(),
 	now.getMonth(),
 	now.getDate(),
 	12, 0, 0);
 
-    if (noon.getTime() > now.getTime()) {
-	    setTimeout(() => {
-		client.sendOutQuestion();
-	    }, (noon.getTime() - now.getTime()));
-    }
-	console.log(`${noon.getTime() - now.getTime()}`);
+    if (noon.getTime() < now.getTime())
+    	noon.setDate(noon.getDate()+1);
+    	
+	 setTimeout(() => {
+	 client.sendOutQuestion();
+	 }, (noon.getTime() - now.getTime()));
+	
 
   // Logging a ready message on first boot
   console.log(`Ready to follow orders ma'am, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);

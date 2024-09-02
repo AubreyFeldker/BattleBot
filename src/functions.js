@@ -322,6 +322,10 @@ client.createProgEmbed = (person) => {
 	const channel = client.guilds.cache.get('355119082808541184').channels.cache.get(q.channel);
 	channel.send(`Hey <@&${role.id}>!\n${q.question}`);
 	client.question_sent = 1;
+	//let's send a new question tomorrow!
+	setTimeout(() => {
+		client.sendOutQuestion();
+	}, (ms_in_day));
   }; //'
 
   //Ends all current timeout/interval functions
@@ -338,10 +342,15 @@ client.createProgEmbed = (person) => {
   		let wario_role_id = client.onePieceVars.get('warioRoleID');
   		let mario_channel_id = client.onePieceVars.get('marioChannelID');
   		let wario_channel_id = client.onePieceVars.get('warioChannelID');
+  		
+  		let mario_caps = client.consoleVars.get('marioCaps');
+  		let wario_caps = client.consoleVars.get('warioCaps');
+  		let tot_mario_caps = client.consoleVars.get('marioTotCaps');
+  		let tot_wario_caps = client.consoleVars.get('warioTotCaps');
   		if(message.member.roles.cache.has(mario_role_id))
-  			return {team: 'mario', role_id: mario_role_id, channel_id: mario_channel_id, other_channel_id: wario_channel_id};
+  			return {team: 'mario', role_id: mario_role_id, channel_id: mario_channel_id, other_channel_id: wario_channel_id, caps: mario_caps, tot_caps: tot_mario_caps, key: 'marioCaps'};
   		else if(message.member.roles.cache.has(wario_role_id))
-  			return {team: 'mario', role_id: wario_role_id, channel_id: wario_channel_id, other_channel_id: mario_channel_id};
+  			return {team: 'wario', role_id: wario_role_id, channel_id: wario_channel_id, other_channel_id: mario_channel_id, caps: wario_caps, tot_caps: tot_wario_caps, key: 'warioCaps'};
   		else 
   			return {team: 'none'};
   };
