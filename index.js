@@ -6,6 +6,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
+const Enmap = require('enmap');
 
 // Create the client instance, require config.json, emoji.js, and the version from package.json
 const client = new Client({
@@ -68,9 +69,7 @@ for (const file of eventFiles) {
 }
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-const Enmap = (...args) => import('enmap').then(({default: Enmap}) => Enmap(...args)).then((n) => {
-  Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions']));
-});
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions']));
 
 // Login to the Discord API using the token in config.js
 client.login(token);

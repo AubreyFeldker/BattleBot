@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const Enmap = require('enmap');
 
 async function clean (clientParam, text) {
   // If the text provided is of type Promise, await it

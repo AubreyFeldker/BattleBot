@@ -161,6 +161,7 @@ module.exports = {
 			console.error(error);
 			if (interaction.replied || interaction.deferred) {
 				await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
+				console.log(`**${interaction.author.tag}** *(${interaction.author.id})* ran cmd \`${command.name}\` in ${interaction.guild ? `**${interaction.guild.name}** *(${interaction.guild.id})*` : '**DMs**'}!`);
 			} else {
 				await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 			}

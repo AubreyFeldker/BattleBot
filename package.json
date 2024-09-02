@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "*",
-    "enmap": "*",
+    "enmap": "^5.9.10",
     "flatbuffers": "^2.0.7",
     "moment-timezone": "*",
     "node-fetch": "*",

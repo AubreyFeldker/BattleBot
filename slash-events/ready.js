@@ -4,6 +4,7 @@ module.exports = {
 	name: Events.ClientReady,
 	once: true,
 	execute(client) {
+    client.oneUpWorld = client.guilds.fetch('355119082808541184');
     const activitiesList = [
       'with some code',
       `Mario Party Jamboree with ${client.users.cache.size} users`,
