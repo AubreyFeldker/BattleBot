@@ -1,334 +1,60 @@
-/* eslint-disable max-len */
-/* eslint-disable consistent-return */
- 
-// Require necessary dependencies
 const Discord = require('discord.js');
-//const eco = require('discordenvo');
-const eco = 1;
+const Events = Discord.Events;
 
 // Collections for command cooldowns, point cooldowns, and level up delays
 const cooldowns = new Discord.Collection();
 const pointCooldowns = new Discord.Collection();
 const memberLevelUpDelays = new Discord.Collection();
 
-module.exports = async (client, message) => {
-	// Ignore all bots
-  if (message.author.bot) {
-    return;
-  }
+module.exports = {
+	name: Events.MessageCreate,
+	async execute(message) {
+    const client = message.client;
+    const member = message.member;
 
-  // If the message is in a guild but the member object is not cached, fetch the member object
-  if (message.guild && !message.member) {
-    await message.guild.members.fetch(message.author);
-  }
+    const lvlRoles = client.lvlRoles;
+    const levelUpPoints = client.levelUpPoints;
 
-  // Run the permLevel function to determine the user's permLevel
-  // Then set the permLevel property of message.author to the returned permLevel
-  const level = client.permLevel(message);
-  // eslint-disable-next-line prefer-destructuring
-  message.author.permLevel = level[1];
-
-  // Ensure the blacklist for the guild exists
-  const blacklist = client.blacklist.ensure(message.guild.id, []);
-
-  // For each element in the blacklist
-  for (const i in blacklist) { // eslint-disable-line no-restricted-syntax
-    // If the message contains the blacklisted element
-    if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) {
-      // Delete the message
-      message.delete();
-
-      // Check if the member is kickable
-      // If they are, kick them with the 'Spam Bot / Raider' reason
-      // If not, error to the console
-      if (!message.member.kickable) {
-        console.error(`Unable to kick ${message.author.tag} because of missing permissions`);
-      } else {
-        message.member.kick('Spam Bot / Raider');
+    // Ignore all bots
+    try {
+      if (member.user.bot) {
+        return;
       }
+    } catch (error) {
+      console.log(message);
+      return;
     }
-  }
 
-  // Deletes messages about the illumination mario movie from #mario-movie (april fools)
-  //if (message.channel.id == 'a') {
-//	if (/illumination|animated|chris|pratt|jack|2022|minion|seth|rogan|illumination|cranky|dk|kong|kamek|peach|charlie|anya|taylorjoy|sonic|angrybirds/.test(message.content.toLowerCase().replace(/\s+/g, ''))) {
-//		message.delete();
-//		message.channel.send(`<@${message.member.id}> This channel is for discussion of the *Super Mario Bros.* movie **exclusively**. Discussion of all other movies will be deleted.`)
-//		.then(msg => {
- //   			setTimeout(() => msg.delete(), 10000)
- //		});
-//	}
- // }
+    // If the message is in a guild but the member object is not cached, fetch the member object
+    if (message.guild && !message.member) {
+      await message.guild.members.fetch(message.author);
+    }
 
-  // Channels and categories ignored from ranking
-  const protectedChannels = [
-    '355186664869724161',
-    '355139801676120074',
-    '415992061955932160',
-    '356505464944459778',
-    '356505383700922370',
-    '355139881531342859',
-  ];
-  // Ensure the user exists in the userDB
-  if (typeof client.userDB.get(message.author.id) === "undefined") { //Bandaid solution to new users not being correctly added idk idk
-		client.userDB.set  (message.author.id, { id: message.author.id, points: 0, rank: 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
-  }
-  const userFromDB = client.userDB.ensure(message.author.id, { id: message.author.id, points: 0, rank: 0 , prestige: 0, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
-  
+    const userFromDB = await client.configureUser(member);
+    const protectedChannels = client.settings.get('protectedChannels');
 
-  // If the user has a previous entry in the pointCooldowns collection and their cooldown expired, increment their points and reset their cooldown
-  // If the user does not have a previous entry, increment their points and create them an entry
-  if ((pointCooldowns.has(message.author.id) ? (Date.now() - pointCooldowns.get(message.author.id)) > 120000 : true) && !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
-    client.userDB.inc(message.author.id, 'points');
-    pointCooldowns.set(message.author.id, Date.now());
-  }
-
-  if (true) {
-
-    // Array of role objects of each rank
-    const userRoles = [
-      message.guild.roles.cache.get('391877990277185556'), // Shroom
-      message.guild.roles.cache.get('751118834206769293'), // Shell
-      message.guild.roles.cache.get('751118889869377656'), // Flower
-      message.guild.roles.cache.get('751616251759165440'), // Leaf
-      message.guild.roles.cache.get('754394768473194607'), // Bell
-      message.guild.roles.cache.get('751616457430925342'), // Feather
-      message.guild.roles.cache.get('754395250042208336'), // Egg
-      message.guild.roles.cache.get('754395466598187148'), // Starbit
-      message.guild.roles.cache.get('751616582307807323'), // Moon
-      message.guild.roles.cache.get('751616793092817038'), // Shine
-      message.guild.roles.cache.get('754395863597711360'), // Special
-      message.guild.roles.cache.get('893381701659656202'), // 1-Up
-    ];
-    // Array if emotes tied to each level-up
-    const levelUpEmojis = [
-      '751523400681259110', // Shroom
-      '751523400782053567', // Shell
-      '751523400421474516', // Flower
-      '751523400803024927', // Leaf
-      '754054543238627389', // Bell
-      '751523400173879486', // Feather
-      '754044526166933654', // Egg
-      '754129851245658112', // Starbit
-      '751523400538783775', // Moon
-      '754060026146193419', // Shine
-      '754044526460665856', // Special
-      '893392833925505075', // 1-Up
-    ];
-
-    const levelUpEmojis8Bit = [
-        '891851922615701565', // Start
-        '893516899550367804', // Mushroom
-        '893516899315494912', // Shell
-        '893516899378421771', // Flower
-        '893516899428728862', // Leaf
-        '893516899365826641', // Bell
-        '893516899416154122', // Feather
-        '893516899307122708', // Egg
-        '893516899541975050', // Starbit
-        '893516899315482674', // Moon
-        '893516899449704518', // Shine
-        '893516899323875338', // Special
-        '893516899495866440', // Prestige
-    ];
-    // Points at which each rankup is obtained at
-    const levelUpPoints = [ 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
+    if ((pointCooldowns.has(member.id) ? (Date.now() - pointCooldowns.get(member.id)) > 120000 : true) && !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
+      client.userDB.inc(member.id, 'points');
+      pointCooldowns.set(member.id, Date.now());
+    }
 
     // Pre-define leveledUp and newRank to be false and 0 respectively as a starting point
     let leveledUp = false;
     let newRank = userFromDB.rank + 1;
 
     const userRank = userFromDB.rank;
+    // If they have enough points, rank up!
     if (userFromDB.points >= levelUpPoints[userRank]) {
-      await message.member.roles.add(userRoles[userRank]);
-      if (userRank != 0) { await message.member.roles.remove(userRoles[userRank - 1]); }
+      await member.roles.add(lvlRoles[userRank]);
+      if (userRank != 0) { await message.member.roles.remove(lvlRoles[userRank - 1]); }
 
-      client.userDB.inc(message.author.id, 'rank');
+      client.userDB.inc(member.id, 'rank');
       leveledUp = true;
       newRank = userRank + 1;
-      if (userRank === 11) { //Prestige up
-	client.userDB.set(message.author.id, { points: userFromDB.points - 27000, rank: 0, prestige: userFromDB.prestige + 1});
+      // If they have enough points, prestige up!!!
+      if (userRank === 11) { 
+	      client.userDB.set(member.id, { points: userFromDB.points - 27000, rank: 0, prestige: userFromDB.prestige + 1});
       }
     }
-
-    // If the member is delayed a level up
-    // (A level up can only be delayed if the user reached the required number of points in #serious-discussion)
-    if (memberLevelUpDelays.has(message.author.id)) {
-      // If the message is not in #serious-discussion
-      // IE. the next message after a level up is outside #serious-discussion
-      if (message.channel.id !== '687843926937305236') {
-	if (Math.random() > .1) { // Easter egg -> 10% chance to have the level up reactions be 8bit
-		// React to the message with the level up emoji and the emoji corresponding to the new rank of the member
-		if (newRank == 12) {
-		  await message.react(client.emojis.cache.get('894461229383450624')); } // prestige emote
-		else {
-		  await message.react(client.emojis.cache.get('751623091200983050')); } // level up emote
-		await message.react(client.emojis.cache.get(levelUpEmojis[memberLevelUpDelays.get(message.author.id) - 1]));
 	}
-	else {
-		// React to the message with the level up emoji and the emoji corresponding to the new rank of the member
-		if (newRank == 12) {
-		  await message.react(client.emojis.cache.get('894461229383450624')); } // prestige emote
-		else {
-		  await message.react(client.emojis.cache.get('893516899143532555')); } // level up emote
-		await message.react(client.emojis.cache.get(levelUpEmojis8Bit[memberLevelUpDelays.get(message.author.id) - 1]));
-	}
-        // Delete the member's level up delay
-        memberLevelUpDelays.delete(message.author.id);
-      }
-    } else if (leveledUp) {
-      // If the member is not delayed a level up and they did in fact level up
-
-      // If the channel the member leveled up in is #serious-discussion, delay the emoji reactions until the next message outside of #serious-discussion
-      if (message.channel.id === '687843926937305236') {
-        memberLevelUpDelays.set(message.author.id, newRank);
-      } else {
-        // If the message is not in #serious-discussion, react to the message with either the level up emoji or prestige emote and the emoji corresponding to the new rank of the member
-        if (newRank == 12)
-          await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
-        else
-          await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
-        await message.react(client.emojis.cache.get(levelUpEmojis[userRank]));
-      }
-    }
-  }
-  
-  //#console ARG shenanigans
-  if (message.channel.id == '1026215798097846344')
-  		client.consoleHandler(message);
-  
-  //#console ARG shenanigans 2	
-  if (message.channel.id == '355186664869724161' && message.content.toUpperCase() == 'CHUCKOLA')
-  	message.channel.send('```COME BACK LATER```');
-  	//client.guilds.cache.get('355119082808541184').channels.cache.get('1026215798097846344').permissionOverwrites.edit('355119082808541184', { VIEW_CHANNEL: true});
-
-  // If the message was not deleted
-  // Useful for not performing operations on messages that are deleted but not yet recognized as such
-  if (!message.deleted) {
-    // Get the guild settings
-    const settings = client.getSettings(message.guild);
-
-    // Ignore messages not starting with the prefix
-    if (message.content.indexOf(settings.prefix) !== 0) {
-      return;
-    }
-
-    // Split the message into arguments to pull from in commands
-    const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
-    // Get the command used
-    const command = args.shift().toLowerCase();
-
-    // Grab the command data and aliases from the client.commands Enmap
-    const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
-    // Grab the enabledCmds object for the provided command
-    const enabledCmds = client.enabledCmds.get(command) || client.enabledCmds.get(client.aliases.get(command));
-
-    // If the command doesn't exist, silently exit and return
-    if (!cmd) {
-      return;
-    }
-
-    // Custom functions to make uniform success and error functions
-    // Basically all they do is run message.channel.send with some special formatting
-    message.success = (suc, msg) => {
-      return message.channel.send(`${client.emoji.checkMark} **${suc}**\n${msg}`);
-    };
-    message.error = (err, msg) => {
-      return message.channel.send(`${client.emoji.redX} **${err}**\n${msg}`);
-    };
-
-    // If the user's level is less than 2 (Mod), and the channel the command is used in is not #robotic-operating-buddy or #bot-testing, delete the message, direct the user to use #robotic-operating-buddy, then delete that message with a 10 second timeout
-    // If the user is a mod or higher, this is bypassed
-    if (!(level[1] >= 2 || message.channel.id == '355186664869724161' || message.channel.id == '682337815031447597') && !(command == 'meme' && message.channel.id == '355139801676120074') && !((command == 'decode' || command == 'roll') && (message.channel.id == '1231099130718191676'|| message.channel.id == '1231099610634784799'))) {
-      await message.delete().catch(console.error);
-      return message.channel.send('Please use **all** bot commands in <#355186664869724161>!')
-        .then((msg) => {
-          setTimeout(() => {
-    		msg.delete()
-  }, (10000));
-        });
-    }
-
-    // If the command provided is disabled
-    if (enabledCmds.enabled === false) {
-      // If the user's level is less than 2, error on command disabled
-      // (Again, mods and higher bypass this)
-      if (level[1] < 2) {
-        return message.error('Command Disabled!', 'This command is currently disabled!');
-      }
-    }
-
-    // If the command was not used in a guild and the command is only to be used in one, error on command not available in DMs
-    if (!message.guild && cmd.conf.guildOnly) {
-      return message.error('Command Not Available in DMs!', 'This command is unavailable in DMs. Please use it in a server!');
-    }
-
-    // If the user is less than the level required to run the provided command, error on invalid permissions and log to the console
-    if (level[1] < client.levelCache[cmd.conf.permLevel]) {
-      message.error('Invalid Permissions!', `You do not currently have the proper permssions to run this command!\n**Current Level:** \`${level[0]}: Level ${level[1]}\`\n**Level Required:** \`${cmd.conf.permLevel}: Level ${client.levelCache[cmd.conf.permLevel]}\``);
-      return console.log(`**${message.author.tag}** *(${message.author.id})* tried to use cmd \`${cmd.help.name}\` without proper perms!`);
-    }
-
-    // If the provided command require arguments and the provided arguments are insufficient (command requires 2 argsuments but only 1 is provided), error on invalid arguments
-    if (cmd.conf.args && (cmd.conf.args > args.length)) {
-      return message.error('Invalid Arguments!', `The proper usage for this command is \`${settings.prefix}${cmd.help.usage}\`! For more information, please see the help command by using \`${settings.prefix}help ${cmd.help.name}\`!`);
-    }
-
-    // If this command doesn't have a cooldown entry, set one, using a collection as its value
-    if (!cooldowns.has(cmd.help.name)) {
-      cooldowns.set(cmd.help.name, new Discord.Collection());
-    }
-
-    // NOW, LIKE RIGHT NOW
-    const now = Date.now();
-    // Get the collection of timestamps from the command's cooldown entry
-    const timestamps = cooldowns.get(cmd.help.name);
-    // Find the cooldown time this command requires
-    const cooldownAmount = (cmd.conf.cooldown || 0) * 1000;
-
-    // If the member has used this command and is in its cooldown entry
-    if (timestamps.has(message.author.id)) {
-      // The timestamp of the cooldown + the cooldown amount
-      const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
-
-      // If the cooldown has not expired yet
-      if (now < expirationTime) {
-        // Find the time left in the cooldown by subtracting now from the expiration time and dividing it by 1000 to get seconds
-        let timeLeft = (expirationTime - now) / 1000;
-        // Set time to seconds to be used in the error string
-        let time = 'second(s)';
-        // If the cooldown required is greater than 60 seconds
-        if (cmd.conf.cooldown > 60) {
-          // Find the time left in the cooldown by subtracting now from the expiration time and dividing it by 60000 to get minutes
-          timeLeft = (expirationTime - now) / 60000;
-          // Set time to minutes to be used in the error string
-          time = 'minute(s)';
-        }
-        // Error on cooldown not expired
-        return message.error('Woah There Bucko!', `Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help.name}\` command!`);
-      }
-    }
-
-    // If the member is not in the command's cooldown entry, set them and the current timestamp
-    timestamps.set(message.author.id, now);
-    // Delete the member from the command's cooldown entry after the cooldown amount
-    setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-
-    // message.flags = -flag
-    // Basically better args
-    message.flags = [];
-    // While args[0] exists and the first character in args[0] = '-'
-    while (args[0] && args[0][0] === '-') {
-      // Push to the message.flags array the value of the flag
-      // IE '-start' would be pushed as 'start'
-      message.flags.push(args.shift().slice(1));
-    }
-
-    // Log the command run
-    console.log(`**${message.author.tag}** *(${message.author.id})* ran cmd \`${cmd.help.name}\` in ${message.guild ? `**${message.guild.name}** *(${message.guild.id})*` : '**DMs**'}!`);
-    // Run the command
-    client.userStats.ensure(message.author.id, {id: message.author.id, usage: 0, blue_coins: 0, starbits: 0, emotes: 0, spotlights: 0, trivia_nights: 0, mario_karts: 0, achievements: 0});
-    client.userStats.observe(message.author.id).usage++;
-    cmd.run(client, message, args, level[1], Discord, eco);
-  }
 };

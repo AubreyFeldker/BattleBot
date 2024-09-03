@@ -1,6 +1,7 @@
 # Configs and such
-/config.js
+config.json
 src/up-world-calendar.json
+deploy-commands.js
 
 # Node crap
 node_modules
@@ -10,3 +11,5 @@ data
 
 # Misc
 Code Backup.txt
+base_template
+BattleBot.code-workspace

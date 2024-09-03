@@ -3,142 +3,123 @@
 /* eslint-disable import/no-dynamic-require */
 
 // Require necessary dependencies
-const Discord = require('discord.js');
+const fs = require('node:fs');
+const path = require('node:path');
+const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const Enmap = require('enmap');
-const Twitter = require('twitter-lite');
-const fs = require('fs');
 
 // Create the client instance, require config.json, emoji.js, and the version from package.json
-const client = new Discord.Client({
+const client = new Client({
   messageCacheMaxSize: 500,
   fetchAllMembers: true,
   disableMentions: 'everyone',
   intents: [
-      Discord.Intents.FLAGS.GUILDS,
-      Discord.Intents.FLAGS.GUILD_MEMBERS,
-      Discord.Intents.FLAGS.GUILD_BANS,
-      Discord.Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS,
-      Discord.Intents.FLAGS.GUILD_WEBHOOKS,
-      Discord.Intents.FLAGS.GUILD_PRESENCES,
-      Discord.Intents.FLAGS.GUILD_MESSAGES,
-      Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-      Discord.Intents.FLAGS.DIRECT_MESSAGES,
-      Discord.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildModeration,
+    GatewayIntentBits.GuildEmojisAndStickers,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMessagePolls,
     ],
 });
+client.commands = new Collection();
 const config = require('./config');
+const { token, makerId } = require('./config.json');
 const { version } = require('./package.json');
 const emoji = require('./src/emoji');
 
-// Bind all functions in functions.js to the client
-require('./src/functions')(client);
-require('./src/console-handler')(client);
-
 // Bind the config object, the version, and the emoji object to the client so they can be used everywhere
 client.config = config;
+client.maker = makerId;
 client.version = `v${version}`;
 client.emoji = emoji;
+require('./src/slash-functions')(client);
 
-// Read the events directory
-fs.readdir('./events/', (err, files) => {
-  // If an error occurs, output to the console
-  if (err) {
-    return console.error(err);
-  }
+const foldersPath = path.join(__dirname, 'slash-commands');
+const commandFolders = fs.readdirSync(foldersPath);
 
-  // For each file in the events directory, require it, get the name, and bind it to the client, allowing the client object to be used in every event
-  return files.forEach((file) => {
-  	 if (! file.includes('~')) {
-    const event = require(`./events/${file}`);
-    const eventName = file.split('.')[0];
-    //console.log(file);
-    client.on(eventName, event.bind(null, client)); }
-  });
-});
-
-// Create new non-persistant Enamps for commands and aliases
-client.commands = new Enmap();
-client.aliases = new Enmap();
-
-// Read the commands directory
-fs.readdir('./commands/', (err, folders) => {
-  // If an error occurs, output to the console
-  if (err) {
-    return console.error(err);
-  }
-
-  // Looping over all folders to load all commands
-  for (let i = 0; i < folders.length; i++) {
-    // Read the next folder in the folders array
-    fs.readdir(`./commands/${folders[i]}/`, (error, files) => {
-      // If an error occurs, output to the console
-      if (error) {
-        return console.error(error);
-      }
-
-      // Loop through all files in the folder
-      files.forEach((file) => {
-        // If the file isn't a .js file and thus not a command file, return
-        if (!file.endsWith('.js') || file == 'SaveSchema.js') {
-          return;
-        }
-
-        // Require the object we exported from the command
-        const props = require(`./commands/${folders[i]}/${file}`);
-        const commandName = props.help.name;
-
-        // Set the command name and its properties in the client.commands Enmap
-        console.log(`Attempting to load command ${commandName}`);
-        client.commands.set(commandName, props);
-
-        // If the command has aliases, set them in the client.aliases Enmap
-        if (props.conf.aliases) {
-          props.conf.aliases.forEach((alias) => {
-            client.aliases.set(alias, commandName);
-          });
-        }
-
-        // Ensure the command is in the enabledCmds Enmap, and if not, set its value to true
-        client.enabledCmds.ensure(commandName, { enabled: true });
-      });
-    });
-  }
-});
-
-// For each permLevel in config.js, set its value in the levelCache object
-client.levelCache = {};
-for (let i = 0; i < config.permLevels.length; i++) {
-  const thislvl = config.permLevels[i];
-  client.levelCache[thislvl.name] = thislvl.level;
+for (const folder of commandFolders) {
+	const commandsPath = path.join(foldersPath, folder);
+	const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+	for (const file of commandFiles) {
+		const filePath = path.join(commandsPath, file);
+		const command = require(filePath);
+		// Set a new item in the Collection with the key as the command name and the value as the exported module
+		if ('data' in command && 'execute' in command) {
+			client.commands.set(command.data.name, command);
+		} else {
+			console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
+		}
+	}
 }
 
-/* Thanks muskrat for nuking twitter's API
-// Twitter object for listening for tweets
-client.twitter = new Twitter({
-  consumer_key: client.config.twitterAPIKey,
-  consumer_secret: client.config.twitterAPISecret,
-  access_token_key: client.config.twitterAccessToken,
-  access_token_secret: client.config.twitterAccessTokenSecret,
-});
+const eventsPath = path.join(__dirname, 'events');
+const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
-
-// Start up the twitter webhook listener
-client.twitterHookAffiliate = new Discord.WebhookClient({ 
-id: client.config.twitterHookAffiliateID,
-token: client.config.twitterHookAffiliateToken
-});
-client.twitterHookOfficial = new Discord.WebhookClient({ 
-id: client.config.twitterHookOfficialID,
-token: client.config.twitterHookOfficialToken
-});
-client.monsterHunterTwitter = new Discord.WebhookClient({ 
-id: client.config.monsterHunterOfficialID,
-token: client.config.monsterHunterOfficialToken
-});*/
-
+for (const file of eventFiles) {
+	const filePath = path.join(eventsPath, file);
+	const event = require(filePath);
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
+}
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'blacklist', 'items', 'results', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'userDBArchive', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions', 'onePieceVars'], { ensureProps: true }));
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions']));
+
+// Array if emotes tied to each level-up
+client.levelUpEmojis = [
+  '751523400681259110', // Shroom
+  '751523400782053567', // Shell
+  '751523400421474516', // Flower
+  '751523400803024927', // Leaf
+  '754054543238627389', // Bell
+  '751523400173879486', // Feather
+  '754044526166933654', // Egg
+  '754129851245658112', // Starbit
+  '751523400538783775', // Moon
+  '754060026146193419', // Shine
+  '754044526460665856', // Special
+  '893392833925505075', // 1-Up
+];
+
+client.levelUpEmojis8Bit = [
+    '891851922615701565', // Start
+    '893516899550367804', // Mushroom
+    '893516899315494912', // Shell
+    '893516899378421771', // Flower
+    '893516899428728862', // Leaf
+    '893516899365826641', // Bell
+    '893516899416154122', // Feather
+    '893516899307122708', // Egg
+    '893516899541975050', // Starbit
+    '893516899315482674', // Moon
+    '893516899449704518', // Shine
+    '893516899323875338', // Special
+    '893516899495866440', // Prestige
+];
+
+client.lvlRoles = [
+  '391877990277185556', // Shroom
+  '751118834206769293', // Shell
+  '751118889869377656', // Flower
+  '751616251759165440', // Leaf
+  '754394768473194607', // Bell
+  '751616457430925342', // Feather
+  '754395250042208336', // Egg
+  '754395466598187148', // Starbit
+  '751616582307807323', // Moon
+  '751616793092817038', // Shine
+  '754395863597711360', // Special
+  '893381701659656202', // 1-Up
+];
+// Points at which each rankup is obtained at
+client.levelUpPoints = [ 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
 
 // Login to the Discord API using the token in config.js
-client.login(config.token);
+client.login(token);
