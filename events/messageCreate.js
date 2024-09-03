@@ -33,7 +33,7 @@ module.exports = {
     const userFromDB = await client.configureUser(member);
     const protectedChannels = client.settings.get('protectedChannels');
 
-    if ((pointCooldowns.has(member.id) ? (Date.now() - pointCooldowns.get(member.id)) > 120000 : true) && !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
+    if (protectedChannels && (pointCooldowns.has(member.id) ? (Date.now() - pointCooldowns.get(member.id)) > 120000 : true) && !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
       client.userDB.inc(member.id, 'points');
       pointCooldowns.set(member.id, Date.now());
     }
