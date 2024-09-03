@@ -10,13 +10,18 @@ module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
     const client = message.client;
-    const member = await message.member;
+    const member = message.member;
 
     const lvlRoles = client.lvlRoles;
     const levelUpPoints = client.levelUpPoints;
 
     // Ignore all bots
-    if (member.user.bot) {
+    try {
+      if (member.user.bot) {
+        return;
+      }
+    } catch (error) {
+      console.log(message);
       return;
     }
 

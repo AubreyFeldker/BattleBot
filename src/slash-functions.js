@@ -24,6 +24,7 @@ module.exports = (client) => {
         }
         }
     
+        client.userStats.ensure(member.id, { id: member.id, blue_coins: 0, starbits: 0});
         return client.userDB.ensure(member.id, { id: member.id, points: points, rank: rank , prestige: prestige, blue_coins: 0, starbits: 0, last_daily: 0, last_work: 0});
     };
 }
