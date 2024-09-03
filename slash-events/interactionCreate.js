@@ -154,6 +154,8 @@ module.exports = {
 			console.error(`No command matching ${interaction.commandName} was found.`);
 			return;
 		}
+
+		const userFromDB = await client.configureUser(interaction.member);
 	
 		try {
 			await command.execute(interaction, client);
