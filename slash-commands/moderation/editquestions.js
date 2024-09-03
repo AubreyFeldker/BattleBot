@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-module.exports.run = (client, message, args, level) => {
+/*module.exports.run = (client, message, args, level) => {
   // Reads from text file memes.txt in order to create an array of memes
   
   const ms_in_day = (3600 * 1000 * 24)
@@ -138,19 +138,86 @@ module.exports.run = (client, message, args, level) => {
   else {
 	return message.error("Incorrect syntax!", "Be sure to format the command as `.editquestions <add/remove/show> <channel> <question>`.");
   }
-};
+};*/
 
-module.exports.conf = {
-  guildOnly: true,
-  aliases: ['editqotd', 'editq'],
-  permLevel: 'Mod',
-  args: 1,
-};
+const { SlashCommandBuilder, PermissionFlagsBits, ChannelType } = require('discord.js');
 
-module.exports.help = {
-  name: 'editquestions',
-  category: 'moderation',
-  minidesc: 'Edit the list of questions',
-  description: 'Edits the list of questions of the day',
-  usage: '.editquestions <add/remove/show> <channel> <question>.',
+async function addQuestion(client, interaction) {
+	const dateString = interaction.options.getString('date') ?? null;
+	const question = interaction.options.getString('question');
+
+	if(! dateString) {
+		client.questions.set(client.questions.autonum, {channel: interaction.options.getChannel('channel').id, question: question})
+		interaction.followUp(`**New question added to the database!**\n ${question}`);
+		if (! client.settings.get('questionSentToday')) //there was no question today
+			client.sendOutQuestion();
+		return;
+	}
+    
+	let options = { weekday: 'long', month: 'short', day: 'numeric' };
+	
+	let parts = dateString.split('-');
+	let myDate = new Date();
+	let day = 0;
+	try {
+		myDate = new Date(parts[0], parts[1] - 1, parts[2]); 
+		day = Math.floor(myDate.getTime() / ms_in_day);
+	}
+	catch (e) { return interaction.followUp("Improper date formation! Proper formatting is `YYYY-MM-DD`."); }
+
+	if (day == NaN)
+		return interaction.followUp("Invalid date! Proper formatting is `YYYY-MM-DD`.");
+	if (client.datedQuestions.has(day)) {
+		return message.error(`There is already a question set to be posted on that day: "${client.datedQuestions.get(day).question}"`);
+	}
+
+	client.datedQuestions.set(day.toString(), {channel: interaction.options.getChannel('channel').id, question: question})
+	return interaction.followUp(`New question added to the database!\n> ${question}\nIt will be posted on ${myDate.toLocaleDateString("en-US", options)}.`);
+}
+
+module.exports = {
+        category: 'moderation',
+		localOnly: false,
+        data: new SlashCommandBuilder()
+			.setName('editquestions')
+			.setDescription('The backend of Question of the Day prompts.')
+			.setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+			.addSubcommand(subcommand =>
+				subcommand.setName('add')
+				.setDescription('Add a Question of the Day to the pile.')
+				.addChannelOption(option =>
+					option.setName('channel')
+					.setDescription('The channel the question is sent in')
+					.setRequired(true)
+					.addChannelTypes(ChannelType.GuildText)
+				)
+				.addStringOption(option =>
+					option.setName('question')
+					.setDescription('The question in... question')
+					.setRequired(true)
+				)
+				.addStringOption(option =>
+					option.setName('date')
+					.setDescription('The day this question will be sent (Format: YYYY-MM-DD)')
+				)
+			)
+			.addSubcommand(subcommand =>
+				subcommand.setName('show')
+				.setDescription('Shows the upcoming Questions of the Day.')
+			)
+		,
+        async execute(interaction, client) {
+			await interaction.deferReply();
+
+			switch(interaction.options.getSubcommand()) {
+				case('add'):
+					addQuestion(client, interaction);
+					break;
+				case('show'):
+					//showQuestions(client, interaction);
+					break;
+				default:
+					interaction.followUp({content: "Unrecognized subcommand.", ephemeral: true});
+			}
+        },
 };

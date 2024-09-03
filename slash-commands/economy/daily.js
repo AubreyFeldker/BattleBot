@@ -2,7 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
   category: 'economy',
-  localOnly: true,
+  localOnly: false,
   data: new SlashCommandBuilder()
           .setName('daily')
           .setDescription('Collect Star Bits and Blue Coins once per day. Refreshes at 5am UTC.'),
