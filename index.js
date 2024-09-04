@@ -27,7 +27,7 @@ const client = new Client({
 });
 client.commands = new Collection();
 const config = require('./config');
-const { token, makerId } = require('./config.json');
+const { token, makerId, testClient } = require('./config.json');
 const { version } = require('./package.json');
 const emoji = require('./src/emoji');
 

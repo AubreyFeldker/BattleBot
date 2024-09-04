@@ -5,6 +5,10 @@ module.exports = {
 	once: true,
 	execute(client) {
     client.oneUpWorld = client.guilds.fetch('355119082808541184');
+    if (message.client.testClient) {
+      console.log(`Ready to follow orders as the test client ma'am, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+      return;
+    }
     const activitiesList = [
       'with some code',
       `Mario Party Jamboree with ${client.users.cache.size} users`,

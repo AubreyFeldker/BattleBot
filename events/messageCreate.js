@@ -9,6 +9,10 @@ const memberLevelUpDelays = new Discord.Collection();
 module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
+    // Relegates the test client and main client to their own servers
+    if (message.client.testClient != (message.guildId != "510274578107465732"))
+      return;
+
     const client = message.client;
     const member = message.member;
 

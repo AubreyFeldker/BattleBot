@@ -145,6 +145,9 @@ const { Events } = require('discord.js');
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
+		// Relegates the test client and main client to their own servers
+		if (interaction.client.testClient != (interaction.guildId != "510274578107465732"))
+			return;
 		const client = interaction.client;
 		if (!interaction.isChatInputCommand()) return;
 
