@@ -170,7 +170,7 @@ module.exports = {
 		if (interaction.client.testClient != (interaction.guildId == "510274578107465732"))
 			return;
 		const client = interaction.client;
-		if (!interaction.isButton()) return await handleButtons(interaction);
+		if (interaction.isButton()) return await handleButtons(interaction);
 
 		const command = interaction.client.commands.get(interaction.commandName);
 	
