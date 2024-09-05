@@ -142,6 +142,27 @@ module.exports = async (client, interaction) => {
 
 const { Events } = require('discord.js');
 
+async function handleButtons(interaction) {
+	const buttonId = interaction.customId.split(" ");
+	
+	if (buttonId[0] == 'lb') {
+		const num = buttonId.length == 6 ? parseInt(buttonId[3]) : 1;
+		interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('leaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord) );
+		
+	}
+	else if (buttonId[0] == 'addrole') {
+		if (interaction.member.roles.cache.some((r) => r.name.includes("Mario's Marines")) || interaction.member.roles.cache.some((r) => r.name.includes("Wario's Scallywags"))) {
+			interaction.reply({ content: 'Aye, ye already joined a team! As they say in every crew: "a flippant crew member is one that walks the plank"!', ephemeral: true }); // '
+			return;
+		}
+		let role_name = buttonId[1] + " " + buttonId[2];
+		//console.log(role_name);
+		const mario_wario_role = interaction.guild.roles.cache.find((r) => r.name === role_name);
+		interaction.member.roles.add(mario_wario_role);
+		interaction.reply({ content: `Welcome aboard, sailor! Yer now part of ${role_name}!`, ephemeral: true }); // '
+	}
+}
+
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
@@ -149,7 +170,7 @@ module.exports = {
 		if (interaction.client.testClient != (interaction.guildId == "510274578107465732"))
 			return;
 		const client = interaction.client;
-		if (!interaction.isChatInputCommand()) return;
+		if (!interaction.isButton()) return await handleButtons(interaction);
 
 		const command = interaction.client.commands.get(interaction.commandName);
 	
