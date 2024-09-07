@@ -34,6 +34,19 @@ valids.set("T.ODE", {message: "This one is deeeeeeeeeep underwater...",
 	}
 });
 
+valids.set("T.ODD", {message: "This one is deeeeeeeeeep underwater...",
+	await: 10,
+	deeper: {message: "Ok, now I'm at some underwater internet cables. Do I just hook into them or something...?",
+		await: 10,
+		deeper: {message: "Woahhhhhh, I got a new file! And since I'm already hooked up to the internet, thiswillgettoyousuperduperfaaaast-",
+			await: 10,
+			deeper: {message: "https://cdn.discordapp.com/attachments/415992268391055380/1282027346039279716/THISTIMEFORABSOLUTECERTAIN.png",
+				await: 2
+			}
+		}
+	}
+});
+
 valids.set("default", {message: "I found something! Commencing excavation process...",
 	await: 10,
 	deeper: {message: "Nevermind, just a rock. The key you provided must not have been correct.",
