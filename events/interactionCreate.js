@@ -204,6 +204,8 @@ module.exports = {
 		if (interaction.client.testClient != (interaction.guildId == "510274578107465732" || interaction.channel.id === "1281818000902852609"))
 			return;
 		const client = interaction.client;
+		const userFromDB = await client.configureUser(interaction.member);
+
 		if (interaction.isButton()) return await handleButtons(interaction);
 		else if (interaction.isStringSelectMenu()) return await handleSelect(interaction);
 
@@ -213,11 +215,8 @@ module.exports = {
 			console.error(`No command matching ${interaction.commandName} was found.`);
 			return;
 		}
-
-		const userFromDB = await client.configureUser(interaction.member);
-	
 		try {
-			console.log(`${interaction.member.displayName} used the command ${interaction.commandName} in #${interaction.channel.name}`);
+			console.log(`${interaction.author.tag} used the command ${interaction.commandName} in ${interaction.guild.name}'s #${interaction.channel.name}`);
 			await command.execute(interaction, client);
 		} catch (error) {
 			console.error(error);

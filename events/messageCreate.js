@@ -59,6 +59,13 @@ module.exports = {
       if (userRank === 11) { 
 	      client.userDB.set(member.id, { points: userFromDB.points - 27000, rank: 0, prestige: userFromDB.prestige + 1});
       }
+
+      // Append emote to commemerate user's levelup
+      if (newRank == 12)
+        await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
+      else
+        await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
+      await message.react(client.emojis.cache.get(levelUpEmojis[userRank]));
     }
 	}
 };

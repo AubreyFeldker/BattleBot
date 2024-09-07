@@ -43,9 +43,11 @@ module.exports = {
       // Eval the code provided in an async function
       const evaled = await eval(`(async () => {${code}})()`);
       // Clean the returned value of the evaled code to ensure it's displayed properly and no sensitive information (such as the token) is displayed
-      const cleaned = await clean(client, evaled);
+      let cleaned = await clean(client, evaled);
   
       // Send the returned value of the cleaned eval
+      if (cleaned.length > 1980)
+        cleaned = cleaned.slice(0, 1950) + '...';
       interaction.followUp(`**Eval**\n\`\`\`js\n${cleaned}\`\`\``);
     } catch (err) {
       // If an error is caught, clean and send it
