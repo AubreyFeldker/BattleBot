@@ -163,14 +163,49 @@ async function handleButtons(interaction) {
 	}
 }
 
+async function handleSelect(interaction) {
+	const id = interaction.customId.split('-');
+	const client = interaction.client;
+	if (id[0] == 'dropdown') {
+	
+		const user = client.userDB.get(interaction.member.id);		
+		const characters = client.characterRoleEmotes;
+		const buttonId = interaction.values[0].split('-');
+		const role = interaction.guild.roles.cache.find((r) => r.name === buttonId[1]);	
+		let removedRole;
+		
+		//Check user is appropriate level for the role
+		if(id[1] === "2") {
+			const rank = client.teamSettings.get('unlockableTeams').find((c) => c.teams.includes(role.name.slice(5)));
+			if(user.rank + (user.prestige * 12) < rank.rankNeeded) {
+				return interaction.reply({ content: 'You are not a high enough level to obtain that team role!', ephemeral: true });
+			}
+		}
+		// Remove other character roles besides special ones if the user has one
+		if (interaction.member.roles.cache.some((r) => r.name.includes('Team') && characters.has(r.name.substr(r.name.indexOf(' ')+1)) && ! client.teamSettings.get('otherTeams').includes(r.name.substr(r.name.indexOf(' ')+1)))) {
+			removedRole = interaction.member.roles.cache.find((r) => r.name.includes('Team')&& characters.has(r.name.substr(r.name.indexOf(' ')+1)) && ! client.teamSettings.get('otherTeams').includes(r.name.substr(r.name.indexOf(' ')+1)));
+			interaction.member.roles.remove(removedRole);
+		}
+
+		//Give the user the new character role
+		interaction.member.roles.add(role);
+
+		if (removedRole)
+			interaction.reply({ content: `Added role: ${role}\nRemoved role: ${removedRole}`, ephemeral: true });
+		else
+		interaction.reply({ content: `Added role: ${role}`, ephemeral: true });
+	}
+}
+
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
 		// Relegates the test client and main client to their own servers
-		if (interaction.client.testClient != (interaction.guildId == "510274578107465732"))
+		if (interaction.client.testClient != (interaction.guildId == "510274578107465732" || interaction.channel.id === "1281818000902852609"))
 			return;
 		const client = interaction.client;
 		if (interaction.isButton()) return await handleButtons(interaction);
+		else if (interaction.isStringSelectMenu()) return await handleSelect(interaction);
 
 		const command = interaction.client.commands.get(interaction.commandName);
 	
@@ -182,6 +217,7 @@ module.exports = {
 		const userFromDB = await client.configureUser(interaction.member);
 	
 		try {
+			console.log(`${interaction.member.displayName} used the command ${interaction.commandName} in #${interaction.channel.name}`);
 			await command.execute(interaction, client);
 		} catch (error) {
 			console.error(error);

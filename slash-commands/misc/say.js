@@ -1,9 +1,10 @@
-const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
+const { SlashCommandBuilder, PermissionsBitField, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('say')
 		.setDescription('Relays the given message into a channel.')
+    .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
       .addChannelOption(option =>
           option.setName('channel')
               .setDescription('Channel to send the message in')
