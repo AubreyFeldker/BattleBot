@@ -216,13 +216,13 @@ module.exports = {
 			return;
 		}
 		try {
-			console.log(`${interaction.author.tag} used the command ${interaction.commandName} in ${interaction.guild.name}'s #${interaction.channel.name}`);
+			console.log(`${interaction.member.displayName} used the command ${interaction.commandName} in ${interaction.guild.name}'s #${interaction.channel.name}`);
 			await command.execute(interaction, client);
 		} catch (error) {
 			console.error(error);
 			if (interaction.replied || interaction.deferred) {
 				await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
-				console.log(`**${interaction.author.tag}** *(${interaction.author.id})* ran cmd \`${command.name}\` in ${interaction.guild ? `**${interaction.guild.name}** *(${interaction.guild.id})*` : '**DMs**'}!`);
+				console.log(`**${interaction.member.displayName}** *(${interaction.author.id})* ran cmd \`${command.name}\` in ${interaction.guild ? `**${interaction.guild.name}** *(${interaction.guild.id})*` : '**DMs**'}!`);
 			} else {
 				await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 			}

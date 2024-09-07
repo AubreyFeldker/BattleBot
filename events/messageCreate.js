@@ -17,6 +17,7 @@ module.exports = {
     const member = message.member;
 
     const lvlRoles = client.lvlRoles;
+    const levelUpEmojis = client.levelUpEmojis;
     const levelUpPoints = client.levelUpPoints;
 
     // Ignore all bots
@@ -25,7 +26,6 @@ module.exports = {
         return;
       }
     } catch (error) {
-      console.log(message);
       return;
     }
 
@@ -49,8 +49,8 @@ module.exports = {
     const userRank = userFromDB.rank;
     // If they have enough points, rank up!
     if (userFromDB.points >= levelUpPoints[userRank]) {
-      await member.roles.add(lvlRoles[userRank]);
-      if (userRank != 0) { await message.member.roles.remove(lvlRoles[userRank - 1]); }
+      member.roles.add(lvlRoles[userRank]);
+      if (userRank != 0) { message.member.roles.remove(lvlRoles[userRank - 1]); }
 
       client.userDB.inc(member.id, 'rank');
       leveledUp = true;
