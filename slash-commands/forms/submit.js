@@ -8,20 +8,20 @@ module.exports = {
     .setName('submit')
     .setDescription('Submit forms for the server.')
     .addSubcommand(subcommand =>
-        subcommand.setName('qotd')
-        .setDescription('Submit your idea for a Question of the Day, once per 7 days.')
-        .addChannelOption(option =>
-            option.setName('channel')
-            .setDescription('The channel the question is sent in')
-            .setRequired(true)
-            .addChannelTypes(ChannelType.GuildText)
-        )
-        .addStringOption(option =>
-            option.setName('question')
-            .setDescription('The question in... question')
-            .setRequired(true)
-        )
-    ),
+      subcommand.setName('qotd')
+      .setDescription('Submit your idea for a Question of the Day, once per 7 days.')
+      .addChannelOption(option =>
+          option.setName('channel')
+          .setDescription('The channel the question is sent in')
+          .setRequired(true)
+          .addChannelTypes(ChannelType.GuildText)
+      )
+      .addStringOption(option =>
+          option.setName('question')
+          .setDescription('The question in... question')
+          .setRequired(true)
+      )
+    ).setDefaultMemberPermissions(PermissionFlagsBits.SendTTSMessages),
   async execute(interaction, client) {
     //Will split this off into its own method once multiple subcommands are implemented
     const lastQuestion = client.userDB.ensure(interaction.user.id, 0, "lastQuestion");
