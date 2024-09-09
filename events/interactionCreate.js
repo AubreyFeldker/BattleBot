@@ -140,26 +140,42 @@ module.exports = async (client, interaction) => {
 }
 };*/
 
-const { Events } = require('discord.js');
+const { Events, EmbedBuilder } = require('discord.js');
 
 async function handleButtons(interaction) {
 	const buttonId = interaction.customId.split(" ");
+	const client = interaction.client;
 	
-	if (buttonId[0] == 'lb') {
-		const num = buttonId.length == 6 ? parseInt(buttonId[3]) : 1;
-		interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('leaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord) );
-		
-	}
-	else if (buttonId[0] == 'addrole') {
-		if (interaction.member.roles.cache.some((r) => r.name.includes("Mario's Marines")) || interaction.member.roles.cache.some((r) => r.name.includes("Wario's Scallywags"))) {
-			interaction.reply({ content: 'Aye, ye already joined a team! As they say in every crew: "a flippant crew member is one that walks the plank"!', ephemeral: true }); // '
-			return;
-		}
-		let role_name = buttonId[1] + " " + buttonId[2];
-		//console.log(role_name);
-		const mario_wario_role = interaction.guild.roles.cache.find((r) => r.name === role_name);
-		interaction.member.roles.add(mario_wario_role);
-		interaction.reply({ content: `Welcome aboard, sailor! Yer now part of ${role_name}!`, ephemeral: true }); // '
+	switch(buttonId[0]) {
+		case 'lb':
+			const num = buttonId.length == 6 ? parseInt(buttonId[3]) : 1;
+			interaction.channel.messages.fetch(buttonId[buttonId.length - 1]).then(message => client.commands.get('leaderboard').run(client, message, [buttonId[2], num, interaction], 0, Discord) );
+			break;
+		case 'addrole':
+			if (interaction.member.roles.cache.some((r) => r.name.includes("Mario's Marines")) || interaction.member.roles.cache.some((r) => r.name.includes("Wario's Scallywags"))) {
+				interaction.reply({ content: 'Aye, ye already joined a team! As they say in every crew: "a flippant crew member is one that walks the plank"!', ephemeral: true }); // '
+				return;
+			}
+
+			let role_name = buttonId[1] + " " + buttonId[2];
+			//console.log(role_name);
+			const mario_wario_role = interaction.guild.roles.cache.find((r) => r.name === role_name);
+			interaction.member.roles.add(mario_wario_role);
+			interaction.reply({ content: `Welcome aboard, sailor! Yer now part of ${role_name}!`, ephemeral: true }); // '
+			break;
+		case 'qotd':
+			let qotdSubmissionEmbed = EmbedBuilder.from(interaction.message.embeds[0]);
+			if(buttonId[1] == "approved") {
+				client.questions.set(client.questions.autonum, {channel: qotdSubmissionEmbed.data.fields[0].name.slice(20,-2), question: qotdSubmissionEmbed.data.fields[0].value.slice(4)});
+				qotdSubmissionEmbed.setTitle('Question of the Day Submission [APPROVED]');
+			}
+			else
+				qotdSubmissionEmbed.setTitle('Question of the Day Submission [DENIED]');
+
+			interaction.update({embeds: [qotdSubmissionEmbed], components: []});
+			break;
+		default:
+			interaction.followUp({content: "Unrecognized button format.", ephemeral: true});
 	}
 }
 

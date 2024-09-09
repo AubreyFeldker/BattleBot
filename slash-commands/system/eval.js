@@ -35,7 +35,7 @@ module.exports = {
       .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 	async execute(interaction, client) {
     if (! interaction.member.id == client.maker) {
-      interaction.reply({content: "Hey, only Poochy is allowed to use this command!", ephemeral: true});
+      return interaction.reply({content: "Hey, only Poochy is allowed to use this command!", ephemeral: true});
     }
     const code = interaction.options.getString('code');
     await interaction.deferReply();

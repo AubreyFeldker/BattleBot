@@ -11,6 +11,9 @@ module.exports = {
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
 	async execute(interaction, client) {
+		if (! interaction.member.id == client.maker) {
+			return interaction.reply({content: "Hey, only Poochy is allowed to use this command!", ephemeral: true});
+		}
 		const commandName = interaction.options.getString('command', true).toLowerCase();
 		const command = interaction.client.commands.get(commandName);
 
@@ -31,5 +34,4 @@ module.exports = {
 		}
 	},
   category: 'misc',
-  localOnly: true,
 };

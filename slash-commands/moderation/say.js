@@ -38,6 +38,6 @@ module.exports = {
           interaction.reply({content: "Message sent!", ephemeral: true});
         }
 	},
-  category: 'misc',
+  category: 'moderation',
   localOnly: false,
 };
