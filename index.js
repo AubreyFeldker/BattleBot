@@ -39,6 +39,8 @@ client.version = `v${version}`;
 client.emoji = emoji;
 require('./src/slash-functions')(client);
 
+client.validChannels = ['355186664869724161'];
+
 const foldersPath = path.join(__dirname, 'slash-commands');
 const commandFolders = fs.readdirSync(foldersPath);
 

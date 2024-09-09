@@ -34,8 +34,9 @@ module.exports = {
     const qotdSubmissionEmbed = new EmbedBuilder()
         .setColor(interaction.member.displayColor)
         .setTitle('Question of the Day Submission [UNTOUCHED]')
-        .setAuthor({ name: '@' + interaction.member.user.tag, iconURL: interaction.member.displayAvatarURL()})
-        .addFields({ name: `For submission in ${interaction.options.getChannel('channel')}:`, value: '>>> ' + interaction.options.getString('question') });
+        .setAuthor({ name: '@' + interaction.user.tag, iconURL: interaction.member.displayAvatarURL()})
+        .addFields({ name: `For submission in ${interaction.options.getChannel('channel')}:`, value: '>>> ' + interaction.options.getString('question') })
+        .setFooter({ text: `User ID: ${interaction.user.id}` });
 
     const confirm = new ButtonBuilder()
         .setCustomId('qotd approved')

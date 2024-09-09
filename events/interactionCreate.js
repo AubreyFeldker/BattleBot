@@ -140,7 +140,7 @@ module.exports = async (client, interaction) => {
 }
 };*/
 
-const { Events, EmbedBuilder } = require('discord.js');
+const { Events, EmbedBuilder, PermissionsBitField } = require('discord.js');
 
 async function handleButtons(interaction) {
 	const buttonId = interaction.customId.split(" ");
@@ -166,7 +166,7 @@ async function handleButtons(interaction) {
 		case 'qotd':
 			let qotdSubmissionEmbed = EmbedBuilder.from(interaction.message.embeds[0]);
 			if(buttonId[1] == "approved") {
-				client.questions.set(client.questions.autonum, {channel: qotdSubmissionEmbed.data.fields[0].name.slice(20,-2), question: qotdSubmissionEmbed.data.fields[0].value.slice(4)});
+				client.questions.set(client.questions.autonum, {channel: qotdSubmissionEmbed.data.fields[0].name.slice(20,-2), question: qotdSubmissionEmbed.data.fields[0].value.slice(4), author: qotdSubmissionEmbed.data.footer});
 				qotdSubmissionEmbed.setTitle('Question of the Day Submission [APPROVED]');
 			}
 			else
@@ -230,6 +230,10 @@ module.exports = {
 		if (!command) {
 			console.error(`No command matching ${interaction.commandName} was found.`);
 			return;
+		}
+		// Checks if the slash command is either done by a mod or is used in a valid channel
+		else if (!(interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages) || client.validChannels.has(interaction.channel.id) || (command.validChannels && command.validChannels.has(interaction.channel.id)))) {
+			await interaction.reply({ content: 'Please keep all bot commands in <#355186664869724161>!', ephemeral: true });
 		}
 		try {
 			console.log(`${interaction.member.displayName} used the command ${interaction.commandName} in ${interaction.guild.name}'s #${interaction.channel.name}`);

@@ -31,41 +31,42 @@ module.exports = (client) => {
     //Sends out the Question of the Day from THE LIST
   client.sendOutQuestion = async () => {
     const oneUpWorld = client.guilds.cache.get('355119082808541184');
-	const role = oneUpWorld.roles.cache.find((r) => r.name === 'Question of the Day');
-	
-	const ms_in_day = (3600 * 1000 * 24)
-	const today = Math.floor(Date.now() / ms_in_day);
-	let q, q_id;
-	
-	if (client.datedQuestions.has(today)) {
-		q = client.datedQuestions.get(today);
-	}
-	else if (client.questions.count > 0) {
-		q_id = client.questions.reduce((currMin, currVal, currKey) => (currMin < currKey) ? currMin : currKey, Number.MAX_VALUE); //Gets the first added question
-        q = client.questions.get(q_id);
-		client.questions.delete(q_id);
-		client.datedQuestions.set(today.toString(), q);
-	}
-	else {
-		client.settings.set('questionSentToday', false);
-		return await oneUpWorld.channels.cache.get('357328011889999873').send("<@&1103339257810124972> There is no question for today. Add one using the `/editquestions add` command. It will send out automatically.");
-	}
+    const role = oneUpWorld.roles.cache.find((r) => r.name === 'Question of the Day');
+    
+    const ms_in_day = (3600 * 1000 * 24)
+    const today = Math.floor(Date.now() / ms_in_day);
+    let q, q_id;
+    
+    if (client.datedQuestions.has(today)) {
+      q = client.datedQuestions.get(today);
+    }
+    else if (client.questions.count > 0) {
+      q_id = client.questions.reduce((currMin, currVal, currKey) => (currMin < currKey) ? currMin : currKey, Number.MAX_VALUE); //Gets the first added question
+          q = client.questions.get(q_id);
+      client.questions.delete(q_id);
+      client.datedQuestions.set(today.toString(), q);
+    }
+    else {
+      client.settings.set('questionSentToday', false);
+      return await oneUpWorld.channels.cache.get('357328011889999873').send("<@&1103339257810124972> There is no question for today. Add one using the `/editquestions add` command. It will send out automatically.");
+    }
 
-	console.log(q);
-	const channel = oneUpWorld.channels.cache.get(q.channel);
-	channel.send(`Hey <@&${role.id}>!\n${q.question}`);
-	client.settings.set('questionSentToday', true);
+    console.log(q);
+    const channel = oneUpWorld.channels.cache.get(q.channel);
+    const suggestion = (q.author) ? `\n-# Question suggested by <@${q.author}>` : "";
+    channel.send(`Hey <@&${role.id}>!\n${q.question}${suggestion}`);
+    client.settings.set('questionSentToday', true);
 
-	//let's send a new question tomorrow!
-	const now = new Date();
-    let noon = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate()+1,
-      12, 0, 0);
+    //let's send a new question tomorrow!
+    const now = new Date();
+      let noon = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate()+1,
+        12, 0, 0);
 
-    setTimeout(() => {
-        client.sendOutQuestion();
-    }, (noon.getTime() - now.getTime()));
+      setTimeout(() => {
+          client.sendOutQuestion();
+      }, (noon.getTime() - now.getTime()));
   };
 }

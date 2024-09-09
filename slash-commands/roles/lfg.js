@@ -11,6 +11,7 @@ const gameNames = new Map([
 
 module.exports = {
   category: 'roles',
+  validChannels: ['824473729019019284'],
   data: new SlashCommandBuilder()
     .setName('lfg')
     .setDescription('Find other people to play a Mario game with.')
