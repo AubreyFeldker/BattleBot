@@ -166,7 +166,7 @@ async function handleButtons(interaction) {
 		case 'qotd':
 			let qotdSubmissionEmbed = EmbedBuilder.from(interaction.message.embeds[0]);
 			if(buttonId[1] == "approved") {
-				client.questions.set(client.questions.autonum, {channel: qotdSubmissionEmbed.data.fields[0].name.slice(20,-2), question: qotdSubmissionEmbed.data.fields[0].value.slice(4), author: qotdSubmissionEmbed.data.footer});
+				client.questions.set(client.questions.autonum, {channel: qotdSubmissionEmbed.data.fields[0].name.slice(20,-2), question: qotdSubmissionEmbed.data.fields[0].value.slice(4), author: qotdSubmissionEmbed.data.footer.text.slice(9)});
 				qotdSubmissionEmbed.setTitle('Question of the Day Submission [APPROVED]');
 			}
 			else

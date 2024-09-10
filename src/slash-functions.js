@@ -41,7 +41,7 @@ module.exports = (client) => {
       q = client.datedQuestions.get(today);
     }
     else if (client.questions.count > 0) {
-      q_id = client.questions.reduce((currMin, currVal, currKey) => (currMin < currKey) ? currMin : currKey, Number.MAX_VALUE); //Gets the first added question
+      q_id = client.questions.reduce((currMin, currVal, currKey) => (parseInt(currMin) < parseInt(currKey)) ? currMin : currKey, "99999"); //Gets the first added question
           q = client.questions.get(q_id);
       client.questions.delete(q_id);
       client.datedQuestions.set(today.toString(), q);
