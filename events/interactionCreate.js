@@ -232,7 +232,7 @@ module.exports = {
 			return;
 		}
 		// Checks if the slash command is either done by a mod or is used in a valid channel
-		else if (!(interaction.member.permissions.hinas(PermissionsBitField.Flags.ManageMessages) || client.validChannels.includes(interaction.channel.id) || (command.validChannels && command.validChannels.includes(interaction.channel.id)))) {
+		else if (!(interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages) || client.validChannels.includes(interaction.channel.id) || (command.validChannels && command.validChannels.includes(interaction.channel.id)))) {
 			await interaction.reply({ content: 'Please keep all bot commands in <#355186664869724161>!', ephemeral: true });
 		}
 		try {
