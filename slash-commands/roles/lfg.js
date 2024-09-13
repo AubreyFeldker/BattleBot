@@ -53,7 +53,7 @@ module.exports = {
     const channel = interaction.guild.channels.cache.find((c) => c.name === interaction.options.getString('channel'));
     const details = interaction.options.getString('details') ?? '';
     
-    await interaction.reply({content: `# ${gameRole}\n${interaction.user} is looking to play **${gameNames.get(game)}** in ${channel}${details === '' ? '!' : ' with the details:\n> '}${details}`});
+    await interaction.reply({content: `# <@&${gameRole.id}>\n${interaction.user} is looking to play **${gameNames.get(game)}** in ${channel}${details === '' ? '!' : ' with the details:\n> '}${details}`});
     client.settings.set(game + ' lastping', {user: interaction.user.id, time: thisPing});
   },
 };
