@@ -186,12 +186,12 @@ async function handleSelect(interaction) {
 	
 		const user = client.userDB.get(interaction.member.id);		
 		const characters = client.characterRoleEmotes;
-		const buttonId = interaction.values[0].split('-');
+		const buttonId = interaction.values[0].split('|');
 		const role = interaction.guild.roles.cache.find((r) => r.name === buttonId[1]);	
 		let removedRole;
 		
 		//Check user is appropriate level for the role
-		if(id[1] === "2") {
+		if(id[1] === "3") {
 			const rank = client.teamSettings.get('unlockableTeams').find((c) => c.teams.includes(role.name.slice(5)));
 			if(user.rank + (user.prestige * 12) < rank.rankNeeded) {
 				return interaction.reply({ content: 'You are not a high enough level to obtain that team role!', ephemeral: true });

@@ -53,7 +53,7 @@ module.exports = (client) => {
 
     console.log(q);
     const channel = oneUpWorld.channels.cache.get(q.channel);
-    const suggestion = (q.author) ? `\n-# Question suggested by <@${q.author}>` : "";
+    const suggestion = (q.author) ? `\n-# Question suggested by <@${q.author}>. Members rank 3+ and boosters can suggest questions via the /submit command in <#355186664869724161>.` : "";
     channel.send(`Hey <@&${role.id}>!\n${q.question}${suggestion}`);
     client.settings.set('questionSentToday', true);
 
