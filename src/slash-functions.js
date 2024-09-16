@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports = (client) => {
+
     // Makeshift way to get everyone back to where they should roughly be
     client.configureUser = async (member) => {
         const client = member.client;
@@ -8,8 +9,10 @@ module.exports = (client) => {
         
         //Check if user already exists in DB, if so just return
         let userFromDB = client.userDB.get(member.id);
-        if (typeof client.userDB.get(member.id) != "undefined")
-        return userFromDB;
+        if (typeof client.userDB.get(member.id) !== "undefined") {
+          if (typeof userFromDB.rank === "undefined")
+          return userFromDB;
+        }
     
         let mRoles = member.roles.cache;
     
