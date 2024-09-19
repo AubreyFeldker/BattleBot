@@ -26,7 +26,7 @@ module.exports = {
         "ALL RIGHT, LET'S-A SEE",
         "ASK AGAIN LATER",
         "NO WAY, AMATEUR!",
-        "AS I SEE IT, TOUCH LUCK!",
+        "AS I SEE IT, TOUGH LUCK!",
         "GAH! GIVE IT UP ALREADY!",
         "DON'T COUNT ON IT",
         "MY SOURCES SAY NO"
