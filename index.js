@@ -73,7 +73,7 @@ for (const file of eventFiles) {
 }
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions']));
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions', 'tournamentSettings']));
 
 // Array if emotes tied to each level-up
 client.levelUpEmojis = [
