@@ -76,8 +76,8 @@ module.exports = (client) => {
   client.sendOutTournament = async () => {
     const oneUpWorld = client.guilds.cache.get('355119082808541184');
     const pollChannel = oneUpWorld.channels.cache.get(client.tournamentSettings.get('pollChannel'));
-    //const role = oneUpWorld.roles.cache.find((r) => r.name === 'Happening Space');
-    const role = '';
+    const role = oneUpWorld.roles.cache.find((r) => r.name === 'Happening Space');
+    //const role = '';
 
     const round = client.tournamentSettings.get('round');
     const match = client.tournamentSettings.get('match');
