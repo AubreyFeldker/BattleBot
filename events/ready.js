@@ -39,10 +39,13 @@ module.exports = {
 
     if (noon.getTime() < now.getTime())
       noon.setDate(noon.getDate()+1);
+
         
     setTimeout(() => {
       client.sendOutQuestion();
+      setTimeout(() => {client.sendOutTournament(); }, (1000*60*60*2));
       }, (noon.getTime() - now.getTime()));
+
 
     console.log(`Ready to follow orders ma'am, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
 	},
