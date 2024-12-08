@@ -34,7 +34,8 @@ module.exports = {
                 runningEmote = client.emojis.cache.get('891878777376878637');
 
             // Determines how far to their next levelup the user has gotten, from 0-9, rounded down
-            let roughProgress = Math.floor(((userFromDB.points - levelPoints[userFromDB.rank - 1]) / (levelPoints[userFromDB.rank] - levelPoints[userFromDB.rank - 1])) * 10);
+            let roughProgress = (userFromDB.rank == 0) ? userFromDB.points :
+                Math.floor(((userFromDB.points - levelPoints[userFromDB.rank - 1]) / (levelPoints[userFromDB.rank] - levelPoints[userFromDB.rank - 1])) * 10);
 
             // Creates "path" of walking emote, start and end destinations, and the rough position they are at
             let progressPath = `${client.emojis.cache.get(levelUpEmojis8Bit[userFromDB.rank])}`;
