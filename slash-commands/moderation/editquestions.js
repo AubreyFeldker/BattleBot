@@ -143,6 +143,7 @@
 const { SlashCommandBuilder, PermissionFlagsBits, ChannelType } = require('discord.js');
 
 async function addQuestion(client, interaction) {
+    const ms_in_day = (3600 * 1000 * 24);
 	const dateString = interaction.options.getString('date') ?? null;
 	const question = interaction.options.getString('question');
 
@@ -163,7 +164,10 @@ async function addQuestion(client, interaction) {
 		myDate = new Date(parts[0], parts[1] - 1, parts[2]); 
 		day = Math.floor(myDate.getTime() / ms_in_day);
 	}
-	catch (e) { return interaction.followUp("Improper date formation! Proper formatting is `YYYY-MM-DD`."); }
+	catch (e) { 
+        console.log(e);
+        return interaction.followUp("Improper date formation! Proper formatting is `YYYY-MM-DD`.");
+    }
 
 	if (day == NaN)
 		return interaction.followUp("Invalid date! Proper formatting is `YYYY-MM-DD`.");
@@ -173,6 +177,52 @@ async function addQuestion(client, interaction) {
 
 	client.datedQuestions.set(day.toString(), {channel: interaction.options.getChannel('channel').id, question: question})
 	return interaction.followUp(`New question added to the database!\n> ${question}\nIt will be posted on ${myDate.toLocaleDateString("en-US", options)}.`);
+}
+
+async function showQuestions(client, interaction) {
+    const ms_in_day = (3600 * 1000 * 24);
+    let startDay = Math.floor(Date.now() / ms_in_day);
+	
+	let rightNow = new Date();
+    const noon = new Date(
+        rightNow.getFullYear(),
+        rightNow.getMonth(),
+        rightNow.getDate(),
+        12, 0, 0);
+        
+	if (rightNow.getTime() > noon.getTime()) { startDay++; rightNow = new Date(
+        rightNow.getFullYear(),
+        rightNow.getMonth(),
+        rightNow.getDate() + 1);}
+	let undatedKeys = client.questions.keyArray();
+    let i = 0;
+    let j = 0;
+    let post = "";
+
+    // Stuff for showing what date a question will be posted, w/formatting
+    let options = { weekday: 'long', month: 'short', day: 'numeric' };
+    
+    while (i < 10) {
+        if (client.datedQuestions.has(startDay)) {
+            let questionInfo = client.datedQuestions.get(startDay);
+            post += `[${startDay}] | ${rightNow.toLocaleDateString("en-US", options)} | <#${questionInfo.channel}> | ${questionInfo.question}\n`
+        }
+        else if (j < undatedKeys.length) {
+            let questionInfo = client.questions.get(undatedKeys[j]);
+            post += `[${undatedKeys[j].toString().padStart(5, '0')}] | ${rightNow.toLocaleDateString("en-US", options)} | <#${questionInfo.channel}> | ${questionInfo.question}\n`
+            j++;
+        }
+        rightNow = new Date(
+            rightNow.getFullYear(),
+            rightNow.getMonth(),
+            rightNow.getDate() + 1);
+        startDay++;
+        i++;
+    }
+    
+    if (post === "") {return interaction.followUp("Question queue is empty.");}
+
+    return interaction.followUp(post);
 }
 
 module.exports = {
@@ -214,7 +264,7 @@ module.exports = {
 					addQuestion(client, interaction);
 					break;
 				case('show'):
-					//showQuestions(client, interaction);
+					showQuestions(client, interaction);
 					break;
 				default:
 					interaction.followUp({content: "Unrecognized subcommand.", ephemeral: true});
