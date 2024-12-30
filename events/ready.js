@@ -43,7 +43,6 @@ module.exports = {
         
     setTimeout(() => {
       client.sendOutQuestion();
-      setTimeout(() => {client.sendOutTournament(); }, (1000*60*60*2));
       }, (noon.getTime() - now.getTime()));
 
 
