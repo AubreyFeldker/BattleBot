@@ -16,7 +16,7 @@ module.exports = {
         .setDescription('Image relevant to the message, if you have any')
     ),
     async execute(interaction, client) {
-        interaction.deferReply();
+        await interaction.deferReply();
         
         const mailer = interaction.member;
 
