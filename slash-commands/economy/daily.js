@@ -21,7 +21,8 @@ module.exports = {
     now.getDate(),
     0, 0, 0);
 
-    if (today - user.last_daily < 0) { //Not enough time has passed to do the new daily
+    //Not enough time has passed to do the new daily
+    if (today - user.last_daily < 0) { 
   		const tom = new Date(
 			now.getFullYear(),
 			now.getMonth(),
@@ -32,7 +33,8 @@ module.exports = {
       return;
     }
 
-    const multi = (interaction.member.roles.cache.has('585533364489158666') ? 2 : 1) * client.settings.get('dailyMult'); //If user has the 'Boost Star' role, rewards are doubled!
+    //If user has the 'Boost Star' role, rewards are doubled!
+    const multi = (interaction.member.roles.cache.has('585533364489158666') ? 2 : 1) * client.settings.get('dailyMult'); 
 
     user.starbits += (d_star * multi);  
 		user.blue_coins += (d_coin * multi);

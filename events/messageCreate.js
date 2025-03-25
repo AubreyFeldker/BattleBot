@@ -37,7 +37,11 @@ module.exports = {
     const userFromDB = await client.configureUser(member);
     const protectedChannels = client.settings.get('protectedChannels');
 
-    if (protectedChannels && (pointCooldowns.has(member.id) ? (Date.now() - pointCooldowns.get(member.id)) > 120000 : true) && !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
+    // If its been at least 2 minutes since the user's last point gain and
+    // the post is not in a channel where points are not gained, increment their points by 1
+    if (protectedChannels && 
+        (pointCooldowns.has(member.id) ? (Date.now() - pointCooldowns.get(member.id)) > 120000 : true) &&
+        !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
       client.userDB.inc(member.id, 'points');
       pointCooldowns.set(member.id, Date.now());
     }

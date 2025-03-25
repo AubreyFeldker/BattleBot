@@ -9,6 +9,7 @@ module.exports = {
             .setDescription('The question you want a response to')
             .setRequired(true)
       ),
+      // Choose a random response from the array and reply with it
 	async execute(interaction, client) {
       const responses = ["WOWZER, OUTLOOK GOOD",
         "OH YEAH!",

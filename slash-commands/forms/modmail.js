@@ -20,6 +20,7 @@ module.exports = {
         
         const mailer = interaction.member;
 
+        // Build an embed with all information of the replier and the message input into the command
         let modmailEmbed = new EmbedBuilder()
             .setColor(mailer.displayColor)
             .setTitle('1-Up World Modmail Form')
@@ -27,6 +28,7 @@ module.exports = {
             .addFields({ name: 'Message:', value: interaction.options.getString('message') },)
             .setTimestamp()
             .setFooter({ text: `User ID: ${mailer.id}` });
+        // If there's submitted images, add their discord urls to the embed image
         if (interaction.options.getAttachment('image'))
             modmailEmbed.setImage(interaction.options.getAttachment('image').proxyURL);
 

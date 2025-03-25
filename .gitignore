@@ -1,6 +1,7 @@
 # Configs and such
 config.json
 src/up-world-calendar.json
+src/functions.js
 deploy-commands.js
 
 # Node crap
