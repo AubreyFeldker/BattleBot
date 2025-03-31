@@ -84,7 +84,7 @@ module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
 		// Relegates the test client and main client to their own servers
-		if (interaction.client.testClient != (interaction.guildId == "510274578107465732" || interaction.channel.id === "1281818000902852609") || interaction.client.responseInTest)
+		if ((interaction.client.testClient != (interaction.guildId == "510274578107465732" || interaction.channel.id === "1281818000902852609")) || interaction.client.responseInTest)
 			return;
 		const client = interaction.client;
 
