@@ -39,6 +39,7 @@ client.testClient = config.testClient;
 client.maker = makerId;
 client.version = `v${version}`;
 client.emoji = emoji;
+client.responseInTest = false;
 require('./src/slash-functions')(client);
 
 client.validChannels = ['355186664869724161'];
