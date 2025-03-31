@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const {Discord, EmbedBuilder} = require('discord.js');
 
 module.exports = (client) => {
 
@@ -161,5 +161,20 @@ module.exports = (client) => {
             layoutType: Discord.PollLayoutType.Default
         }
     }).then(sent => { client.tournamentSettings.set('lastPoll', sent.id) });
+  };
+
+  // Create an embed post based on the number of April
+  // Fools luigi reacts left to be found
+  client.createLuigiEmbed = () => {
+    const luigisLeft = client.luigiEmotes.filter((v) => v===false).size;
+    const embed = new EmbedBuilder()
+        .setColor(0x19A01)
+        .setTitle(`Mario's Fate is Set <t:1743598800:R>`)
+        .setImage('https://cdn.discordapp.com/attachments/584662689658306561/1355988672381587666/capturedMario.png')
+        .setThumbnail('https://cdn.discordapp.com/attachments/584662689658306561/1355984013533122642/jigsawlogo2.png')
+        .addFields({name: "Use the hints below to find the 64 Hidden Luigis. Each one is a reaction to a message on the server. Show mercy to one brother to save the other. It's all up to you.",
+            value: `${luigisLeft} Luigi${(luigisLeft == 1) ? '' : 's'} ${client.emojis.cache.get('1355989613692588043')} remain.`
+        });
+    return embed;
   };
 }

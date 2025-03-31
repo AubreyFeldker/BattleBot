@@ -5,7 +5,7 @@
 // Require necessary dependencies
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, Partials } = require('discord.js');
 const Enmap = require('enmap');
 
 // Create the client instance, require config.json, emoji.js, and the version from package.json
@@ -24,6 +24,8 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.GuildMessagePolls,
     ],
+    //Required for non-cached reaction events
+  partials: [Partials.Message, Partials.Reaction],
 });
 client.commands = new Collection();
 const config = require('./config');
@@ -73,7 +75,10 @@ for (const file of eventFiles) {
 }
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
-Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items', 'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes', 'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars', 'questions', 'datedQuestions', 'tournamentSettings']));
+Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items',
+    'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes',
+    'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars',
+    'questions', 'datedQuestions', 'luigiEmotes']));
 
 // Array if emotes tied to each level-up
 client.levelUpEmojis = [
