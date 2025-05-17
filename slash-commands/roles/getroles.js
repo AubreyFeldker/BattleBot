@@ -12,7 +12,7 @@ module.exports = {
 				.setCustomId('dropdown-1')
 				.setPlaceholder('Core Team Roles');
 			client.teamSettings.get('teams').forEach ((char) => {
-				let emote = client.characterRoleEmotes.get(char);
+				let emote = client.characterRoleEmotes.get(char) ?? client.emoji.boost_star;
 				menu1.addOptions(new StringSelectMenuOptionBuilder()
 					.setLabel(`Team ${char}`)
 					.setValue(`reg|Team ${char}`)
@@ -40,7 +40,7 @@ module.exports = {
 				.setPlaceholder('Unlockable Team Roles');
 			client.teamSettings.get('unlockableTeams').forEach ((rank) => {
 				rank.teams.forEach ((char) => {
-					let emote = client.characterRoleEmotes.get(char);
+					let emote = client.characterRoleEmotes.get(char) ?? client.emoji.boost_star;
 					menu3.addOptions(new StringSelectMenuOptionBuilder()
 						.setLabel(`Team ${char}`)
 						.setValue(`unlock|Team ${char}`)
