@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require('discord.js');
+const { Channels } = require('../../src/consts/channels');
 
 const gameNames = new Map([
   ['Super Mario Bros. Wonder', 'Super Mario Bros. Wonder'],
@@ -11,7 +12,7 @@ const gameNames = new Map([
 
 module.exports = {
   category: 'roles',
-  validChannels: ['824473729019019284'],
+  validChannels: [Channels.GAME_MATCHMAKING],
   data: new SlashCommandBuilder()
     .setName('lfg')
     .setDescription('Find other people to play a Mario game with.')

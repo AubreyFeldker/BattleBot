@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require('discord.js');
+const { Channels } = require('../../src/consts/channels');
 
 module.exports = {
     category: 'forms',
@@ -33,7 +34,7 @@ module.exports = {
             modmailEmbed.setImage(interaction.options.getAttachment('image').proxyURL);
 
         try {
-            await interaction.guild.channels.cache.get('904794977551413298').send({embeds: [modmailEmbed]});
+            await interaction.guild.channels.cache.get(Channels.MODMAIL_SUBMISSIONS).send({embeds: [modmailEmbed]});
             return interaction.editReply({content: "Your message has been sent to the staff team! We'll reach out to you if any follow-up is required.", ephemeral: true});
         } catch (e) {
             return interaction.editReply({content: "Sorry, there was an error with sending the modmail! Please reach out to a staff member directly.", ephemeral: true});

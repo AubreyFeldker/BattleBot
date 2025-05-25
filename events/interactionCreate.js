@@ -1,4 +1,5 @@
 const { Events, EmbedBuilder, PermissionsBitField, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
+const { Servers, Channels } = require('../src/consts/channels');
 
 // Button handling
 async function handleButtons(interaction) {
@@ -119,7 +120,10 @@ module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
 		// Relegates the test client and main client to their own servers
-		if ((interaction.client.testClient != (interaction.guildId == "510274578107465732" || interaction.channel.id === "1281818000902852609")) && !interaction.client.responseInTest)
+		if ((interaction.client.testClient !=
+            (interaction.guildId == Servers.TEST_SERVER || interaction.channel.id === Channels.TEST_BOT_TESTING))
+            && !interaction.client.responseInTest)
+            
 			return;
 		const client = interaction.client;
 
@@ -136,7 +140,10 @@ module.exports = {
 			return;
 		}
 		// Checks if the slash command is either done by a mod or is used in a valid channel
-		else if (!(interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages) || client.validChannels.includes(interaction.channel.id) || (command.useAnywhere || (command.validChannels && command.validChannels.includes(interaction.channel.id))))) {
+		else if (!(interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages)
+            || client.validChannels.includes(interaction.channel.id)
+            || (command.useAnywhere || (command.validChannels && command.validChannels.includes(interaction.channel.id))))) {
+
 			await interaction.reply({ content: 'Please keep all bot commands in <#355186664869724161>!', ephemeral: true });
 		}
 		try {

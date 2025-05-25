@@ -1,4 +1,5 @@
 const {Discord, EmbedBuilder} = require('discord.js');
+const {Channels, Servers} = require('./consts/channels.js')
 
 module.exports = (client) => {
 
@@ -33,7 +34,7 @@ module.exports = (client) => {
 
     //Sends out the Question of the Day from THE LIST
   client.sendOutQuestion = async () => {
-    const oneUpWorld = client.guilds.cache.get('355119082808541184');
+    const oneUpWorld = client.guilds.cache.get(Servers.ONE_UP_WORLD);
     const role = oneUpWorld.roles.cache.find((r) => r.name === 'Question of the Day');
     
     const ms_in_day = (3600 * 1000 * 24)
@@ -51,7 +52,7 @@ module.exports = (client) => {
     }
     else {
       client.settings.set('questionSentToday', false);
-      return await oneUpWorld.channels.cache.get('357328011889999873').send("<@&1103339257810124972> There is no question for today. Add one using the `/editquestions add` command. It will send out automatically.");
+      return await oneUpWorld.channels.cache.get(Channels.GENERAL_PLANNING).send("<@&1103339257810124972> There is no question for today. Add one using the `/editquestions add` command. It will send out automatically.");
     }
 
     console.log(q);
@@ -74,7 +75,7 @@ module.exports = (client) => {
   };
 
   client.sendOutTournament = async () => {
-    const oneUpWorld = client.guilds.cache.get('355119082808541184');
+    const oneUpWorld = client.guilds.cache.get(Servers.ONE_UP_WORLD);
     const pollChannel = oneUpWorld.channels.cache.get(client.tournamentSettings.get('pollChannel'));
     const role = oneUpWorld.roles.cache.find((r) => r.name === 'Happening Space');
     //const role = '';

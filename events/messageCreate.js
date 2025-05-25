@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const Events = Discord.Events;
 
+const { Servers } = require('../src/consts/channels');
+
 // Collections for command cooldowns, point cooldowns, and level up delays
 const cooldowns = new Discord.Collection();
 const pointCooldowns = new Discord.Collection();
@@ -10,7 +12,7 @@ module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
     // Relegates the test client and main client to their own servers
-    if (message.client.testClient != (message.guildId == "510274578107465732"))
+    if (message.client.testClient != (message.guildId == Servers.TEST_SERVER))
       return;
 
     const client = message.client;

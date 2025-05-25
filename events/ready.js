@@ -1,10 +1,11 @@
 const { Events } = require('discord.js');
+const { Servers } = require('../src/consts/channels');
 
 module.exports = {
 	name: Events.ClientReady,
 	once: true,
 	execute(client) {
-    client.oneUpWorld = client.guilds.fetch('355119082808541184');
+    client.oneUpWorld = client.guilds.fetch(Servers.ONE_UP_WORLD);
     if (client.testClient) {
       console.log(`Ready to follow orders as the test client ma'am, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
       return;
