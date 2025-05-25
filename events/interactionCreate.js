@@ -1,4 +1,4 @@
-const { Events, EmbedBuilder, PermissionsBitField } = require('discord.js');
+const { Events, EmbedBuilder, PermissionsBitField, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
 
 // Button handling
 async function handleButtons(interaction) {
@@ -33,12 +33,39 @@ async function handleButtons(interaction) {
 			if(buttonId[1] == "approved") {
 				client.questions.set(client.questions.autonum, {channel: qotdSubmissionEmbed.data.fields[0].name.slice(20,-2), question: qotdSubmissionEmbed.data.fields[0].value.slice(4), author: qotdSubmissionEmbed.data.footer.text.slice(9)});
 				qotdSubmissionEmbed.setTitle('Question of the Day Submission [APPROVED]');
+                interaction.update({embeds: [qotdSubmissionEmbed], components: []});
 			}
             //Otherwise, delete the buttons and deny the question
-			else
-				qotdSubmissionEmbed.setTitle('Question of the Day Submission [DENIED]');
+			else {
+                //await interaction.deferUpdate();
+                const modal = new ModalBuilder()
+                    .setCustomId('QDD-test')
+                    .setTitle('Delete QotD');
 
-			interaction.update({embeds: [qotdSubmissionEmbed], components: []});
+                const removeReason = new TextInputBuilder()
+                    .setCustomId('reason')
+                    .setLabel('Deletion reason:')
+                    .setStyle(TextInputStyle.Short);
+
+                modal.addComponents(new ActionRowBuilder().addComponents(removeReason));
+                await interaction.showModal(modal);
+
+                let modalInput = {};
+                const filter = (modalInteraction) => {
+                    const interactionId = modalInteraction.customId.split('-');
+                    return interactionId[0] === 'QDD'; };
+                interaction.awaitModalSubmit({ filter, time: 15_000 })
+                    .then(modalInteraction => {
+                        modalInput.reason = modalInteraction.fields.getTextInputValue('reason');
+                        modalInput.mod = modalInteraction.user.globalName;
+
+                        qotdSubmissionEmbed.setTitle(`Question of the Day Submission [DENIED BY ${modalInput.mod.toUpperCase()}]`);
+                        qotdSubmissionEmbed.setDescription(`Denial reason: ${modalInput.reason}`);
+
+                        modalInteraction.update({embeds: [qotdSubmissionEmbed], components: []});
+                    })
+                    .catch(console.error);
+            }
 			break;
 		default:
 			interaction.followUp({content: "Unrecognized button format.", ephemeral: true});
@@ -80,6 +107,14 @@ async function handleSelect(interaction) {
 	}
 }
 
+/* // For handling modal inputs (QotD submissions)
+async function handleModal(interaction) {
+    const interactionId = interaction.customId.split('-');
+    if(id[0] === 'QDD') {
+        console.log(interaction);
+    }
+} */
+
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
@@ -91,6 +126,7 @@ module.exports = {
         //Handle the button and select menu stuff in their own commands
 		if (interaction.isButton()) return await handleButtons(interaction);
 		else if (interaction.isStringSelectMenu()) return await handleSelect(interaction);
+        else if (interaction.isModalSubmit()) return;
 
         //its a slash command then. grab the module for this slash command
 		const command = interaction.client.commands.get(interaction.commandName);
