@@ -55,7 +55,7 @@ module.exports = {
                 .setColor(color)
                 .setTitle(`${member.displayName}'s Level Journey!`)
                 .setThumbnail(member.displayAvatarURL())
-                .addFields({name: `On the way to level ${user.rank()} | ${prestige} **x ${user.prestige()}**`, value: `${progressPath}`});
+                .addFields({name: `On the way to level ${user.rank()+1} | ${prestige} **x ${user.prestige()}**`, value: `${progressPath}`});
                 
             rankEmbed.addFields({name: ((roughProgress === 5) ? `You're halfway there!` : `You're ${roughProgress * 10}% of the way there!`), value: motivationalQuotes[roughProgress]});
 
