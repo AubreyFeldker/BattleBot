@@ -1,5 +1,6 @@
 const { Events, EmbedBuilder, PermissionsBitField, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
 const { Servers, Channels } = require('../src/consts/channels');
+const { User } = require('../src/consts/user');
 
 // Button handling
 async function handleButtons(interaction) {
@@ -79,16 +80,16 @@ async function handleSelect(interaction) {
 	const client = interaction.client;
 	if (id[0] == 'dropdown') {
 	
-		const user = client.userDB.get(interaction.member.id);		
+		const user = new User(client, interaction.member.id)
 		const characters = client.characterRoleEmotes;
 		const buttonId = interaction.values[0].split('|');
 		const role = interaction.guild.roles.cache.find((r) => r.name === buttonId[1]);	
 		let removedRole;
 		
-		//Level-gated role: heck user is appropriate level for the role
+		//Level-gated role: check user is appropriate level for the role
 		if(id[1] === "3") {
 			const rank = client.teamSettings.get('unlockableTeams').find((c) => c.teams.includes(role.name.slice(5)));
-			if(user.rank + (user.prestige * 12) < rank.rankNeeded) {
+			if(user.prestige() === 0 && user.rank() < rank.rankNeeded) {
 				return interaction.reply({ content: 'You are not a high enough level to obtain that team role!', ephemeral: true });
 			}
 		}

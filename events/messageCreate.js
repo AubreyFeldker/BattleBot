@@ -1,77 +1,70 @@
 const Discord = require('discord.js');
 const Events = Discord.Events;
 
-const { Servers } = require('../src/consts/channels');
+const { Servers, Channels } = require('../src/consts/channels');
+const { User } = require('../src/consts/user');
 
-// Collections for command cooldowns, point cooldowns, and level up delays
-const cooldowns = new Discord.Collection();
-const pointCooldowns = new Discord.Collection();
-const memberLevelUpDelays = new Discord.Collection();
+// Get the UNIX timestamp day
+const getDate = (timestamp) => { return Math.floor(timestamp / (86400000));};
 
 module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
-    // Relegates the test client and main client to their own servers
-    if (message.client.testClient != (message.guildId == Servers.TEST_SERVER))
-      return;
+        // Relegates the test client and main client to their own servers
+        if (message.client.testClient != (message.guildId == Servers.TEST_SERVER || message.channel.id === Channels.TEST_BOT_TESTING)) {return;}
 
-    const client = message.client;
-    const member = message.member;
+        const client = message.client;
+        const member = message.member;
 
-    const lvlRoles = client.lvlRoles;
-    const levelUpEmojis = client.levelUpEmojis;
-    const levelUpPoints = client.levelUpPoints;
+        const lvlRoles = client.lvlRoles;
+        const levelUpEmojis = client.levelUpEmojis;
 
-    // Ignore all bots
-    try {
-      if (member.user.bot) {
-        return;
-      }
-    } catch (error) {
-      return;
+        const messageTime = message.createdTimestamp;
+
+        // Ignore all bots
+        try {
+            if (member.user.bot) {
+                return;
+            }
+        } catch (error) {
+            return;
+        }
+
+        // If the message is in a guild but the member object is not cached, fetch the member object
+        if (message.guild && !message.member) {
+        await message.guild.members.fetch(message.author);
+        }
+
+        const userData = new User(client, member.id)
+        const protectedChannels = client.settings.get('protectedChannels');
+
+        const oldRank = userData.rank();
+
+        // If its been at least [point cooldown] since the user's last point gain and
+        // the post is not in a channel where points are not gained, increment their points by 1
+        if (messageTime - userData.lastPoint > client.pointCooldown &&
+            protectedChannels &&
+            !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))
+        ) {
+            // Give a lot of XP if this is their first post today and they are not a brand new user
+            console.log(getDate(messageTime))
+            const msgXP = (!userData.newUser && getDate(messageTime) > getDate(userData.lastPoint)) ? client.dailyBonus : 1;
+            userData.addXP(msgXP);
+        }
+
+        // Check if the user has ranked up or prestiged
+        const newRank = userData.rank();
+
+        if(oldRank !== newRank) {
+            member.roles.add(lvlRoles[newRank]);
+            // Don't ever remove the 1-Up lvl rank
+            if (oldRank !== 0) { member.roles.remove(lvlRoles[oldRank]); }
+
+            // Append emotes to commemerate user's levelup
+            // if new rank = 0 at lvl up, they prestiged
+            const upReact = (newRank === 0) ? client.emoji.prestige : client.emoji.levelUp;
+            await message.react(client.emojis.cache.get(upReact));
+            await message.react(client.emojis.cache.get(levelUpEmojis[newRank]));
+        }
     }
-
-    // If the message is in a guild but the member object is not cached, fetch the member object
-    if (message.guild && !message.member) {
-      await message.guild.members.fetch(message.author);
-    }
-
-    const userFromDB = await client.configureUser(member);
-    const protectedChannels = client.settings.get('protectedChannels');
-
-    // If its been at least 2 minutes since the user's last point gain and
-    // the post is not in a channel where points are not gained, increment their points by 1
-    if (protectedChannels && 
-        (pointCooldowns.has(member.id) ? (Date.now() - pointCooldowns.get(member.id)) > 120000 : true) &&
-        !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))) {
-      client.userDB.inc(member.id, 'points');
-      pointCooldowns.set(member.id, Date.now());
-    }
-
-    // Pre-define leveledUp and newRank to be false and 0 respectively as a starting point
-    let leveledUp = false;
-    let newRank = userFromDB.rank + 1;
-
-    const userRank = userFromDB.rank;
-    // If they have enough points, rank up!
-    if (userFromDB.points >= levelUpPoints[userRank]) {
-      member.roles.add(lvlRoles[userRank]);
-      if (userRank != 0) { message.member.roles.remove(lvlRoles[userRank - 1]); }
-
-      client.userDB.inc(member.id, 'rank');
-      leveledUp = true;
-      newRank = userRank + 1;
-      // If they have enough points, prestige up!!!
-      if (userRank === 11) { 
-	      client.userDB.set(member.id, { points: userFromDB.points - 27000, rank: 0, prestige: userFromDB.prestige + 1});
-      }
-
-      // Append emote to commemerate user's levelup
-      if (newRank == 12)
-        await message.react(client.emojis.cache.get('894461229383450624')); // prestige emote
-      else
-        await message.react(client.emojis.cache.get('751623091200983050')); // level up emote
-      await message.react(client.emojis.cache.get(levelUpEmojis[userRank]));
-    }
-	}
 };

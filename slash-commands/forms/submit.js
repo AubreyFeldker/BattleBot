@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ButtonBuilder, ButtonStyle, ChannelType, ActionRowBuilder } = require('discord.js');
 const { Channels } = require('../../src/consts/channels');
+const { User } = require('../../src/consts/user');
 
 const oneWeek = 604800000;
 
@@ -25,11 +26,11 @@ module.exports = {
     ).setDefaultMemberPermissions(PermissionFlagsBits.SendTTSMessages),
   async execute(interaction, client) {
     //Will split this off into its own method once multiple subcommands are implemented
-    const lastQuestion = client.userDB.ensure(interaction.user.id, 0, "lastQuestion");
+    const user = new User(client, interaction.user.id);
     const thisQuestion = Date.now();
     
-    if(thisQuestion - lastQuestion < oneWeek) {
-      return interaction.reply({content: `It's been too soon since your last Question of the Day submission! You'll be able to send a new one <t:${Math.floor((lastQuestion+oneWeek)/1000)}:R>.`, ephemeral: true});
+    if(thisQuestion - user.lastQuestion < oneWeek) {
+      return interaction.reply({content: `It's been too soon since your last Question of the Day submission! You'll be able to send a new one <t:${Math.floor((user.lastQuestion+oneWeek)/1000)}:R>.`, ephemeral: true});
     }
 
     const qotdSubmissionEmbed = new EmbedBuilder()
@@ -52,6 +53,6 @@ module.exports = {
     await interaction.guild.channels.cache.get(Channels.QOTD_SUBMISSIONS).send({embeds: [qotdSubmissionEmbed], components: [row]});
     interaction.reply({content: "Your question was submitted!", ephemeral: true});
     
-    client.userDB.set(interaction.user.id, thisQuestion, "lastQuestion");
+    user.setLast('Question');
   },
 };
