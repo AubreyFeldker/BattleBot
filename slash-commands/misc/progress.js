@@ -51,7 +51,6 @@ module.exports = {
             progressPath += '⠀';
 
             const rankEmbed = new EmbedBuilder()
-                .setColor(color)
                 .setTitle(`${member.displayName}'s Level Journey!`)
                 .setThumbnail(member.displayAvatarURL())
                 .addFields({name: `On the way to level ${userFromDB.rank + 1} | ${prestige} **x ${userFromDB.prestige}**`, value: `${progressPath}`});
