@@ -47,7 +47,6 @@ module.exports = {
             !(protectedChannels.includes(message.channel.id) || protectedChannels.includes(message.channel.parentId))
         ) {
             // Give a lot of XP if this is their first post today and they are not a brand new user
-            console.log(getDate(messageTime))
             const msgXP = (!userData.newUser && getDate(messageTime) > getDate(userData.lastPoint)) ? client.dailyBonus : 1;
             userData.addXP(msgXP);
         }
