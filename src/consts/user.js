@@ -31,7 +31,7 @@ export class User {
     }
 
     static rankupPoints = 2000;
-    static requiredPoints = [0,10,150,500];
+    static requiredPoints = [0,10,100,250];
 
     prestige() { return Math.floor(this.points / (User.rankupPoints * 12)) }
     rank() { 

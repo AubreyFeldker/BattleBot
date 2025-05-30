@@ -134,5 +134,7 @@ client.lvlRoles = [
   '754395863597711360', // Special
 ];
 
+client.levelUpPoints = [ 0, 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
+
 // Login to the Discord API using the token in config.js
 client.login(token);
