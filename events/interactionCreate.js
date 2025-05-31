@@ -128,8 +128,8 @@ module.exports = {
 			return;
 
         // If interactions are disabled
-        if (!interaction.client.interact) {return;}
-        
+        if (!interaction.client.interact && !(interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages))) {return;}
+
 		const client = interaction.client;
 
         //Handle the button and select menu stuff in their own commands
