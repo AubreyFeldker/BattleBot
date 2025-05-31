@@ -40,7 +40,14 @@ client.maker = makerId;
 client.version = `v${version}`;
 client.emoji = emoji;
 client.responseInTest = false;
+client.interact = true;
+
 require('./src/slash-functions')(client);
+
+client.pointCooldown = 120000;
+client.dailyBonus = 30;
+client.dailyStarbits = 5000;
+client.dailyCoins = 5;
 
 client.validChannels = ['355186664869724161'];
 
@@ -79,10 +86,11 @@ for (const file of eventFiles) {
 Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items',
     'enabledCmds', 'teamSettings', 'characterRoleEmotes', 'userDB', 'emotes',
     'titles', 'userEmotes', 'userTitles', 'locations', 'userStats', 'consoleVars',
-    'questions', 'datedQuestions', 'luigiEmotes']));
+    'questions', 'datedQuestions', 'luigiEmotes', 'userInfo']));
 
 // Array if emotes tied to each level-up
 client.levelUpEmojis = [
+  '893392833925505075', // 1-Up
   '751523400681259110', // Shroom
   '751523400782053567', // Shell
   '751523400421474516', // Flower
@@ -94,7 +102,6 @@ client.levelUpEmojis = [
   '751523400538783775', // Moon
   '754060026146193419', // Shine
   '754044526460665856', // Special
-  '893392833925505075', // 1-Up
 ];
 
 client.levelUpEmojis8Bit = [
@@ -114,6 +121,7 @@ client.levelUpEmojis8Bit = [
 ];
 
 client.lvlRoles = [
+  '893381701659656202', // 1-Up
   '391877990277185556', // Shroom
   '751118834206769293', // Shell
   '751118889869377656', // Flower
@@ -125,10 +133,9 @@ client.lvlRoles = [
   '751616582307807323', // Moon
   '751616793092817038', // Shine
   '754395863597711360', // Special
-  '893381701659656202', // 1-Up
 ];
-// Points at which each rankup is obtained at
-client.levelUpPoints = [ 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
+
+client.levelUpPoints = [ 0, 10, 150, 500, 1000, 2500, 5000, 7000, 9999, 13000, 17000, 22000, 27000 ];
 
 // Login to the Discord API using the token in config.js
 client.login(token);
