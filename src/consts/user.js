@@ -2,7 +2,7 @@ export class User {
     #database
 
     constructor(client, id) {
-        const dbInfo = client.userDB.ensure(id,
+        const dbInfo = client.userInfo.ensure(id,
             { id: id,
                 points: 0,
                 currency: { bluecoins: 0, starbits: 0},
@@ -15,7 +15,7 @@ export class User {
         );
 
         this.id = id;
-        this.#database = client.userDB;
+        this.#database = client.userInfo;
 
         this.lastWork = dbInfo.lastWork ?? 0;
         this.lastDaily = dbInfo.lastDaily ?? 0;
