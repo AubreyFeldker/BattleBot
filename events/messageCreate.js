@@ -12,6 +12,8 @@ module.exports = {
 	async execute(message) {
         // Relegates the test client and main client to their own servers
         if (message.client.testClient != (message.guildId == Servers.TEST_SERVER || message.channel.id === Channels.TEST_BOT_TESTING)) {return;}
+        // If interactions are disabled
+        if (!message.client.interact) {return;}
 
         const client = message.client;
         const member = message.member;

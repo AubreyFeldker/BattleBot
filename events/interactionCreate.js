@@ -126,6 +126,10 @@ module.exports = {
             && !interaction.client.responseInTest)
             
 			return;
+
+        // If interactions are disabled
+        if (!interaction.client.interact) {return;}
+        
 		const client = interaction.client;
 
         //Handle the button and select menu stuff in their own commands

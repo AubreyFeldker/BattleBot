@@ -40,6 +40,7 @@ client.maker = makerId;
 client.version = `v${version}`;
 client.emoji = emoji;
 client.responseInTest = false;
+client.interact = true;
 
 require('./src/slash-functions')(client);
 
