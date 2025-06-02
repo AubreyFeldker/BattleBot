@@ -1,6 +1,6 @@
 const { Events } = require('discord.js');
 const { Servers } = require('../src/consts/channels');
-const { sendOutQuestion } = require('../src/utils');
+const { sendOutQuestion, archiveEnmap } = require('../src/utils');
 
 module.exports = {
 	name: Events.ClientReady,
@@ -45,6 +45,7 @@ module.exports = {
         
     setTimeout(() => {
       sendOutQuestion();
+      archiveEnmap(client.userInfo, 'userInfo');
       }, (noon.getTime() - now.getTime()));
 
 

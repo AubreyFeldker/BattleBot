@@ -1,5 +1,6 @@
 const { Discord, EmbedBuilder } = require('discord.js');
 const { Channels, Servers } = require('./consts/channels.js')
+const fs = require('node:fs');
 
 //Sends out the Question of the Day from THE LIST
 const sendOutQuestion = async () => {
@@ -40,6 +41,7 @@ const sendOutQuestion = async () => {
 
     setTimeout(() => {
         client.sendOutQuestion();
+        archiveEnmap(client.userInfo, 'userInfo');
     }, (noon.getTime() - now.getTime()));
 };
 
@@ -149,4 +151,40 @@ const createLuigiEmbed = () => {
     return embed;
 };
 
-module.exports = { sendOutQuestion, sendOutTournament, sendOutPoll, createLuigiEmbed }
+// Saves the current enmap to a file, keeping the last week's
+// worth of archives for that enmap
+const archiveEnmap = (enmap, name) => {
+    const archivesKept = 3;
+    // Make directory if not exists
+    if(!fs.existsSync('archive'))
+        fs.mkdirSync('archive');
+
+    // Cycle through all of the files and delete the oldest
+    // of this archive type if there's over 7 archives
+    const archives = fs.readdirSync('archive').filter((file) => {return file.split('-')[0] === name});
+    let oldest, oldestTime;
+
+    console.log(archives)
+
+    if (archives.length >= archivesKept) {
+        for (let i = 0; i < archives.length; i++) {
+            const stats = fs.statSync(`archive/${archives[i]}`);
+            if (oldestTime == undefined || stats.mtime < oldestTime) {
+                oldestTime = stats.mtime;
+                oldest = archives[i];
+            }
+        }
+
+        fs.rmSync(`archive/${oldest}`);
+    }
+
+    fs.writeFileSync(`archive/${name}-${Date.now()}.json`, enmap.export());
+    console.log(`Archived enmap file ${name}-${getDate(Date.now())}.json`);
+
+    
+};
+
+// Get the UNIX timestamp day
+const getDate = (timestamp) => { return Math.floor(timestamp / (86400000));};
+
+module.exports = { sendOutQuestion, sendOutTournament, sendOutPoll, createLuigiEmbed, archiveEnmap, getDate }

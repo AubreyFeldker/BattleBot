@@ -4,11 +4,16 @@ src/up-world-calendar.json
 src/functions.js
 deploy-commands.js
 
+# Outdated
+commands
+src/functions.js
+
 # Node crap
 node_modules
 
 # Enmap data
 data
+archive/*
 
 # Misc
 Code Backup.txt

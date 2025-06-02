@@ -5,9 +5,7 @@ const { Servers, Channels, protectedChannels } = require('../src/consts/channels
 const { User } = require('../src/objs/user');
 const { lvlRoles } = require('../src/consts/roles');
 const { levelUpEmojis, miscCharacters } = require('../src/consts/emoji');
-
-// Get the UNIX timestamp day
-const getDate = (timestamp) => { return Math.floor(timestamp / (86400000));};
+const { getDate } = require('../src/utils');
 
 module.exports = {
 	name: Events.MessageCreate,
