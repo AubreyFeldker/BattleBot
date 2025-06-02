@@ -1,5 +1,6 @@
 const { Events } = require('discord.js');
 const { Servers } = require('../src/consts/channels');
+const { sendOutQuestion } = require('../src/utils');
 
 module.exports = {
 	name: Events.ClientReady,
@@ -43,7 +44,7 @@ module.exports = {
 
         
     setTimeout(() => {
-      client.sendOutQuestion();
+      sendOutQuestion();
       }, (noon.getTime() - now.getTime()));
 
 

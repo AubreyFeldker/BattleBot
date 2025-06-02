@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const Events = Discord.Events;
 
-const { Servers, Channels } = require('../src/consts/channels');
+const { Servers, Channels, protectedChannels } = require('../src/consts/channels');
 const { User } = require('../src/consts/user');
+const { lvlRoles } = require('../src/consts/roles');
+const { levelUpEmojis, miscCharacters } = require('../src/consts/emoji');
 
 // Get the UNIX timestamp day
 const getDate = (timestamp) => { return Math.floor(timestamp / (86400000));};
@@ -17,9 +19,6 @@ module.exports = {
 
         const client = message.client;
         const member = message.member;
-
-        const lvlRoles = client.lvlRoles;
-        const levelUpEmojis = client.levelUpEmojis;
 
         const messageTime = message.createdTimestamp;
 
@@ -37,8 +36,7 @@ module.exports = {
         await message.guild.members.fetch(message.author);
         }
 
-        const userData = new User(client, member.id)
-        const protectedChannels = client.settings.get('protectedChannels');
+        const userData = new User(client, member.id);
 
         const oldRank = userData.rank();
 
@@ -63,7 +61,7 @@ module.exports = {
 
             // Append emotes to commemerate user's levelup
             // if new rank = 0 at lvl up, they prestiged
-            const upReact = (newRank === 0) ? client.emoji.prestige : client.emoji.levelUp;
+            const upReact = (newRank === 0) ? miscCharacters.prestige : miscCharacters.levelUp;
             await message.react(client.emojis.cache.get(upReact));
             await message.react(client.emojis.cache.get(levelUpEmojis[newRank]));
         }

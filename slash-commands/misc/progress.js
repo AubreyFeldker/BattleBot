@@ -1,24 +1,23 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require('discord.js');
 const { User } = require('../../src/consts/user');
+const { levelUpEmojis8Bit, miscCharacters } = require('../../src/consts/emoji');
 
 module.exports = {
         category: 'misc',
         data: new SlashCommandBuilder()
-                .setName('progress')
-                .setDescription('Keep track of your journey through the server rank system.'),
+            .setName('progress')
+            .setDescription('Keep track of your journey through the server rank system.'),
         async execute(interaction, client) {
             const member = interaction.member;
 
-            const levelUpEmojis8Bit = client.levelUpEmojis8Bit;
-            const dot = client.emojis.cache.get('891851922196287529');
-            const prestige = client.emojis.cache.get('894461229383450624');
+            const dot = client.emojis.cache.get(miscCharacters.dot);
+            const prestige = client.emojis.cache.get(miscCharacters.prestige);
 
-            const levelPoints = client.levelUpPoints;
             const motivationalQuotes = ["Everyone starts somewhere.", "You're making progress already!", "Keep on keeping on.", "That's roughly a third!", "Great job so far!", "*Living on a prayer!*", "It's all downhill from here.", "The end is nearly in sight!", "Don't give up now!!!", "You could rank up any time now! Exciting!"]
 
             const characters = client.characterRoleEmotes;
             const user = new User(client, member.id);
-            let runningEmote = client.emojis.cache.get('710519845124309394');
+            let runningEmote;
             let color = "#000000";
 
             // Gets emote of character if user has an applicable team role; uses Mario otherwise
@@ -32,7 +31,7 @@ module.exports = {
                 color = role.color.toString(16);
             }
             else
-                runningEmote = client.emojis.cache.get('891878777376878637');
+                runningEmote = client.emojis.cache.get(miscCharacters.runningMario);
 
             // Determines how far to their next levelup the user has gotten, from 0-9, rounded down
             let roughProgress = Math.floor(user.rankProgress() * 10);
@@ -56,7 +55,10 @@ module.exports = {
                 .setThumbnail(member.displayAvatarURL())
                 .addFields({name: `On the way to level ${user.rank()+1} | ${prestige} **x ${user.prestige()}**`, value: `${progressPath}`});
                 
-            rankEmbed.addFields({name: ((roughProgress === 5) ? `You're halfway there!` : `You're ${roughProgress * 10}% of the way there!`), value: motivationalQuotes[roughProgress]});
+            rankEmbed.addFields({
+                name: ((roughProgress === 5) ? `You're halfway there!` : `You're ${roughProgress * 10}% of the way there!`),
+                value: motivationalQuotes[roughProgress]
+            });
 
             return interaction.reply({ embeds: [rankEmbed] });
         },
