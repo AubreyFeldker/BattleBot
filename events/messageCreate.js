@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const Events = Discord.Events;
 
 const { Servers, Channels, protectedChannels } = require('../src/consts/channels');
-const { User } = require('../src/consts/user');
+const { User } = require('../src/objs/user');
 const { lvlRoles } = require('../src/consts/roles');
 const { levelUpEmojis, miscCharacters } = require('../src/consts/emoji');
 

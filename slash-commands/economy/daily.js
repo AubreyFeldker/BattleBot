@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
-const { User } = require('../../src/consts/user');
+const { User } = require('../../src/objs/user');
 const { miscCharacters } = require('../../src/consts/emoji');
 
 module.exports = {

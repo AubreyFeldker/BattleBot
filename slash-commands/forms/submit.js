@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ButtonBuilder, ButtonStyle, ChannelType, ActionRowBuilder } = require('discord.js');
 const { Channels } = require('../../src/consts/channels');
-const { User } = require('../../src/consts/user');
+const { User } = require('../../src/objs/user');
 
 const oneWeek = 604800000;
 

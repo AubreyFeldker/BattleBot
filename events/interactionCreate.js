@@ -1,6 +1,6 @@
 const { Events, EmbedBuilder, PermissionsBitField, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
 const { Servers, Channels } = require('../src/consts/channels');
-const { User } = require('../src/consts/user');
+const { User } = require('../src/objs/user');
 
 // Button handling
 async function handleButtons(interaction) {
