@@ -6,7 +6,7 @@ const { User } = require('./objs/user.js');
 const moment = require('moment');
 
 //Sends out the Question of the Day from THE LIST
-const sendOutQuestion = async () => {
+const sendOutQuestion = async (client) => {
     const oneUpWorld = client.guilds.cache.get(Servers.ONE_UP_WORLD);
     const role = oneUpWorld.roles.cache.find((r) => r.name === 'Question of the Day');
 

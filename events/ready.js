@@ -44,7 +44,7 @@ module.exports = {
 
         
     setTimeout(() => {
-      sendOutQuestion();
+      sendOutQuestion(client);
       archiveEnmap(client.userInfo, 'userInfo');
       }, (noon.getTime() - now.getTime()));
 
