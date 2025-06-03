@@ -2,8 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 const { BanRule } = require('../../src/objs/banrule');
 
 module.exports = {
-        category: 'cat',
-        localOnly: true,
+        category: 'moderation',
         data: new SlashCommandBuilder()
             .setName('bannedwords')
             .setDescription('description')
