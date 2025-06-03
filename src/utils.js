@@ -1,6 +1,9 @@
 const { Discord, EmbedBuilder } = require('discord.js');
 const { Channels, Servers } = require('./consts/channels.js')
 const fs = require('node:fs');
+const { BanRule } = require('./objs/banrule.js');
+const { User } = require('./objs/user.js');
+const moment = require('moment');
 
 //Sends out the Question of the Day from THE LIST
 const sendOutQuestion = async () => {
@@ -151,6 +154,34 @@ const createLuigiEmbed = () => {
     return embed;
 };
 
+// Check the content of a message against the server's ban rules
+const checkBannedWords = (message) => {
+    const banRules = BanRule.getAllRules(message.client);
+    const msgContent = BanRule.cleanText(message.content);
+    const triggers = [];
+    let oldestTrigger = null;
+
+    //Check the message contents against each ban rule
+    banRules.forEach((rule) => {
+        const priorTrigger = rule.test(msgContent, message.member.id);
+        if (priorTrigger) {
+            triggers.push(rule.name);
+            if (!oldestTrigger || oldestTrigger.lastWarn > priorTrigger.lastWarn)
+                oldestTrigger = priorTrigger;
+        }
+    });
+
+    if (triggers.length === 0)
+        return;
+
+    const user = new User(message.client, message.member.id);
+    // If removing XP doesn't rank them down, dock their XP
+    if (user.rank() === user.rank(-5))
+        user.addXP(-5);
+
+    message.channel.send(`<@${message.member.id}> referenced the forbidden term${triggers.length > 1 ? 's' : ''}: \`${triggers.join(', ')}\`\nThis breaks a streak started ${moment.unix(oldestTrigger.lastWarn).fromNow()}.`);
+};
+
 // Saves the current enmap to a file, keeping the last week's
 // worth of archives for that enmap
 const archiveEnmap = (enmap, name) => {
@@ -180,11 +211,9 @@ const archiveEnmap = (enmap, name) => {
 
     fs.writeFileSync(`archive/${name}-${Date.now()}.json`, enmap.export());
     console.log(`Archived enmap file ${name}-${getDate(Date.now())}.json`);
-
-    
 };
 
 // Get the UNIX timestamp day
 const getDate = (timestamp) => { return Math.floor(timestamp / (86400000));};
 
-module.exports = { sendOutQuestion, sendOutTournament, sendOutPoll, createLuigiEmbed, archiveEnmap, getDate }
+module.exports = { sendOutQuestion, sendOutTournament, sendOutPoll, createLuigiEmbed, archiveEnmap, getDate, checkBannedWords }

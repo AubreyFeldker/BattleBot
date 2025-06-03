@@ -5,7 +5,7 @@ const { Servers, Channels, protectedChannels } = require('../src/consts/channels
 const { User } = require('../src/objs/user');
 const { lvlRoles } = require('../src/consts/roles');
 const { levelUpEmojis, miscCharacters } = require('../src/consts/emoji');
-const { getDate } = require('../src/utils');
+const { getDate, checkBannedWords } = require('../src/utils');
 
 module.exports = {
 	name: Events.MessageCreate,
@@ -33,6 +33,8 @@ module.exports = {
         if (message.guild && !message.member) {
         await message.guild.members.fetch(message.author);
         }
+
+        checkBannedWords(message);
 
         const userData = new User(client, member.id);
 

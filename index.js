@@ -82,7 +82,7 @@ for (const file of eventFiles) {
 
 // Define multiple Enmaps and bind them to the client so they can be used everywhere (ie. client.settings, client.factionSettings, etc.)
 Object.assign(client, Enmap.multi(['settings', 'factionSettings', 'items', 'characterRoleEmotes',
-    'enabledCmds', 'teamSettings', 'userStats', 'questions', 'datedQuestions', 'userInfo']));
+    'enabledCmds', 'teamSettings', 'userStats', 'questions', 'datedQuestions', 'userInfo', 'bannedWords']));
 
 // Login to the Discord API using the token in config.js
 client.login(token);

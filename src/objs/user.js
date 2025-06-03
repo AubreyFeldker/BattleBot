@@ -34,15 +34,16 @@ export class User {
     static requiredPoints = [0,10,100,250];
 
     prestige() { return Math.floor(this.points / (User.rankupPoints * 12)) }
-    rank() { 
+    rank(pointOffset=0) { 
+        const points = this.points + pointOffset;
         if (this.newUser) {
             let rank = 3;
-            while(this.points < User.requiredPoints[rank])
+            while(points < User.requiredPoints[rank])
                 rank--;
             return rank;
         }
 
-        return Math.floor(this.points / User.rankupPoints) % 12;
+        return Math.floor(points / User.rankupPoints) % 12;
     }
 
     rankProgress() {
