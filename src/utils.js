@@ -43,7 +43,7 @@ const sendOutQuestion = async (client) => {
         12, 0, 0);
 
     setTimeout(() => {
-        client.sendOutQuestion();
+        sendOutQuestion(client);
         archiveEnmap(client.userInfo, 'userInfo');
     }, (noon.getTime() - now.getTime()));
 };
