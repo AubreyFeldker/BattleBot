@@ -24,9 +24,10 @@ module.exports = {
                     { name: 'Super Mario Bros. Wonder', value: 'Super Mario Bros. Wonder' },
                     { name: 'Super Mario 3D World', value: '3D World' },
                     { name: 'Super Mario Maker 2', value: 'Mario Maker 2' },
-                    { name: 'Mario Kart 8 Deluxe', value: 'Mario Kart' },
+                    { name: 'Mario Kart 8 Deluxe', value: 'Mario Kart 8' },
                     { name: 'Mario Party series', value: 'Mario Party' },
                     { name: 'Super Smash Bros. Ultimate', value: 'Smash Bros.' },
+                    { name: 'Mario Kart World', value: 'Mario Kart World'}
                 ))
         .addStringOption(option =>
             option.setName('channel')
