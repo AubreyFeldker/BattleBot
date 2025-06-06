@@ -8,6 +8,7 @@ const gameNames = new Map([
     ['Mario Kart', 'Mario Kart 8 Deluxe'],
     ['Mario Party', 'Mario Party'],
     ['Smash Bros.', 'Super Smash Bros. Ultimate'],
+    ['Mario Kart World', 'Mario Kart World']
 ]);
 
 module.exports = {
