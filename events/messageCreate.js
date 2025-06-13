@@ -5,7 +5,8 @@ const { Servers, Channels, protectedChannels } = require('../src/consts/channels
 const { User } = require('../src/objs/user');
 const { lvlRoles } = require('../src/consts/roles');
 const { levelUpEmojis, miscCharacters } = require('../src/consts/emoji');
-const { getDate, checkBannedWords } = require('../src/utils');
+const { checkBannedWords } = require('../src/funcs');
+const { getDate } = require('../src/utils');
 
 module.exports = {
 	name: Events.MessageCreate,

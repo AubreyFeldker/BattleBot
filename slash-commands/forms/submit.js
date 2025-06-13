@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ButtonBuilder, ButtonStyle, ChannelType, ActionRowBuilder } = require('discord.js');
 const { Channels } = require('../../src/consts/channels');
 const { User } = require('../../src/objs/user');
+const { Lasts } = require('../../src/consts/user-params');
 
 const oneWeek = 604800000;
 
@@ -53,6 +54,6 @@ module.exports = {
         await interaction.guild.channels.cache.get(Channels.QOTD_SUBMISSIONS).send({ embeds: [qotdSubmissionEmbed], components: [row] });
         interaction.reply({ content: "Your question was submitted!", ephemeral: true });
 
-        user.setLast('Question');
+        user.setLast(Lasts.QUESTION);
     },
 };

@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 const { User } = require('../../src/objs/user');
 const { miscCharacters } = require('../../src/consts/emoji');
+const { Lasts, Currencies } = require('../../src/consts/user-params');
 
 module.exports = {
     category: 'economy',
@@ -35,10 +36,10 @@ module.exports = {
         //If user has the 'Boost Star' role, rewards are doubled!
         const multi = (interaction.member.roles.cache.has('585533364489158666') ? 2 : 1) * client.settings.get('dailyMult');
 
-        user.addCurrency('starbits', client.dailyStarbits * multi);
-        user.addCurrency('bluecoins', client.dailyCoins * multi);
+        user.addCurrency(Currencies.STARBITS, client.dailyStarbits * multi);
+        user.addCurrency(Currencies.BLUECOINS, client.dailyCoins * multi);
 
-        user.setLast('Daily');
+        user.setLast(Lasts.DAILY);
 
         interaction.reply(`Claimed! You collected **${client.dailyStarbits * multi} starbits** ${starbits} and **${client.dailyCoins * multi} Blue Coins** ${bluecoins}.\nYou now have **${user.currency.starbits} starbits** ${starbits} and **${user.currency.bluecoins} Blue Coins** ${bluecoins}!`);
     },

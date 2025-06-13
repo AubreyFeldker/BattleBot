@@ -1,5 +1,9 @@
+import { Currencies, GameInfo, Lasts } from "../consts/user-params.js";
+import { cleanToAlphaNumeric } from "../utils.js";
+
 export class User {
-    #database
+    #userDatabase
+    #gameDatabase
 
     constructor(client, id) {
         const dbInfo = client.userInfo.ensure(id,
@@ -15,7 +19,8 @@ export class User {
         );
 
         this.id = id;
-        this.#database = client.userInfo;
+        this.#userDatabase = client.userInfo;
+        this.#gameDatabase = client.userGameInfo;
 
         this.lastWork = dbInfo.lastWork ?? 0;
         this.lastDaily = dbInfo.lastDaily ?? 0;
@@ -28,6 +33,8 @@ export class User {
         this.currency = dbInfo.currency;
 
         this.boostRole = null;
+
+        this.gameInfo = client.userGameInfo.get(id) ?? null;
     }
 
     static rankupPoints = 2000;
@@ -55,28 +62,54 @@ export class User {
     }
 
     addXP(value=1) {
-        this.#database.set(this.id, Date.now(), 'lastPointAdd');
+        this.#userDatabase.set(this.id, Date.now(), 'lastPointAdd');
         this.points += value;
+
+        // Points must be a positive number
+        this.points = Math.max(this.points, 0);
+        
         // Once they reach rank 3 for the first time,
         // proceed onto the linear 2000 point per rank track
         if (this.newUser && this.points >= User.requiredPoints[3]) {
             this.points = User.rankupPoints * 3;
             this.newUser = false;
-            this.#database.set(this.id, false, 'newUser');
+            this.#userDatabase.set(this.id, false, 'newUser');
         }
-        this.#database.set(this.id, this.points, 'points');
+        this.#userDatabase.set(this.id, this.points, 'points');
     }
 
     addCurrency(type, value=1) {
-        if(type === 'bluecoins' || type === 'starbits') {
+        if(type in Currencies) {
             this.currency[type] += value;
-            this.#database.set(this.id, this.currency[type], `currency.${type}`)
+            this.#userDatabase.set(this.id, this.currency[type], `currency.${type}`)
         }
     }
 
-    setLast(type) {
-        if(type === 'Work' || type === 'Daily' || type === 'Question')
-            this[`last${type}`] = Date.now();
-            this.#database.set(this.id, Date.now(), `last${type}`);
+    setLast(type, date = Date.now()) {
+        if(type in Lasts)
+            this[`last${type}`] = date;
+            this.#userDatabase.set(this.id, Date.now(), `last${type}`);
+    }
+
+    setGameInfo(type, value) {
+        if(type === GameInfo.SW_FC) {
+            // clean up friend code to just numerical value
+            const cleanedFC = value.replaceAll(/[^0-9]/g, '');
+            // Switch FCs are 12 chars long
+            if (cleanedFC.length !== 12)
+                return false;
+
+            // Create empty object if not already existant
+            this.gameInfo = this.gameInfo ?? {};
+            this.gameInfo[type] = cleanedFC;
+            this.#gameDatabase.set(this.id, cleanedFC, type);
+        }
+        else if(type === GameInfo.STM_NAME || type === GameInfo.SW_NAME) {
+            // clean up just to alphanum
+            const cleanedName = cleanToAlphaNumeric(value);
+
+            this.gameInfo[type] = cleanedName;
+            this.#gameDatabase.set(this.id, cleanedName, type)
+        }
     }
 }
