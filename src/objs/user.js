@@ -101,6 +101,7 @@ export class User {
 
             this.gameInfo[type] = cleanedFC;
             this.#gameDatabase.set(this.id, cleanedFC, type);
+            return true;
         }
         else if(type === GameInfo.STM_NAME || type === GameInfo.SW_NAME) {
             // clean up just to alphanum
@@ -108,6 +109,7 @@ export class User {
 
             this.gameInfo[type] = cleanedName;
             this.#gameDatabase.set(this.id, cleanedName, type)
+            return true;
         }
     }
 }
