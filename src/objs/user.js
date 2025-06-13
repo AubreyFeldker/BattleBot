@@ -34,7 +34,7 @@ export class User {
 
         this.boostRole = null;
 
-        this.gameInfo = client.userGameInfo.get(id) ?? null;
+        this.gameInfo = client.userGameInfo.get(id) ?? {};
     }
 
     static rankupPoints = 2000;
@@ -67,7 +67,7 @@ export class User {
 
         // Points must be a positive number
         this.points = Math.max(this.points, 0);
-        
+
         // Once they reach rank 3 for the first time,
         // proceed onto the linear 2000 point per rank track
         if (this.newUser && this.points >= User.requiredPoints[3]) {
@@ -79,7 +79,7 @@ export class User {
     }
 
     addCurrency(type, value=1) {
-        if(type in Currencies) {
+        if(Object.values(Currencies).includes(type)) {
             this.currency[type] += value;
             this.#userDatabase.set(this.id, this.currency[type], `currency.${type}`)
         }
@@ -99,8 +99,6 @@ export class User {
             if (cleanedFC.length !== 12)
                 return false;
 
-            // Create empty object if not already existant
-            this.gameInfo = this.gameInfo ?? {};
             this.gameInfo[type] = cleanedFC;
             this.#gameDatabase.set(this.id, cleanedFC, type);
         }
