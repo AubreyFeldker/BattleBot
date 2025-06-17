@@ -1,6 +1,6 @@
 const { Events } = require('discord.js');
 const { Servers } = require('../src/consts/channels');
-const { sendOutQuestion, archiveEnmap } = require('../src/utils');
+const { sendOutQuestion, archiveEnmap } = require('../src/funcs');
 
 module.exports = {
 	name: Events.ClientReady,
