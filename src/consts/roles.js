@@ -13,4 +13,6 @@ const lvlRoles = [
     '754395863597711360', // Special
 ];
 
-module.exports = {lvlRoles};
+const staffRole = '1103339257810124972';
+
+module.exports = {lvlRoles, staffRole};

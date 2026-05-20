@@ -3,6 +3,7 @@ const { Channels, Servers } = require('./consts/channels.js')
 const fs = require('node:fs');
 const { BanRule } = require('./objs/banrule.js');
 const { User } = require('./objs/user.js');
+const { staffRole } = require('./consts/roles.js')
 const moment = require('moment');
 const { getDate } = require('./utils.js');
 
@@ -183,6 +184,19 @@ const checkBannedWords = (message) => {
     message.channel.send(`<@${message.member.id}> referenced the forbidden term${triggers.length > 1 ? 's' : ''}: \`${triggers.join(', ')}\`\nThis breaks a streak started ${moment.unix(oldestTrigger.lastWarn).fromNow()}.`);
 };
 
+// Bans any users that post in the honeypot channel
+const banInHoneypot = async (message) => {
+    if (message.channel.id == Channels.HONEYPOT_CHANNEL &&
+        !message.member.roles.cache.has(staffRole)) {
+            message.member.ban( { deleteMessageSeconds: 60*60, reason: 'Triggered bot honeypot'})
+                .then(console.log)
+                .catch(console.error);
+            // Send a ban message to the moderation log
+            message.guild.channels.fetch(Channels.MOD_LOG)
+                .then(channel => channel.send(`<@${message.member.id}> triggered the honeypot trap and was banned.`));
+    }
+}
+
 // Saves the current enmap to a file, keeping the last week's
 // worth of archives for that enmap
 const archiveEnmap = (enmap, name) => {
@@ -216,4 +230,4 @@ const archiveEnmap = (enmap, name) => {
 
 
 
-module.exports = { sendOutQuestion, sendOutTournament, sendOutPoll, createLuigiEmbed, archiveEnmap, checkBannedWords  }
+module.exports = { sendOutQuestion, sendOutTournament, sendOutPoll, createLuigiEmbed, archiveEnmap, checkBannedWords, banInHoneypot }

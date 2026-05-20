@@ -5,7 +5,7 @@ const { Servers, Channels, protectedChannels } = require('../src/consts/channels
 const { User } = require('../src/objs/user');
 const { lvlRoles } = require('../src/consts/roles');
 const { levelUpEmojis, miscCharacters } = require('../src/consts/emoji');
-const { checkBannedWords } = require('../src/funcs');
+const { checkBannedWords, banInHoneypot } = require('../src/funcs');
 const { getDate } = require('../src/utils');
 
 module.exports = {
@@ -36,6 +36,7 @@ module.exports = {
         }
 
         checkBannedWords(message);
+        banInHoneypot(message);
 
         const userData = new User(client, member.id);
 
